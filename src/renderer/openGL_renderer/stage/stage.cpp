@@ -66,11 +66,9 @@ int stage::run() {
     
     //Begin Process
     if(initResources()) {
-        glEnable(GL_BLEND);
-        glEnable(GL_DEPTH_TEST);
-        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        init_glSettings();
         
-        update();
+        update_loop();
     }
     
     freeResources();
@@ -131,8 +129,14 @@ int stage::initResources() {
     return initShaders();
 }
 
+void stage::init_glSettings() {
+    glEnable(GL_BLEND);
+    glEnable(GL_DEPTH_TEST);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
+
 //Update Loop
-void stage::update() {
+void stage::update_loop() {
     while (!glfwWindowShouldClose(window)) {
         /* Render here */
         onIdle();
@@ -148,7 +152,6 @@ void stage::update() {
 void stage::onIdle() {
     //Update body positions
     for(int i=0;i<numBodyTypes;i++) {
-
         myBodies.at(i)->updateMVP(myCamera->view
                                  , myCamera->projection);
     }

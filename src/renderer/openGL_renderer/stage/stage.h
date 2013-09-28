@@ -61,13 +61,15 @@ private:
     static bool initShaders(); //Called in initResources()
     static int initResources();
     
+    static void init_glSettings();
+    
     //Update loop
-    static void update();
+    static void update_loop();
     
     static void onIdle();
+    static void updateDraw(); //Called in onIdle
     
-    static void updateDraw();
-    
+//    static void GLFWCALL OnWindowSize( int width, int height );
     static void onReshape(int width, int height);
     
     static void freeResources();
