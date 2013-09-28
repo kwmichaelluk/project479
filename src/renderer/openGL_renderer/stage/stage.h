@@ -16,8 +16,8 @@
 #include "../bodies/rigidbodies.h"
 
 #include <GL/glew.h>
-#include <GLUT/glut.h>
-//#include <GLFW/glfw3.h>
+//#include <GLUT/glut.h>
+#include <GLFW/glfw3.h>
 
 #include <vector>
 #include "../config/config.h"
@@ -38,6 +38,7 @@ private:
     //static rigidbodies* myBodies;
     static std::vector<rigidbodies*> myBodies;
     static int numBodyTypes;
+    static GLFWwindow* window;
     
 public:
     //Declare Shader Variables
@@ -61,9 +62,11 @@ private:
     static int initResources();
     
     //Update loop
+    static void update();
+    
     static void onIdle();
     
-    static void onDisplay();
+    static void updateDraw();
     
     static void onReshape(int width, int height);
     

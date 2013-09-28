@@ -11,9 +11,9 @@
 #include <math.h>
 
 #include <GL/glew.h>
-#include <GLUT/glut.h>
+//#include <GLUT/glut.h>
 
-//#include <GLFW/glfw3.h>
+#include <GLFW/glfw3.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -28,7 +28,7 @@ using namespace std;
 
 int main()
 {
-    printf("RUN START/n");
+    printf("RUN START\n");
     
     //Prepare Memory Map
     memmap_reader memmap(4);
@@ -53,7 +53,7 @@ int main()
     
     memmap.dispose();
     
-    printf("RUN END/n");
+    printf("RUN END\n");
     return 0;
 }
 

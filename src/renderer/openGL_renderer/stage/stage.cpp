@@ -24,6 +24,7 @@ GLint stage::uniform_mvp = 0;
 
 camera* stage::myCamera = NULL;
 std::vector<rigidbodies*> stage::myBodies;
+GLFWwindow* stage::window = NULL;
 
 void stage::setCamera(camera &cam) {
     myCamera = &cam;
@@ -35,40 +36,47 @@ void stage::addBody(rigidbodies &body) {
     numBodyTypes++;
 }
 
+
 int stage::run() {
+    //Initialize GLFW
+    if(!glfwInit())
+        throw std::runtime_error("glfwInit failed");
     
-    char fakeParam[] = "fake";
-    char *fakeargv[] = { fakeParam, NULL };
-    int fakeargc = 1;
+    //Create Window
+    window = glfwCreateWindow(screen_width, screen_height, "Renderer", NULL, NULL);
+    if (!window) {
+        glfwTerminate();
+        exit(EXIT_FAILURE);
+    }
+    glfwMakeContextCurrent(window);
     
-    glutInit(&fakeargc, fakeargv);
-    glutInitDisplayMode(GLUT_RGBA|GLUT_ALPHA|GLUT_DOUBLE|GLUT_DEPTH);
-    glutInitWindowSize(screen_width, screen_height);
-    glutCreateWindow("Rendering Engine");
+    //Enable V-Sync
+    glfwSwapInterval(1);
     
+    //Initialize GLEW
     GLenum glew_status = glewInit();
     if (glew_status != GLEW_OK) {
         fprintf(stderr, "Error: %s\n", glewGetErrorString(glew_status));
         return 1;
     }
-    
     if (!GLEW_VERSION_2_0) {
         fprintf(stderr, "Error: your graphic card does not support OpenGL 2.0\n");
         return 1;
     }
     
-    if (initResources()) {
-        glutDisplayFunc(onDisplay);
-        glutReshapeFunc(onReshape);
-        glutIdleFunc(onIdle);
+    //Begin Process
+    if(initResources()) {
         glEnable(GL_BLEND);
         glEnable(GL_DEPTH_TEST);
-        //glDepthFunc(GL_LESS);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-        glutMainLoop();
+        
+        update();
     }
     
     freeResources();
+    glfwDestroyWindow(window);
+    glfwTerminate();
+
     return 0;
 }
 
@@ -123,7 +131,22 @@ int stage::initResources() {
     return initShaders();
 }
 
+//Update Loop
+void stage::update() {
+    while (!glfwWindowShouldClose(window)) {
+        /* Render here */
+        onIdle();
+        
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
+        
+        /* Poll for and process events */
+        glfwPollEvents();
+    }
+}
+
 void stage::onIdle() {
+    //Update body positions
     for(int i=0;i<numBodyTypes;i++) {
 
         myBodies.at(i)->updateMVP(myCamera->view
@@ -136,25 +159,24 @@ void stage::onIdle() {
 
         myBodies.at(i)->updateUniform(uniform_mvp);
     }
-    
-    glutPostRedisplay();
+
+    //Draw Again
+    updateDraw();
 }
 
-void stage::onDisplay() {
+void stage::updateDraw() {
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     
     glUseProgram(program);
     
     //Draw Stuff Here
-    for( int i=0; i<numBodyTypes; i++) {   
+    for( int i=0; i<numBodyTypes; i++) {
         myBodies.at(i)->initDrawBodies(attribute_coord3d,attribute_v_color,uniform_mvp);
     }
     
     glDisableVertexAttribArray(attribute_coord3d);
     glDisableVertexAttribArray(attribute_v_color);
-    
-    glutSwapBuffers();
 }
 
 void stage::onReshape(int width, int height) {
