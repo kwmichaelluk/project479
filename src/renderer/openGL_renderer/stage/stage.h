@@ -5,6 +5,7 @@
 //  Created by Michael Luk on 2013-09-11.
 //  Copyright (c) 2013 Michael Luk. All rights reserved.
 //
+//  STAGE is for controlling OpenGL Rendering of Rigid Bodies, and controlling GLFW and initializing GLEW
 
 #ifndef __openGL_renderer__stage__
 #define __openGL_renderer__stage__
@@ -23,10 +24,6 @@
 #include "../config/config.h"
 
 class stage {
-private:
-    //static const char *vert_shader_path;
-    //static const char *frag_shader_path;
-
 public:
     //Screen Size
     static int screen_width;
@@ -35,7 +32,6 @@ public:
 private:
     //For Rendering
     static camera *myCamera;
-    //static rigidbodies* myBodies;
     static std::vector<rigidbodies*> myBodies;
     static int numBodyTypes;
     static GLFWwindow* window;
@@ -69,8 +65,7 @@ private:
     static void onIdle();
     static void updateDraw(); //Called in onIdle
     
-//    static void GLFWCALL OnWindowSize( int width, int height );
-    static void onReshape(int width, int height);
+    static void onReshape(int width, int height); //TODO: Implement on Window resize
     
     static void freeResources();
 };

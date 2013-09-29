@@ -8,10 +8,6 @@
 
 #include "stage.h"
 
-//File Paths
-//const char* stage::vert_shader_path = "shaders/cube.vert";
-//const char* stage::frag_shader_path = "shaders/cube.frag";
-
 //Initializing Static Values
 int stage::screen_width = 800;
 int stage::screen_height = 800;
@@ -35,7 +31,6 @@ void stage::addBody(rigidbodies &body) {
     myBodies.push_back(&body);
     numBodyTypes++;
 }
-
 
 int stage::run() {
     //Initialize GLFW
@@ -78,7 +73,6 @@ int stage::run() {
     return 0;
 }
 
-//
 bool stage::initShaders() {
     //Link Shaders
     GLint link_ok = GL_FALSE;
@@ -152,14 +146,12 @@ void stage::update_loop() {
 void stage::onIdle() {
     //Update body positions
     for(int i=0;i<numBodyTypes;i++) {
-        myBodies.at(i)->updateMVP(myCamera->view
-                                 , myCamera->projection);
+        myBodies.at(i)->updateMVP(myCamera->view, myCamera->projection);
     }
     
     glUseProgram(program);
     
     for( int i=0; i<numBodyTypes; i++) {
-
         myBodies.at(i)->updateUniform(uniform_mvp);
     }
 

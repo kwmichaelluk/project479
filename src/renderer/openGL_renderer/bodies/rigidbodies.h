@@ -120,7 +120,7 @@ public:
             (myBodies+index)->setPosition(pos.x, pos.y, pos.z);
     }*/
     
-    void setPosition(double *pos_x, double *pos_y, double *pos_z, int index) {
+    void linkPosition(double *pos_x, double *pos_y, double *pos_z, int index) {
         if(index < size)
             (myBodies+index)->setPosition(pos_x, pos_y, pos_z);
     }
