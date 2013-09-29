@@ -20,10 +20,10 @@ start_renderer();
 tic;
 while ctrl_pos.Data(1) < 4
     deltaT = toc;
-    if deltaT > 0.03
-        ctrl_pos.Data(1) = ctrl_pos.Data(1) + 0.07;
-        %ctrl_pos.Data(2) = ctrl_pos.Data(2) - 0.03;
-        %ctrl_pos.Data(3) = ctrl_pos.Data(3) + 0.005;
+    if deltaT > 0.003
+        ctrl_pos.Data(1) = ctrl_pos.Data(1) + 0.009;
+        ctrl_pos.Data(2) = ctrl_pos.Data(2) - 0.003;
+        ctrl_pos.Data(3) = ctrl_pos.Data(3) + 0.0005;
         tic;
     end
 end
