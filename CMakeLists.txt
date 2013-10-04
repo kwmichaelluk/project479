@@ -25,15 +25,23 @@ add_library( GLEW_1100 STATIC
 	${GLEW_SOURCE}
 )
 
-set(ALL_LIBS
-	glfw
-	${GLFW_LIBRARIES}
-	GLEW_1100
-)
+
 
 target_link_libraries( GLEW_1100
 	${OPENGL_LIBRARY}
 	${EXTRA_LIBS}
+)
+
+#GLEW libraries
+add_library(glew_static STATIC IMPORTED)
+set_target_properties(glew_static PROPERTIES
+    IMPORTED_LOCATION external/glew-1.10.0-win32/glew-1.10.0/lib/Release/Win32/glew32.lib)
+
+set(ALL_LIBS
+	glfw
+	${GLFW_LIBRARIES}
+	glew_static
+	
 )
 
 target_link_libraries(glfw_test ${ALL_LIBS})
