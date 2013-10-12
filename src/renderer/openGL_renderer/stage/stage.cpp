@@ -13,9 +13,9 @@ int stage::screen_width = 800;
 int stage::screen_height = 800;
 int stage::numBodyTypes = 0;
 
-GLuint stage::program = 0;
+GLuint stage::shader_program = 0;
 GLint stage::attribute_coord3d = 0;
-GLint stage::attribute_v_color = 0;
+GLint stage::attribute_v_color = 1;
 GLint stage::uniform_mvp = 0;
 //GLuint stage::vao = 0;
 
@@ -83,33 +83,36 @@ bool stage::initShaders() {
     if ((vs = create_shader(config::vert_shader_path.c_str(), GL_VERTEX_SHADER))   == 0) return 0;
     if ((fs = create_shader(config::frag_shader_path.c_str(), GL_FRAGMENT_SHADER)) == 0) return 0;
     
-    program = glCreateProgram();
-    glAttachShader(program, vs);
-    glAttachShader(program, fs);
-    glLinkProgram(program);
-    glGetProgramiv(program, GL_LINK_STATUS, &link_ok);
+    shader_program = glCreateProgram();
+    glAttachShader(shader_program, vs);
+    glAttachShader(shader_program, fs);
+    glLinkProgram(shader_program);
+    glGetProgramiv(shader_program, GL_LINK_STATUS, &link_ok);
     if (!link_ok) {
         fprintf(stderr, "glLinkProgram:");
-        print_log(program);
+        print_log(shader_program);
         return 0;
     }
     
     const char* attribute_name;
     attribute_name = "coord3d";
-    attribute_coord3d = glGetAttribLocation(program, attribute_name);
-    if (attribute_coord3d == -1) {
+    //attribute_coord3d = glGetAttribLocation(shader_program, attribute_name);
+    glBindAttribLocation(shader_program, attribute_coord3d, attribute_name);
+    if (glGetAttribLocation(shader_program,"coord3d") == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
         return 0;
     }
     attribute_name = "v_color";
-    attribute_v_color = glGetAttribLocation(program, attribute_name);
-    if (attribute_v_color == -1) {
+    //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
+    glBindAttribLocation(shader_program, attribute_v_color, attribute_name);
+    if (glGetAttribLocation(shader_program,"v_color") == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
         return 0;
     }
+    
     const char* uniform_name;
     uniform_name = "mvp";
-    uniform_mvp = glGetUniformLocation(program, uniform_name);
+    uniform_mvp = glGetUniformLocation(shader_program, uniform_name);
     if (uniform_mvp == -1) {
         fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
         return 0;
@@ -154,27 +157,34 @@ void stage::onIdle() {
         myBodies.at(i)->updateMVP(myCamera->view, myCamera->projection);
     }
     
-    glUseProgram(program);
+    //Bind shader program
+    glUseProgram(shader_program);
     
-    for( int i=0; i<numBodyTypes; i++) {
+    /*for( int i=0; i<numBodyTypes; i++) {
         myBodies.at(i)->updateUniform(uniform_mvp);
-    }
+    }*/
 
     //Draw Again
     updateDraw();
+    
+    //Unbind shader
+    glUseProgram(0);
 }
 
+//Private method - used in onIdle()
 void stage::updateDraw() {
+    //Clear Screen
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     
-    glUseProgram(program);
-    //glBindVertexArray(vao);
+    //glUseProgram(program);
     
-    //Draw Stuff Here
+    //Draw Stuff Here - NOTE: Each "bodies" each has their own VAO
     for( int i=0; i<numBodyTypes; i++) {
         myBodies.at(i)->initDrawBodies(attribute_coord3d,attribute_v_color,uniform_mvp);
     }
+    
+    //glUseProgram(0);
     
     glDisableVertexAttribArray(attribute_coord3d);
     glDisableVertexAttribArray(attribute_v_color);
@@ -187,7 +197,7 @@ void stage::onReshape(int width, int height) {
 }
 
 void stage::freeResources() {
-    glDeleteProgram(program);
+    glDeleteProgram(shader_program);
     
     for( int i=0; i<numBodyTypes; i++) {
         myBodies.at(i)->free_resources();

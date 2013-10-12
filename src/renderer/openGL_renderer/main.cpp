@@ -36,10 +36,13 @@ int main()
     myCam.setProjection(80.0f, 0.1f, 20.0f);
     
     //Define Objects
-    cube ta(1, stage::uniform_mvp);
+    int num_obj = 2;
+    cube ta(num_obj, stage::uniform_mvp);
     
     //Link Object Data
-    ta.linkPosition(memmap.pos_data+0, memmap.pos_data+1, memmap.pos_data+2, 0);
+    for(int i=0;i<num_obj;i++) {
+        ta.linkPosition(memmap.pos_data+(i*3), memmap.pos_data+(i*3+1), memmap.pos_data+(i*3+2), i);
+    }
     
     //Prepare Stage
     stage::setCamera(myCam);

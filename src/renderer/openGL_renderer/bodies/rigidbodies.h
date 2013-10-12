@@ -31,7 +31,6 @@ protected:
     GLuint vbo_colors;
     GLuint ibo_elements;
     
-    
     rigidbody *myBodies;
     int size; //Number of bodies within vbo
     
@@ -77,14 +76,15 @@ public:
     }
     
     void initDrawBodies(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &uniform_mvp) {
+        glBindVertexArray(vao); //Bind VAO
         for(int i=0; i<size; i++) {
             //Set Box To Draw
             //glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr((myBodies+i)->mvp));
             (myBodies+i)->uniformUpdate(uniform_mvp);
             
+            glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
             glEnableVertexAttribArray(attribute_coord3d);
             // Describe our vertices array to OpenGL (it can't guess its format automatically)
-            glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
             glVertexAttribPointer(
                                   attribute_coord3d, // attribute
                                   3,                 // number of elements per vertex, here (x,y,z)
@@ -94,8 +94,8 @@ public:
                                   0                  // offset of first element
                                   );
             
-            glEnableVertexAttribArray(attribute_v_color);
             glBindBuffer(GL_ARRAY_BUFFER, vbo_colors);
+            glEnableVertexAttribArray(attribute_v_color);
             glVertexAttribPointer(
                                   attribute_v_color, // attribute
                                   3,                 // number of elements per vertex, here (R,G,B)
@@ -109,11 +109,11 @@ public:
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
             int size;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
             
-            glBindVertexArray(vao);
             glDrawElements(GL_TRIANGLES, size/sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
             
             //glDrawArrays(GL_TRIANGLES, 0, size/sizeof(GLushort));
         }
+        glBindVertexArray(0); //Unbind VAO
     };
     
     void free_resources() {
@@ -122,14 +122,11 @@ public:
         glDeleteBuffers(1, &ibo_elements);
     };  //Call on destroy
     
-    /*void setPosition(glm::vec3 pos, int index) {
-        if(index < size)
-            (myBodies+index)->setPosition(pos.x, pos.y, pos.z);
-    }*/
-    
+    //Link the position of a specific object at INDEX
     void linkPosition(double *pos_x, double *pos_y, double *pos_z, int index) {
         if(index < size)
             (myBodies+index)->setPosition(pos_x, pos_y, pos_z);
     }
+    
 };
 #endif /* defined(__openGL_renderer__rigidbodies__) */
