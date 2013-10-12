@@ -17,6 +17,7 @@ GLuint stage::program = 0;
 GLint stage::attribute_coord3d = 0;
 GLint stage::attribute_v_color = 0;
 GLint stage::uniform_mvp = 0;
+//GLuint stage::vao = 0;
 
 camera* stage::myCamera = NULL;
 std::vector<rigidbodies*> stage::myBodies;
@@ -49,6 +50,7 @@ int stage::run() {
     glfwSwapInterval(1);
     
     //Initialize GLEW
+    glewExperimental = GL_TRUE;
     GLenum glew_status = glewInit();
     if (glew_status != GLEW_OK) {
         fprintf(stderr, "Error: %s\n", glewGetErrorString(glew_status));
@@ -117,6 +119,9 @@ bool stage::initShaders() {
 }
 
 int stage::initResources() {
+    //glGenVertexArrays(1, &vao);
+    //glBindVertexArray(vao);
+    
     for(int i=0;i<numBodyTypes;i++) {
         myBodies.at(i)->init_buffers();
     }
@@ -164,6 +169,7 @@ void stage::updateDraw() {
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
     
     glUseProgram(program);
+    //glBindVertexArray(vao);
     
     //Draw Stuff Here
     for( int i=0; i<numBodyTypes; i++) {

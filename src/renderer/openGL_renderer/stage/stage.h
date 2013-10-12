@@ -42,6 +42,7 @@ public:
     static GLint attribute_coord3d;
     static GLint attribute_v_color;
     static GLint uniform_mvp;
+    //static GLuint vao;
     
 public:
     static void initStage();

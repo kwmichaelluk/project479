@@ -24,10 +24,13 @@
 
 class rigidbodies {
 protected:
+    GLuint vao;
+    
     //Holds all instances of the same rigid body
     GLuint vbo_vertices;
     GLuint vbo_colors;
     GLuint ibo_elements;
+    
     
     rigidbody *myBodies;
     int size; //Number of bodies within vbo
@@ -105,7 +108,11 @@ public:
             /* Push each element in buffer_vertices to the vertex shader */
             glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
             int size;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
+            
+            glBindVertexArray(vao);
             glDrawElements(GL_TRIANGLES, size/sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
+            
+            //glDrawArrays(GL_TRIANGLES, 0, size/sizeof(GLushort));
         }
     };
     

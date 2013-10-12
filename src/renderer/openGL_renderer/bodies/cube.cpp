@@ -9,6 +9,9 @@
 #include "cube.h"
 
 void cube::init_buffers() {
+    glGenVertexArrays(1, &vao);
+    glBindVertexArray(vao);
+    
     GLfloat cube_vertices[] = {
         // front
         -1.0, -1.0,  1.0,
