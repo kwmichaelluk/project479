@@ -41,6 +41,8 @@ public:
     static GLuint shader_program;
     static GLint attribute_coord3d;
     static GLint attribute_v_color;
+    static GLint attribute_positions;
+    
     static GLint uniform_mvp;
     //static GLuint vao;
     

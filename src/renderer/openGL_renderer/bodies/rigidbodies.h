@@ -20,7 +20,7 @@
 
 #include "rigidbody.h"
 #include "../tools/camera.h"
-
+#include <vector>
 
 class rigidbodies {
 protected:
@@ -31,8 +31,14 @@ protected:
     GLuint vbo_colors;
     GLuint ibo_elements;
     
+    //FOr instancing
+    GLuint vbo_positions;
+    
     rigidbody *myBodies;
     int size; //Number of bodies within vbo
+    
+    //Holds position data
+    std::vector<glm::vec4> positions;
     
 private:
     //Helper methods
@@ -50,16 +56,64 @@ private:
         }
     }
     
+    void drawBodies(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &uniform_mvp) {
+        
+        
+        for(int i=0; i<size; i++) {
+            (myBodies+i)->uniformUpdate(uniform_mvp);
+            
+            /* Push each element in buffer_vertices to the vertex shader */
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
+            int size;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
+            
+            glDrawElements(GL_TRIANGLES, size/sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
+        }
+    }
+    
 public:
     rigidbodies(int size, GLint &uniform_mvp) {
         this->size = size;
         myBodies = new rigidbody[size];
         
+        positions.resize(size);
+        
         init_rigidBody(uniform_mvp);
+        
     };
     
     //Initializes vbo, ibo buffers and vertices (shape)
-    virtual void init_buffers() = 0;
+    virtual void init_buffers() {
+        glGenVertexArrays(1, &vao);
+        glBindVertexArray(vao);
+        
+        glGenBuffers( 1, &vbo_positions );
+        glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
+    }
+    
+    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_v_color) {
+        glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
+        glEnableVertexAttribArray(attribute_coord3d);
+        // Describe our vertices array to OpenGL (it can't guess its format automatically)
+        glVertexAttribPointer(
+                              attribute_coord3d, // attribute
+                              3,                 // number of elements per vertex, here (x,y,z)
+                              GL_FLOAT,          // the type of each element
+                              GL_FALSE,          // take our values as-is
+                              0,                 // no extra data between each position
+                              0                  // offset of first element
+                              );
+        
+        glBindBuffer(GL_ARRAY_BUFFER, vbo_colors);
+        glEnableVertexAttribArray(attribute_v_color);
+        glVertexAttribPointer(
+                              attribute_v_color, // attribute
+                              3,                 // number of elements per vertex, here (R,G,B)
+                              GL_FLOAT,          // the type of each element
+                              GL_FALSE,          // take our values as-is
+                              0,                 // no extra data between each position
+                              0                  // offset of first element
+                              );
+    }
     
     void updateMVP(glm::mat4 &view, glm::mat4 &projection) {
         //Update all MVP
@@ -77,42 +131,7 @@ public:
     
     void initDrawBodies(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &uniform_mvp) {
         glBindVertexArray(vao); //Bind VAO
-        for(int i=0; i<size; i++) {
-            //Set Box To Draw
-            //glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr((myBodies+i)->mvp));
-            (myBodies+i)->uniformUpdate(uniform_mvp);
-            
-            glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
-            glEnableVertexAttribArray(attribute_coord3d);
-            // Describe our vertices array to OpenGL (it can't guess its format automatically)
-            glVertexAttribPointer(
-                                  attribute_coord3d, // attribute
-                                  3,                 // number of elements per vertex, here (x,y,z)
-                                  GL_FLOAT,          // the type of each element
-                                  GL_FALSE,          // take our values as-is
-                                  0,                 // no extra data between each position
-                                  0                  // offset of first element
-                                  );
-            
-            glBindBuffer(GL_ARRAY_BUFFER, vbo_colors);
-            glEnableVertexAttribArray(attribute_v_color);
-            glVertexAttribPointer(
-                                  attribute_v_color, // attribute
-                                  3,                 // number of elements per vertex, here (R,G,B)
-                                  GL_FLOAT,          // the type of each element
-                                  GL_FALSE,          // take our values as-is
-                                  0,                 // no extra data between each position
-                                  0                  // offset of first element
-                                  );
-            
-            /* Push each element in buffer_vertices to the vertex shader */
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
-            int size;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
-            
-            glDrawElements(GL_TRIANGLES, size/sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
-            
-            //glDrawArrays(GL_TRIANGLES, 0, size/sizeof(GLushort));
-        }
+        drawBodies(attribute_coord3d,attribute_v_color,uniform_mvp);
         glBindVertexArray(0); //Unbind VAO
     };
     

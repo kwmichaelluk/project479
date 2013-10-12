@@ -16,8 +16,9 @@ int stage::numBodyTypes = 0;
 GLuint stage::shader_program = 0;
 GLint stage::attribute_coord3d = 0;
 GLint stage::attribute_v_color = 1;
+GLint stage::attribute_positions = 2;
+
 GLint stage::uniform_mvp = 0;
-//GLuint stage::vao = 0;
 
 camera* stage::myCamera = NULL;
 std::vector<rigidbodies*> stage::myBodies;
@@ -127,6 +128,7 @@ int stage::initResources() {
     
     for(int i=0;i<numBodyTypes;i++) {
         myBodies.at(i)->init_buffers();
+        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_v_color);
     }
     return initShaders();
 }
@@ -186,8 +188,8 @@ void stage::updateDraw() {
     
     //glUseProgram(0);
     
-    glDisableVertexAttribArray(attribute_coord3d);
-    glDisableVertexAttribArray(attribute_v_color);
+    //glDisableVertexAttribArray(attribute_coord3d);
+    //glDisableVertexAttribArray(attribute_v_color);
 }
 
 void stage::onReshape(int width, int height) {
