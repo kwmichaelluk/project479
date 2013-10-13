@@ -44,6 +44,7 @@ public:
     static GLint attribute_positions;
     
     static GLint uniform_mvp;
+    static glm::mat4 m_mvp;
     //static GLuint vao;
     
 public:

@@ -40,6 +40,9 @@ protected:
     //Holds position data
     std::vector<glm::vec4> positions;
     
+    //MVP
+    //glm::mat4 m_mvp;
+    
 private:
     //Helper methods
     
@@ -56,26 +59,19 @@ private:
         }
     }
     
-    void drawBodies(GLint &uniform_mvp) {
+    void drawBodies(GLint &uniform_mvp, glm::mat4 &mvp) {
 
         if(config::instancing)
-            drawBodiesInstanced(uniform_mvp);
-        else
-            //DONT NEED THIS IF INSTANCING
-            for(int i=0; i<size; i++) {
-                (myBodies+i)->uniformUpdate(uniform_mvp);
-                
-                glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
-                int size;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
-                
-                glDrawElements(GL_TRIANGLES, size/sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
-            }
+            drawBodiesInstanced(uniform_mvp, mvp);
+
     }
     
-    void drawBodiesInstanced(GLint &uniform_mvp) {
+    void drawBodiesInstanced(GLint &uniform_mvp, glm::mat4 &mvp) {
+        
+        glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr(mvp));
+        
         for( int c = 0; c < size; c++ )
         {
-            (myBodies+c)->uniformUpdate(uniform_mvp);
             positions[c] = glm::vec4((myBodies+c)->position,0);
         }
         
@@ -157,18 +153,22 @@ public:
         for(int i=0;i<size;i++) {
             (myBodies+i)->update(view, projection);
         }
+        //m_mvp = projection*view;
     }
     
     void updateUniform(GLint &uniform_mvp) {
-        for(int i=0;i<size;i++) {
+        /*for(int i=0;i<size;i++) {
             //glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr((myBodies+i)->mvp));
             (myBodies+i)->uniformUpdate(uniform_mvp);
-        }
+        }*/
+        
     }
     
-    void initDrawBodies(GLint &uniform_mvp) {
+    void initDrawBodies(GLint &uniform_mvp, glm::mat4 &mvp) {
         glBindVertexArray(vao); //Bind VAO
-        drawBodies(uniform_mvp);
+        
+        drawBodies(uniform_mvp, mvp);
+        
         glBindVertexArray(0); //Unbind VAO
     };
     

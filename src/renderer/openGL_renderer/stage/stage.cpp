@@ -19,6 +19,7 @@ GLint stage::attribute_v_color = 1;
 GLint stage::attribute_positions = 2;
 
 GLint stage::uniform_mvp = 0;
+glm::mat4 stage::m_mvp;
 
 camera* stage::myCamera = NULL;
 std::vector<rigidbodies*> stage::myBodies;
@@ -167,6 +168,7 @@ void stage::onIdle() {
     for(int i=0;i<numBodyTypes;i++) {
         myBodies.at(i)->updateMVP(myCamera->view, myCamera->projection);
     }
+    m_mvp = (myCamera->projection)*(myCamera->view);
     
     //Bind shader program
     glUseProgram(shader_program);
@@ -174,7 +176,7 @@ void stage::onIdle() {
     /*for( int i=0; i<numBodyTypes; i++) {
         myBodies.at(i)->updateUniform(uniform_mvp);
     }*/
-
+    
     //Draw Again
     updateDraw();
     
@@ -192,7 +194,7 @@ void stage::updateDraw() {
     
     //Draw Stuff Here - NOTE: Each "bodies" each has their own VAO
     for( int i=0; i<numBodyTypes; i++) {
-        myBodies.at(i)->initDrawBodies(uniform_mvp);
+        myBodies.at(i)->initDrawBodies(uniform_mvp, m_mvp);
     }
     
     //glUseProgram(0);

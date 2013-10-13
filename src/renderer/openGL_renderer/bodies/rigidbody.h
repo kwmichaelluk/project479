@@ -29,11 +29,11 @@ private:
     double *pos_y;
     double *pos_z;
     
-    glm::mat4 model;
+    //glm::mat4 model;
     
 public:
     glm::vec3 position;
-    glm::mat4 mvp;
+    //glm::mat4 mvp;
     
     
     
@@ -53,7 +53,7 @@ public:
     }
     
     //Update MVP and Position (Position no longer part of MVP)
-    void update(glm::mat4 &view, glm::mat4 projection) {
+    void update(glm::mat4 &view, glm::mat4 &projection) {
         //Update position data
         position.x = *pos_x;
         position.y = *pos_y;
@@ -61,18 +61,18 @@ public:
         
         
         //Keep model constant for instancing...
-        if(config::instancing)
+        /*if(config::instancing)
             model = glm::translate(glm::mat4(1.0f), glm::vec3(0,0,0));
         else
-            model = glm::translate(glm::mat4(1.0f), position);
+            model = glm::translate(glm::mat4(1.0f), position);*/
         
-        mvp = projection * view * model;
+        //mvp = projection * view; //* model;
     };
     
     //Call after glUseProgram in onIdle in rigidbodies
-    void uniformUpdate(GLint &uniform_mvp) {
+    /*void uniformUpdate(GLint &uniform_mvp) {
         glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr(mvp));
-    };
+    };*/
     
     //glm::mat4 getMVP() { return mvp; };
     
