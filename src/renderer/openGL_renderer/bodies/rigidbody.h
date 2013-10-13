@@ -22,14 +22,9 @@
 
 class rigidbody {
 private:
-    //GLint *uniform_mvp;
-    
-    
     double *pos_x;
     double *pos_y;
     double *pos_z;
-    
-    //glm::mat4 model;
     
 public:
     glm::vec3 position;

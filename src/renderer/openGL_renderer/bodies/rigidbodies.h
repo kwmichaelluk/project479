@@ -38,7 +38,7 @@ protected:
     int size; //Number of bodies within vbo
     
     //Holds position data
-    std::vector<glm::vec4> positions;
+    std::vector<glm::vec3> positions;
     
     //MVP
     //glm::mat4 m_mvp;
@@ -70,9 +70,8 @@ private:
         
         glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr(mvp));
         
-        for( int c = 0; c < size; c++ )
-        {
-            positions[c] = glm::vec4((myBodies+c)->position,0);
+        for( int c = 0; c < size; c++ ) {
+            positions[c] = (myBodies+c)->position;
         }
         
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
@@ -136,10 +135,10 @@ public:
         glEnableVertexAttribArray( attribute_positions );
         glVertexAttribPointer(
                               attribute_positions, // attribute
-                              4,
+                              3,
                               GL_FLOAT,          // the type of each element
                               GL_FALSE,          // take our values as-is
-                              sizeof(glm::vec4),
+                              sizeof(glm::vec3),
                               0                  // offset of first element
                               );
         glVertexAttribDivisor(attribute_positions,1);

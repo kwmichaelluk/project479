@@ -16,8 +16,8 @@ namespace config {
     static const std::string shader_dir = "shaders";
     static const std::string data_dir = "data";
 
-    static const std::string frag_shader_file = "cube.frag";
-    static const std::string vert_shader_file = "cube.vert";
+    static const std::string frag_shader_file = "shader.frag";
+    static const std::string vert_shader_file = "shader.vert";
 
     static const std::string pos_data_file = "data_pos";
 
