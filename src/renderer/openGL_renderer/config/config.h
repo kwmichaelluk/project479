@@ -25,6 +25,9 @@ namespace config {
     static const std::string vert_shader_path = shader_dir+"/"+vert_shader_file;
 
     static const std::string pos_data_path = data_dir+"/"+pos_data_file;
+    
+    static const bool instancing = true;
+    //NOTE: If not instancing, remove 'm_pos' from vertex shader
 
 }
 

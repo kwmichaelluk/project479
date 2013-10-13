@@ -99,16 +99,25 @@ bool stage::initShaders() {
     attribute_name = "coord3d";
     //attribute_coord3d = glGetAttribLocation(shader_program, attribute_name);
     glBindAttribLocation(shader_program, attribute_coord3d, attribute_name);
-    if (glGetAttribLocation(shader_program,"coord3d") == -1) {
+    if (glGetAttribLocation(shader_program,attribute_name) == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
         return 0;
     }
     attribute_name = "v_color";
     //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
     glBindAttribLocation(shader_program, attribute_v_color, attribute_name);
-    if (glGetAttribLocation(shader_program,"v_color") == -1) {
+    if (glGetAttribLocation(shader_program,attribute_name) == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
         return 0;
+    }
+    if(config::instancing) {
+        attribute_name = "m_pos";
+        //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
+        glBindAttribLocation(shader_program, attribute_positions, attribute_name);
+        if (glGetAttribLocation(shader_program,attribute_name) == -1) {
+            fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+            return 0;
+        }
     }
     
     const char* uniform_name;
@@ -128,7 +137,7 @@ int stage::initResources() {
     
     for(int i=0;i<numBodyTypes;i++) {
         myBodies.at(i)->init_buffers();
-        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_v_color);
+        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_v_color, attribute_positions);
     }
     return initShaders();
 }
@@ -183,7 +192,7 @@ void stage::updateDraw() {
     
     //Draw Stuff Here - NOTE: Each "bodies" each has their own VAO
     for( int i=0; i<numBodyTypes; i++) {
-        myBodies.at(i)->initDrawBodies(attribute_coord3d,attribute_v_color,uniform_mvp);
+        myBodies.at(i)->initDrawBodies(uniform_mvp);
     }
     
     //glUseProgram(0);

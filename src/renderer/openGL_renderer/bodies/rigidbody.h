@@ -18,10 +18,12 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "config.h"
+
 class rigidbody {
 private:
     //GLint *uniform_mvp;
-    glm::vec3 position;
+    
     
     double *pos_x;
     double *pos_y;
@@ -30,6 +32,7 @@ private:
     glm::mat4 model;
     
 public:
+    glm::vec3 position;
     glm::mat4 mvp;
     
     
@@ -49,13 +52,20 @@ public:
         pos_x=x; pos_y=y; pos_z=z;
     }
     
-    //Update MVP
+    //Update MVP and Position (Position no longer part of MVP)
     void update(glm::mat4 &view, glm::mat4 projection) {
+        //Update position data
         position.x = *pos_x;
         position.y = *pos_y;
         position.z = *pos_z;
         
-        model = glm::translate(glm::mat4(1.0f), position);
+        
+        //Keep model constant for instancing...
+        if(config::instancing)
+            model = glm::translate(glm::mat4(1.0f), glm::vec3(0,0,0));
+        else
+            model = glm::translate(glm::mat4(1.0f), position);
+        
         mvp = projection * view * model;
     };
     

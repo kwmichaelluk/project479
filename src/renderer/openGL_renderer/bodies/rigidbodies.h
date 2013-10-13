@@ -56,19 +56,38 @@ private:
         }
     }
     
-    void drawBodies(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &uniform_mvp) {
-        
-        
-        for(int i=0; i<size; i++) {
-            (myBodies+i)->uniformUpdate(uniform_mvp);
-            
-            /* Push each element in buffer_vertices to the vertex shader */
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
-            int size;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
-            
-            glDrawElements(GL_TRIANGLES, size/sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
-        }
+    void drawBodies(GLint &uniform_mvp) {
+
+        if(config::instancing)
+            drawBodiesInstanced(uniform_mvp);
+        else
+            //DONT NEED THIS IF INSTANCING
+            for(int i=0; i<size; i++) {
+                (myBodies+i)->uniformUpdate(uniform_mvp);
+                
+                glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
+                int size;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &size);
+                
+                glDrawElements(GL_TRIANGLES, size/sizeof(GLushort), GL_UNSIGNED_SHORT, 0);
+            }
     }
+    
+    void drawBodiesInstanced(GLint &uniform_mvp) {
+        for( int c = 0; c < size; c++ )
+        {
+            (myBodies+c)->uniformUpdate(uniform_mvp);
+            positions[c] = glm::vec4((myBodies+c)->position,0);
+        }
+        
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
+        int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
+        
+        glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
+        glBufferData( GL_ARRAY_BUFFER, sizeof( glm::vec4 ) * size, &positions[0][0], GL_DYNAMIC_DRAW );
+        
+        glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, size);
+    }
+    
     
 public:
     rigidbodies(int size, GLint &uniform_mvp) {
@@ -86,11 +105,11 @@ public:
         glGenVertexArrays(1, &vao);
         glBindVertexArray(vao);
         
-        glGenBuffers( 1, &vbo_positions );
-        glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
+        
+        
     }
     
-    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_v_color) {
+    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &attribute_positions) {
         glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
         glEnableVertexAttribArray(attribute_coord3d);
         // Describe our vertices array to OpenGL (it can't guess its format automatically)
@@ -113,6 +132,24 @@ public:
                               0,                 // no extra data between each position
                               0                  // offset of first element
                               );
+        
+        //Instanced Position...
+        glGenBuffers( 1, &vbo_positions );
+        glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
+
+        glEnableVertexAttribArray( attribute_positions );
+        glVertexAttribPointer(
+                              attribute_positions, // attribute
+                              4,
+                              GL_FLOAT,          // the type of each element
+                              GL_FALSE,          // take our values as-is
+                              sizeof(glm::vec4),
+                              0                  // offset of first element
+                              );
+        glVertexAttribDivisor(attribute_positions,1);
+        
+        
+        
     }
     
     void updateMVP(glm::mat4 &view, glm::mat4 &projection) {
@@ -129,9 +166,9 @@ public:
         }
     }
     
-    void initDrawBodies(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &uniform_mvp) {
+    void initDrawBodies(GLint &uniform_mvp) {
         glBindVertexArray(vao); //Bind VAO
-        drawBodies(attribute_coord3d,attribute_v_color,uniform_mvp);
+        drawBodies(uniform_mvp);
         glBindVertexArray(0); //Unbind VAO
     };
     
@@ -139,12 +176,15 @@ public:
         glDeleteBuffers(1, &vbo_vertices);
         glDeleteBuffers(1, &vbo_colors);
         glDeleteBuffers(1, &ibo_elements);
+        glDeleteBuffers(1, &vbo_positions);
     };  //Call on destroy
     
     //Link the position of a specific object at INDEX
     void linkPosition(double *pos_x, double *pos_y, double *pos_z, int index) {
-        if(index < size)
+        if(index < size) {
             (myBodies+index)->setPosition(pos_x, pos_y, pos_z);
+            //positions[index] = glm::vec4(*pos_x,*pos_y,*pos_z,0);
+        }
     }
     
 };
