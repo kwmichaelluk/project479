@@ -14,9 +14,12 @@ int stage::screen_height = 800;
 int stage::numBodyTypes = 0;
 
 GLuint stage::shader_program = 0;
+
+//Attribute Locations
 GLint stage::attribute_coord3d = 0;
 GLint stage::attribute_v_color = 1;
-GLint stage::attribute_positions = 2;
+
+GLint stage::attribute_model = 2;
 
 GLint stage::uniform_view = 0;
 GLint stage::uniform_proj = 0;
@@ -91,6 +94,40 @@ bool stage::initShaders() {
     shader_program = glCreateProgram();
     glAttachShader(shader_program, vs);
     glAttachShader(shader_program, fs);
+    /*glLinkProgram(shader_program);
+    glGetProgramiv(shader_program, GL_LINK_STATUS, &link_ok);
+    if (!link_ok) {
+        fprintf(stderr, "glLinkProgram:");
+        print_log(shader_program);
+        return 0;
+    }*/
+    
+    const char* attribute_name;
+    attribute_name = "coord3d";
+    //attribute_coord3d = glGetAttribLocation(shader_program, attribute_name);
+    glBindAttribLocation(shader_program, attribute_coord3d, attribute_name);
+    /*if (glGetAttribLocation(shader_program,attribute_name) == -1) {
+        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+        return 0;
+    }*/
+    attribute_name = "v_color";
+    //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
+    glBindAttribLocation(shader_program, attribute_v_color, attribute_name);
+    /*if (glGetAttribLocation(shader_program,attribute_name) == -1) {
+        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+        return 0;
+    }*/
+    if(config::instancing) {        
+        attribute_name = "model_matrix";
+        //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
+        glBindAttribLocation(shader_program, attribute_model, attribute_name);
+        /*if (glGetAttribLocation(shader_program,attribute_name) == -1) {
+            fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+            return 0;
+        }*/
+    }
+    
+    //Link Shader
     glLinkProgram(shader_program);
     glGetProgramiv(shader_program, GL_LINK_STATUS, &link_ok);
     if (!link_ok) {
@@ -99,31 +136,21 @@ bool stage::initShaders() {
         return 0;
     }
     
-    const char* attribute_name;
-    attribute_name = "coord3d";
-    //attribute_coord3d = glGetAttribLocation(shader_program, attribute_name);
-    glBindAttribLocation(shader_program, attribute_coord3d, attribute_name);
-    if (glGetAttribLocation(shader_program,attribute_name) == -1) {
+    //Check Attributes
+    if (glGetAttribLocation(shader_program,"coord3d") == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
         return 0;
     }
-    attribute_name = "v_color";
-    //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
-    glBindAttribLocation(shader_program, attribute_v_color, attribute_name);
-    if (glGetAttribLocation(shader_program,attribute_name) == -1) {
+    if (glGetAttribLocation(shader_program,"v_color") == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
         return 0;
     }
-    if(config::instancing) {
-        attribute_name = "m_pos";
-        //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
-        glBindAttribLocation(shader_program, attribute_positions, attribute_name);
-        if (glGetAttribLocation(shader_program,attribute_name) == -1) {
-            fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
-            return 0;
-        }
+    if (glGetAttribLocation(shader_program,"model_matrix") == -1) {
+        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+        return 0;
     }
     
+    //Get Uniform Locations
     const char* uniform_name;
     uniform_name = "view_matrix";
     uniform_view = glGetUniformLocation(shader_program, uniform_name);
@@ -147,7 +174,7 @@ int stage::initResources() {
     
     for(int i=0;i<numBodyTypes;i++) {
         myBodies.at(i)->init_buffers();
-        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_v_color, attribute_positions);
+        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_v_color, attribute_model);
     }
     return initShaders();
 }

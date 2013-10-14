@@ -32,13 +32,14 @@ protected:
     GLuint ibo_elements;
     
     //FOr instancing
-    GLuint vbo_positions;
+//    GLuint vbo_positions;
+    GLuint vbo_models;
     
     rigidbody *myBodies;
     int size; //Number of bodies within vbo
     
     //Holds position data
-    std::vector<glm::vec3> positions;
+//    std::vector<glm::vec3> positions;
     
     //MVP
     //glm::mat4 m_mvp;
@@ -69,19 +70,28 @@ private:
     }
     
     void drawBodiesInstanced(glm::mat4 &view,glm::mat4 &proj) {
+        glBindBuffer(GL_ARRAY_BUFFER, vbo_models);
+        
+        glm::mat4 * modelmap = (glm::mat4 *)glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+        for (int n = 0; n < size; n++)
+        {
+            modelmap[n] = (myBodies+n)->model_matrix;
+        }
+        
+        glUnmapBuffer(GL_ARRAY_BUFFER);
         
         glUniformMatrix4fv(*uniform_view, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(*uniform_proj, 1, GL_FALSE, glm::value_ptr(proj));
         
-        for( int c = 0; c < size; c++ ) {
-            positions[c] = (myBodies+c)->position;
-        }
+        /*for( int c = 0; c < size; c++ ) {
+            positions[c] = glm::vec3(0,0,0);
+        }*/
         
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
         int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
         
-        glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
-        glBufferData( GL_ARRAY_BUFFER, sizeof( glm::vec4 ) * size, &positions[0][0], GL_DYNAMIC_DRAW );
+        //glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
+        //glBufferData( GL_ARRAY_BUFFER, sizeof( glm::vec4 ) * size, &positions[0][0], GL_DYNAMIC_DRAW );
         
         glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, size);
     }
@@ -92,7 +102,7 @@ public:
         this->size = size;
         myBodies = new rigidbody[size];
         
-        positions.resize(size);
+        //positions.resize(size);
         
         init_rigidBody();
         
@@ -104,7 +114,7 @@ public:
         glBindVertexArray(vao);
     }
     
-    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &attribute_positions) {
+    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &attribute_model) {
         glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
         glEnableVertexAttribArray(attribute_coord3d);
         // Describe our vertices array to OpenGL (it can't guess its format automatically)
@@ -129,7 +139,7 @@ public:
                               );
         
         //Instanced Position...
-        glGenBuffers( 1, &vbo_positions );
+        /*glGenBuffers( 1, &vbo_positions );
         glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
 
         glEnableVertexAttribArray( attribute_positions );
@@ -141,7 +151,28 @@ public:
                               sizeof(glm::vec3),
                               0                  // offset of first element
                               );
-        glVertexAttribDivisor(attribute_positions,1);
+        glVertexAttribDivisor(attribute_positions,1);*/
+        
+        
+        
+        glGenBuffers( 1, &vbo_models );
+        glBindBuffer( GL_ARRAY_BUFFER, vbo_models );
+        glBufferData(GL_ARRAY_BUFFER, size * sizeof(glm::mat4), NULL, GL_DYNAMIC_DRAW);
+        char* pp=0;
+        GLsizei ss = sizeof(glm::mat4);
+        for(int i=0;i<4;i++) {
+            glEnableVertexAttribArray( attribute_model+i );
+            glVertexAttribPointer(
+                                  attribute_model+i, // attribute
+                                  4,
+                                  GL_FLOAT,          // the type of each element
+                                  GL_FALSE,          // take our values as-is
+                                  ss,
+                                  pp+(i*sizeof(glm::vec4))                // offset of first element
+                                  );
+            glVertexAttribDivisor(attribute_model+i,1);
+        }
+        
     }
     
     void linkUniforms(GLint &uniform_view, GLint &uniform_proj) {
@@ -177,7 +208,8 @@ public:
         glDeleteBuffers(1, &vbo_vertices);
         glDeleteBuffers(1, &vbo_colors);
         glDeleteBuffers(1, &ibo_elements);
-        glDeleteBuffers(1, &vbo_positions);
+        //glDeleteBuffers(1, &vbo_positions);
+        glDeleteBuffers(1, &vbo_models);
     };  //Call on destroy
     
     //Link the position of a specific object at INDEX

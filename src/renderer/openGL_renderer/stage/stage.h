@@ -41,7 +41,8 @@ public:
     static GLuint shader_program;
     static GLint attribute_coord3d;
     static GLint attribute_v_color;
-    static GLint attribute_positions;
+
+    static GLint attribute_model;
     
     static GLint uniform_view, uniform_proj;
     static glm::mat4 m_mvp;

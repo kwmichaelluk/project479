@@ -28,6 +28,7 @@ private:
     
 public:
     glm::vec3 position;
+    glm::mat4 model_matrix;
     //glm::mat4 mvp;
     
     
@@ -35,15 +36,7 @@ public:
 public:
     rigidbody() {};
     
-    /*void setUniformMvp(GLint &uniform_mvp) {
-        this->uniform_mvp = &uniform_mvp;
-    }*/
-    
     void setPosition(double *x, double *y, double *z) {
-        /*position.x = x;
-        position.y = y;
-        position.z = z;*/
-        
         pos_x=x; pos_y=y; pos_z=z;
     }
     
@@ -54,6 +47,7 @@ public:
         position.y = *pos_y;
         position.z = *pos_z;
         
+        model_matrix = glm::translate(glm::mat4(1.0f), position);
         
         //Keep model constant for instancing...
         /*if(config::instancing)
