@@ -12,7 +12,7 @@
 #include <iostream>
 
 namespace config {
-
+    //File Directories
     static const std::string shader_dir = "shaders";
     static const std::string data_dir = "data";
 
@@ -26,7 +26,16 @@ namespace config {
 
     static const std::string pos_data_path = data_dir+"/"+pos_data_file;
     
-    static const bool instancing = true;
+    //Attribute Names
+    static const std::string coord3d = "coord3d";
+    static const std::string v_color = "v_color";
+    static const std::string model_matrix = "model_matrix";
+    
+    //Uniform Names
+    static const std::string view_matrix = "view_matrix";
+    static const std::string proj_matrix = "proj_matrix";
+    
+//    static const bool instancing = true;
     //NOTE: If not instancing, remove 'm_pos' from vertex shader
 
 }

@@ -25,13 +25,10 @@ private:
     double *pos_x;
     double *pos_y;
     double *pos_z;
+    glm::vec3 position;
     
 public:
-    glm::vec3 position;
     glm::mat4 model_matrix;
-    //glm::mat4 mvp;
-    
-    
     
 public:
     rigidbody() {};
@@ -49,21 +46,8 @@ public:
         
         model_matrix = glm::translate(glm::mat4(1.0f), position);
         
-        //Keep model constant for instancing...
-        /*if(config::instancing)
-            model = glm::translate(glm::mat4(1.0f), glm::vec3(0,0,0));
-        else
-            model = glm::translate(glm::mat4(1.0f), position);*/
-        
-        //mvp = projection * view; //* model;
     };
-    
-    //Call after glUseProgram in onIdle in rigidbodies
-    /*void uniformUpdate(GLint &uniform_mvp) {
-        glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr(mvp));
-    };*/
-    
-    //glm::mat4 getMVP() { return mvp; };
+
     
 };
 

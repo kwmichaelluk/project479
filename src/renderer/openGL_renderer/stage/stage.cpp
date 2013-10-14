@@ -91,41 +91,16 @@ bool stage::initShaders() {
     if ((vs = create_shader(config::vert_shader_path.c_str(), GL_VERTEX_SHADER))   == 0) return 0;
     if ((fs = create_shader(config::frag_shader_path.c_str(), GL_FRAGMENT_SHADER)) == 0) return 0;
     
+    //Create Program and Attach Shaders
     shader_program = glCreateProgram();
     glAttachShader(shader_program, vs);
     glAttachShader(shader_program, fs);
-    /*glLinkProgram(shader_program);
-    glGetProgramiv(shader_program, GL_LINK_STATUS, &link_ok);
-    if (!link_ok) {
-        fprintf(stderr, "glLinkProgram:");
-        print_log(shader_program);
-        return 0;
-    }*/
-    
-    const char* attribute_name;
-    attribute_name = "coord3d";
-    //attribute_coord3d = glGetAttribLocation(shader_program, attribute_name);
-    glBindAttribLocation(shader_program, attribute_coord3d, attribute_name);
-    /*if (glGetAttribLocation(shader_program,attribute_name) == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
-        return 0;
-    }*/
-    attribute_name = "v_color";
-    //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
-    glBindAttribLocation(shader_program, attribute_v_color, attribute_name);
-    /*if (glGetAttribLocation(shader_program,attribute_name) == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
-        return 0;
-    }*/
-    if(config::instancing) {        
-        attribute_name = "model_matrix";
-        //attribute_v_color = glGetAttribLocation(shader_program, attribute_name);
-        glBindAttribLocation(shader_program, attribute_model, attribute_name);
-        /*if (glGetAttribLocation(shader_program,attribute_name) == -1) {
-            fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
-            return 0;
-        }*/
-    }
+
+    //Bind Attributes
+    glBindAttribLocation(shader_program, attribute_coord3d, config::coord3d.c_str());
+    glBindAttribLocation(shader_program, attribute_v_color, config::v_color.c_str());
+    glBindAttribLocation(shader_program, attribute_model, config::model_matrix.c_str());
+
     
     //Link Shader
     glLinkProgram(shader_program);
@@ -137,31 +112,29 @@ bool stage::initShaders() {
     }
     
     //Check Attributes
-    if (glGetAttribLocation(shader_program,"coord3d") == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+    if (glGetAttribLocation(shader_program,config::coord3d.c_str()) == -1) {
+        fprintf(stderr, "Could not bind attribute %s\n", config::coord3d.c_str());
         return 0;
     }
-    if (glGetAttribLocation(shader_program,"v_color") == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+    if (glGetAttribLocation(shader_program,config::v_color.c_str()) == -1) {
+        fprintf(stderr, "Could not bind attribute %s\n", config::v_color.c_str());
         return 0;
     }
-    if (glGetAttribLocation(shader_program,"model_matrix") == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", attribute_name);
+    if (glGetAttribLocation(shader_program,config::model_matrix.c_str()) == -1) {
+        fprintf(stderr, "Could not bind attribute %s\n", config::model_matrix.c_str());
         return 0;
     }
     
     //Get Uniform Locations
-    const char* uniform_name;
-    uniform_name = "view_matrix";
-    uniform_view = glGetUniformLocation(shader_program, uniform_name);
+    uniform_view = glGetUniformLocation(shader_program, config::view_matrix.c_str());
     if (uniform_view == -1) {
-        fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
+        fprintf(stderr, "Could not bind uniform %s\n", config::view_matrix.c_str());
         return 0;
     }
-    uniform_name = "proj_matrix";
-    uniform_proj = glGetUniformLocation(shader_program, uniform_name);
+
+    uniform_proj = glGetUniformLocation(shader_program, config::proj_matrix.c_str());
     if (uniform_proj == -1) {
-        fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
+        fprintf(stderr, "Could not bind uniform %s\n", config::proj_matrix.c_str());
         return 0;
     }
     

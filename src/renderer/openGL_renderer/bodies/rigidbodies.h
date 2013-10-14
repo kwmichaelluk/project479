@@ -56,22 +56,16 @@ private:
     
     void init_rigidBody() {
         for(int i=0;i<size;i++) {
-            //(myBodies+i)->setUniformMvp(uniform_mvp);
-            //(myBodies+i)->setPosition(i*2.5f, -3.0, -8.0);
             (myBodies+i)->setPosition(def_val_x, def_val_y, def_val_z);
         }
     }
     
     void drawBodies(glm::mat4 &view,glm::mat4 &proj) {
-
-        if(config::instancing)
-            drawBodiesInstanced(view,proj);
-
+        drawBodiesInstanced(view,proj);
     }
     
     void drawBodiesInstanced(glm::mat4 &view,glm::mat4 &proj) {
         glBindBuffer(GL_ARRAY_BUFFER, vbo_models);
-        
         glm::mat4 * modelmap = (glm::mat4 *)glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
         for (int n = 0; n < size; n++)
         {
@@ -83,15 +77,8 @@ private:
         glUniformMatrix4fv(*uniform_view, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(*uniform_proj, 1, GL_FALSE, glm::value_ptr(proj));
         
-        /*for( int c = 0; c < size; c++ ) {
-            positions[c] = glm::vec3(0,0,0);
-        }*/
-        
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
         int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
-        
-        //glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
-        //glBufferData( GL_ARRAY_BUFFER, sizeof( glm::vec4 ) * size, &positions[0][0], GL_DYNAMIC_DRAW );
         
         glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, size);
     }
@@ -102,7 +89,6 @@ public:
         this->size = size;
         myBodies = new rigidbody[size];
         
-        //positions.resize(size);
         
         init_rigidBody();
         
@@ -138,23 +124,7 @@ public:
                               0                  // offset of first element
                               );
         
-        //Instanced Position...
-        /*glGenBuffers( 1, &vbo_positions );
-        glBindBuffer( GL_ARRAY_BUFFER, vbo_positions );
-
-        glEnableVertexAttribArray( attribute_positions );
-        glVertexAttribPointer(
-                              attribute_positions, // attribute
-                              3,
-                              GL_FLOAT,          // the type of each element
-                              GL_FALSE,          // take our values as-is
-                              sizeof(glm::vec3),
-                              0                  // offset of first element
-                              );
-        glVertexAttribDivisor(attribute_positions,1);*/
-        
-        
-        
+        //Instanced Model Matrix...
         glGenBuffers( 1, &vbo_models );
         glBindBuffer( GL_ARRAY_BUFFER, vbo_models );
         glBufferData(GL_ARRAY_BUFFER, size * sizeof(glm::mat4), NULL, GL_DYNAMIC_DRAW);
@@ -188,14 +158,6 @@ public:
         //m_mvp = projection*view;
     }
     
-    void updateUniform(GLint &uniform_mvp) {
-        /*for(int i=0;i<size;i++) {
-            //glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr((myBodies+i)->mvp));
-            (myBodies+i)->uniformUpdate(uniform_mvp);
-        }*/
-        
-    }
-    
     void initDrawBodies(glm::mat4 &view,glm::mat4 &proj) {
         glBindVertexArray(vao); //Bind VAO
         
@@ -208,7 +170,6 @@ public:
         glDeleteBuffers(1, &vbo_vertices);
         glDeleteBuffers(1, &vbo_colors);
         glDeleteBuffers(1, &ibo_elements);
-        //glDeleteBuffers(1, &vbo_positions);
         glDeleteBuffers(1, &vbo_models);
     };  //Call on destroy
     
@@ -216,7 +177,6 @@ public:
     void linkPosition(double *pos_x, double *pos_y, double *pos_z, int index) {
         if(index < size) {
             (myBodies+index)->setPosition(pos_x, pos_y, pos_z);
-            //positions[index] = glm::vec4(*pos_x,*pos_y,*pos_z,0);
         }
     }
     
