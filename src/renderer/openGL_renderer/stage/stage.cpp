@@ -18,7 +18,8 @@ GLint stage::attribute_coord3d = 0;
 GLint stage::attribute_v_color = 1;
 GLint stage::attribute_positions = 2;
 
-GLint stage::uniform_mvp = 0;
+GLint stage::uniform_view = 0;
+GLint stage::uniform_proj = 0;
 glm::mat4 stage::m_mvp;
 
 camera* stage::myCamera = NULL;
@@ -65,6 +66,8 @@ int stage::run() {
     
     //Begin Process
     if(initResources()) {
+        linkUniforms();
+        
         init_glSettings();
         
         update_loop();
@@ -122,9 +125,15 @@ bool stage::initShaders() {
     }
     
     const char* uniform_name;
-    uniform_name = "mvp";
-    uniform_mvp = glGetUniformLocation(shader_program, uniform_name);
-    if (uniform_mvp == -1) {
+    uniform_name = "view_matrix";
+    uniform_view = glGetUniformLocation(shader_program, uniform_name);
+    if (uniform_view == -1) {
+        fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
+        return 0;
+    }
+    uniform_name = "proj_matrix";
+    uniform_proj = glGetUniformLocation(shader_program, uniform_name);
+    if (uniform_proj == -1) {
         fprintf(stderr, "Could not bind uniform %s\n", uniform_name);
         return 0;
     }
@@ -141,6 +150,12 @@ int stage::initResources() {
         myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_v_color, attribute_positions);
     }
     return initShaders();
+}
+
+void stage::linkUniforms() {
+    for(int i=0;i<numBodyTypes;i++) {
+        myBodies.at(i)->linkUniforms(uniform_view, uniform_proj);
+    }
 }
 
 void stage::init_glSettings() {
@@ -194,7 +209,7 @@ void stage::updateDraw() {
     
     //Draw Stuff Here - NOTE: Each "bodies" each has their own VAO
     for( int i=0; i<numBodyTypes; i++) {
-        myBodies.at(i)->initDrawBodies(uniform_mvp, m_mvp);
+        myBodies.at(i)->initDrawBodies(myCamera->view,myCamera->projection);
     }
     
     //glUseProgram(0);

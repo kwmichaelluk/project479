@@ -37,7 +37,7 @@ int main()
     
     //Define Objects
     int num_obj = 2;
-    cube ta(num_obj, stage::uniform_mvp);
+    cube ta(num_obj);
     
     //Link Object Data
     for(int i=0;i<num_obj;i++) {

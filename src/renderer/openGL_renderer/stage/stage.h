@@ -43,7 +43,7 @@ public:
     static GLint attribute_v_color;
     static GLint attribute_positions;
     
-    static GLint uniform_mvp;
+    static GLint uniform_view, uniform_proj;
     static glm::mat4 m_mvp;
     //static GLuint vao;
     
@@ -60,6 +60,8 @@ private:
     //Below methods are used in run()
     static bool initShaders(); //Called in initResources()
     static int initResources();
+    
+    static void linkUniforms();
     
     static void init_glSettings();
     

@@ -43,6 +43,8 @@ protected:
     //MVP
     //glm::mat4 m_mvp;
     
+    GLint *uniform_view;
+    GLint *uniform_proj;
 private:
     //Helper methods
     
@@ -51,7 +53,7 @@ private:
     double* def_val_y = new double(-3.0);
     double* def_val_z = new double(-8.0);
     
-    void init_rigidBody(GLint &uniform_mvp) {
+    void init_rigidBody() {
         for(int i=0;i<size;i++) {
             //(myBodies+i)->setUniformMvp(uniform_mvp);
             //(myBodies+i)->setPosition(i*2.5f, -3.0, -8.0);
@@ -59,16 +61,17 @@ private:
         }
     }
     
-    void drawBodies(GLint &uniform_mvp, glm::mat4 &mvp) {
+    void drawBodies(glm::mat4 &view,glm::mat4 &proj) {
 
         if(config::instancing)
-            drawBodiesInstanced(uniform_mvp, mvp);
+            drawBodiesInstanced(view,proj);
 
     }
     
-    void drawBodiesInstanced(GLint &uniform_mvp, glm::mat4 &mvp) {
+    void drawBodiesInstanced(glm::mat4 &view,glm::mat4 &proj) {
         
-        glUniformMatrix4fv(uniform_mvp, 1, GL_FALSE, glm::value_ptr(mvp));
+        glUniformMatrix4fv(*uniform_view, 1, GL_FALSE, glm::value_ptr(view));
+        glUniformMatrix4fv(*uniform_proj, 1, GL_FALSE, glm::value_ptr(proj));
         
         for( int c = 0; c < size; c++ ) {
             positions[c] = (myBodies+c)->position;
@@ -85,13 +88,13 @@ private:
     
     
 public:
-    rigidbodies(int size, GLint &uniform_mvp) {
+    rigidbodies(int size) {
         this->size = size;
         myBodies = new rigidbody[size];
         
         positions.resize(size);
         
-        init_rigidBody(uniform_mvp);
+        init_rigidBody();
         
     };
     
@@ -99,9 +102,6 @@ public:
     virtual void init_buffers() {
         glGenVertexArrays(1, &vao);
         glBindVertexArray(vao);
-        
-        
-        
     }
     
     void bind_buffers(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &attribute_positions) {
@@ -142,9 +142,11 @@ public:
                               0                  // offset of first element
                               );
         glVertexAttribDivisor(attribute_positions,1);
-        
-        
-        
+    }
+    
+    void linkUniforms(GLint &uniform_view, GLint &uniform_proj) {
+        this->uniform_view = &uniform_view;
+        this->uniform_proj = &uniform_proj;
     }
     
     void updateMVP(glm::mat4 &view, glm::mat4 &projection) {
@@ -163,10 +165,10 @@ public:
         
     }
     
-    void initDrawBodies(GLint &uniform_mvp, glm::mat4 &mvp) {
+    void initDrawBodies(glm::mat4 &view,glm::mat4 &proj) {
         glBindVertexArray(vao); //Bind VAO
         
-        drawBodies(uniform_mvp, mvp);
+        drawBodies(view,proj);
         
         glBindVertexArray(0); //Unbind VAO
     };

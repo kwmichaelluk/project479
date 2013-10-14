@@ -25,7 +25,7 @@ class cube : public rigidbodies {
 private:
     
 public:
-    cube(int size, GLint uniform_mvp) : rigidbodies(size, uniform_mvp) {};
+    cube(int size) : rigidbodies(size) {};
     
     void init_buffers();
     
