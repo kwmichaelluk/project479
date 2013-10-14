@@ -31,18 +31,10 @@ protected:
     GLuint vbo_colors;
     GLuint ibo_elements;
     
-    //FOr instancing
-//    GLuint vbo_positions;
     GLuint vbo_models;
     
     rigidbody *myBodies;
-    int size; //Number of bodies within vbo
-    
-    //Holds position data
-//    std::vector<glm::vec3> positions;
-    
-    //MVP
-    //glm::mat4 m_mvp;
+    int instance_size; //Number of bodies within vbo
     
     GLint *uniform_view;
     GLint *uniform_proj;
@@ -55,7 +47,7 @@ private:
     double* def_val_z = new double(-8.0);
     
     void init_rigidBody() {
-        for(int i=0;i<size;i++) {
+        for(int i=0;i<instance_size;i++) {
             (myBodies+i)->setPosition(def_val_x, def_val_y, def_val_z);
         }
     }
@@ -67,7 +59,7 @@ private:
     void drawBodiesInstanced(glm::mat4 &view,glm::mat4 &proj) {
         glBindBuffer(GL_ARRAY_BUFFER, vbo_models);
         glm::mat4 * modelmap = (glm::mat4 *)glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
-        for (int n = 0; n < size; n++)
+        for (int n = 0; n < instance_size; n++)
         {
             modelmap[n] = (myBodies+n)->model_matrix;
         }
@@ -80,14 +72,14 @@ private:
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
         int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
         
-        glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, size);
+        glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, instance_size);
     }
     
     
 public:
     rigidbodies(int size) {
-        this->size = size;
-        myBodies = new rigidbody[size];
+        this->instance_size = size;
+        myBodies = new rigidbody[instance_size];
         
         
         init_rigidBody();
@@ -127,7 +119,7 @@ public:
         //Instanced Model Matrix...
         glGenBuffers( 1, &vbo_models );
         glBindBuffer( GL_ARRAY_BUFFER, vbo_models );
-        glBufferData(GL_ARRAY_BUFFER, size * sizeof(glm::mat4), NULL, GL_DYNAMIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, instance_size * sizeof(glm::mat4), NULL, GL_DYNAMIC_DRAW);
         char* pp=0;
         GLsizei ss = sizeof(glm::mat4);
         for(int i=0;i<4;i++) {
@@ -152,7 +144,7 @@ public:
     
     void updateMVP(glm::mat4 &view, glm::mat4 &projection) {
         //Update all MVP
-        for(int i=0;i<size;i++) {
+        for(int i=0;i<instance_size;i++) {
             (myBodies+i)->update(view, projection);
         }
         //m_mvp = projection*view;
@@ -175,7 +167,7 @@ public:
     
     //Link the position of a specific object at INDEX
     void linkPosition(double *pos_x, double *pos_y, double *pos_z, int index) {
-        if(index < size) {
+        if(index < instance_size) {
             (myBodies+index)->setPosition(pos_x, pos_y, pos_z);
         }
     }
