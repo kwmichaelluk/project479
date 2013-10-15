@@ -22,13 +22,16 @@
 #include "stage/stage.h"
 #include "tools/memmap_reader.h"
 
+//#include "boost/filesystem.hpp"
+
 
 int main()
 {
     printf("Renderer Begin Process\n");
+    int num_obj = 2;
     
     //Prepare Memory Map
-    memmap_reader memmap(4);
+    memmap_reader memmap(num_obj);
     
     //Define Camera
     camera myCam(stage::screen_width,stage::screen_height);
@@ -36,7 +39,7 @@ int main()
     myCam.setProjection(80.0f, 0.1f, 20.0f);
     
     //Define Objects
-    int num_obj = 2;
+    
     cube ta(num_obj);
     
     //Link Object Data

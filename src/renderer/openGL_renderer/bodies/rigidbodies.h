@@ -101,7 +101,7 @@ public:
                               3,                 // number of elements per vertex, here (x,y,z)
                               GL_FLOAT,          // the type of each element
                               GL_FALSE,          // take our values as-is
-                              0,                 // no extra data between each position
+                              3*sizeof(GLfloat),         
                               0                  // offset of first element
                               );
         
@@ -112,7 +112,7 @@ public:
                               3,                 // number of elements per vertex, here (R,G,B)
                               GL_FLOAT,          // the type of each element
                               GL_FALSE,          // take our values as-is
-                              0,                 // no extra data between each position
+                              3*sizeof(GLfloat),
                               0                  // offset of first element
                               );
         
