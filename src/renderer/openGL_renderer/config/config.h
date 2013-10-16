@@ -10,6 +10,7 @@
 #define __openGL_renderer__config__
 
 #include <iostream>
+#include <string>
 
 namespace config {
     //File Directories

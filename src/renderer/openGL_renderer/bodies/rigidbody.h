@@ -12,7 +12,7 @@
 #include <iostream>
 
 #include <GL/glew.h>
-#include <GLUT/glut.h>
+//#include <GLUT/glut.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>

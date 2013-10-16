@@ -12,7 +12,7 @@
 
 #include <iostream>
 #include <GL/glew.h>
-#include <GLUT/glut.h>
+//#include <GLUT/glut.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -42,13 +42,13 @@ private:
     //Helper methods
     
     //Call at end of constructor (REMOVE?!?!)
-    double* def_val_x = new double(-3.0);
-    double* def_val_y = new double(-3.0);
-    double* def_val_z = new double(-8.0);
+    //double* def_val_x = new double(-3.0);
+    //double* def_val_y = new double(-3.0);
+    //double* def_val_z = new double(-8.0);
     
     void init_rigidBody() {
         for(int i=0;i<instance_size;i++) {
-            (myBodies+i)->setPosition(def_val_x, def_val_y, def_val_z);
+            //(myBodies+i)->setPosition(def_val_x, def_val_y, def_val_z);
         }
     }
     
