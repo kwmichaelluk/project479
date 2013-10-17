@@ -37,9 +37,6 @@ namespace config {
     //Uniform Names
     static const std::string view_matrix = "view_matrix";
     static const std::string proj_matrix = "proj_matrix";
-    
-//    static const bool instancing = true;
-    //NOTE: If not instancing, remove 'm_pos' from vertex shader
 
 }
 
