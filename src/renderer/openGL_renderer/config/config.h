@@ -11,21 +11,23 @@
 
 #include <iostream>
 #include <string>
+#include <boost/filesystem.hpp>
+
 
 namespace config {
-    //File Directories
+    //Folders
     static const std::string shader_dir = "shaders";
     static const std::string data_dir = "data";
 
+    //Files
     static const std::string frag_shader_file = "shader.frag";
     static const std::string vert_shader_file = "shader.vert";
-
     static const std::string pos_data_file = "data_pos";
 
-    static const std::string frag_shader_path = shader_dir+"/"+frag_shader_file;
-    static const std::string vert_shader_path = shader_dir+"/"+vert_shader_file;
-
-    static const std::string pos_data_path = data_dir+"/"+pos_data_file;
+    //File Paths - boost::filesystem
+    static const boost::filesystem::path frag_shader_path(shader_dir+"/"+frag_shader_file);
+    static const boost::filesystem::path vert_shader_path(shader_dir+"/"+vert_shader_file);
+    static const boost::filesystem::path pos_data_path(data_dir+"/"+pos_data_file);
     
     //Attribute Names
     static const std::string coord3d = "coord3d";
