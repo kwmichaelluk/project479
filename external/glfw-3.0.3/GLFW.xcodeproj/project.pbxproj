@@ -1,0 +1,1080 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              27754A6DDC5A4E9EBC1929AA /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = FAD98E9CD66847F6AC409DC0 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            FAC749C352744EB6B34407BC /* CMake Rules */,
+                     );
+                     dependencies = (
+                            2DBABFA8EB5D485EBE93F8F8 /* PBXTargetDependency */,
+                            25AFA97950E04C5AB6799658 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              A8B3689CFBA1452697B8A4A6 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = F462E9FB69034558B246665F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            E2608472E92C48138B927F73 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              EC000F9D4E9D41C2B69CB0AB /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 2D538C62FAA345ACA6538CC3 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            3B879C4E0E6C40AEA1A3789D /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            A20163925D364A36A30366B4 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+              1F7C82A3F1FE4874B5DE0E61 /* uninstall */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 37EBDE0CF8E4494AA9A03375 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+                     buildPhases = (
+                            0B432F686F1F412885A25EB7 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            FA89EF708E7948B6AFB6E2DC /* PBXTargetDependency */,
+                     );
+                     name = uninstall;
+                     productName = uninstall;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+D8501F10152745CA85BB39BD /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 5A15E4B3E3D74197A7076DB9 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3.h */; settings = { COMPILER_FLAGS = ""; }; };
+4ED92E70B6324432A5563250 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 705B98A4CDFF466F8641894C /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3native.h */; settings = { COMPILER_FLAGS = ""; }; };
+BD322FC51E0B4024A7C12153 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 5AFC57B3F1DD4103904AAB3F /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+FE4AD41727CC4A38B0E32B0A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c */ = {isa = PBXBuildFile; fileRef = 00D709EFB78946509FC675C6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c */; settings = { COMPILER_FLAGS = ""; }; };
+3AAA030E39CE4E0186AF9746 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m */ = {isa = PBXBuildFile; fileRef = ED35ABA6C5DF443CB8EF25A6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m */; settings = { COMPILER_FLAGS = ""; }; };
+E4052855F16D4BDABC0C2194 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c */ = {isa = PBXBuildFile; fileRef = 1FEBA5F7E21D46A6B4E5764A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c */; settings = { COMPILER_FLAGS = ""; }; };
+E0A897EFB9604DF8A4520FAE /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 7E4881C98AEE4245A8AA8C02 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m */; settings = { COMPILER_FLAGS = ""; }; };
+25D20080CB56459796819B6C /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = AF89E348FDC249CA9E758B5A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m */; settings = { COMPILER_FLAGS = ""; }; };
+E04E48FE76A341C4946609BF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 4B77D9671D8D4010997F1260 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m */; settings = { COMPILER_FLAGS = ""; }; };
+4AB3EBE349CF40C8AC412B21 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 44ACA36D0DD140D69DE3241F /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_platform.h */; settings = { COMPILER_FLAGS = ""; }; };
+64380DA784884A8CA8C97BD8 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = D1C97F0AB5A8416EBFAF3939 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c */; settings = { COMPILER_FLAGS = ""; }; };
+06702F0F6A444AF09B9D4DA5 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 70EA85A9ADC44CD0A5C000BB /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m */; settings = { COMPILER_FLAGS = ""; }; };
+B6443A5A33F44ABA9C9309FE /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/config.h */ = {isa = PBXBuildFile; fileRef = 5FC7DD9DE1734EA78DD0F75D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/config.h */; settings = { COMPILER_FLAGS = ""; }; };
+22559C56D04749EE807FC71D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c */ = {isa = PBXBuildFile; fileRef = 8D5D364965314FBF9848918A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c */; settings = { COMPILER_FLAGS = ""; }; };
+D396D9162B614F689482B051 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c */ = {isa = PBXBuildFile; fileRef = 8971EE1E22394A56A136CA45 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c */; settings = { COMPILER_FLAGS = ""; }; };
+4C28E4A0D2F947059D3C4FBF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c */ = {isa = PBXBuildFile; fileRef = 628CC0770C8944B9B78D4DEA /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c */; settings = { COMPILER_FLAGS = ""; }; };
+5EDEFC98F31D4E96A3211C19 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c */ = {isa = PBXBuildFile; fileRef = 328B294656384DCCBCCAE5B7 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c */; settings = { COMPILER_FLAGS = ""; }; };
+F5F748202D3A411BA10359DF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/internal.h */ = {isa = PBXBuildFile; fileRef = 94765203675B48AE918CA4B8 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/internal.h */; settings = { COMPILER_FLAGS = ""; }; };
+21C4D50E7C824B9A86443CC0 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c */ = {isa = PBXBuildFile; fileRef = A229CC3AC44E4971B4DC740E /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c */; settings = { COMPILER_FLAGS = ""; }; };
+575E3A4F6025439EBE2FB55C /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 1AD45D4A330747A8A44100F6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c */; settings = { COMPILER_FLAGS = ""; }; };
+6E6A109874FB47C28BAC9AF7 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = E807CF0C0F9B421DA8F04E7D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m */; settings = { COMPILER_FLAGS = ""; }; };
+873125465280420EA1429E84 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_platform.h */ = {isa = PBXBuildFile; fileRef = B5AC78EC66584885A7EC40B1 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_platform.h */; settings = { COMPILER_FLAGS = ""; }; };
+9752EC123C8D44D68FAAE707 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c */ = {isa = PBXBuildFile; fileRef = 643EDFAFED804024971EB4FD /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c */; settings = { COMPILER_FLAGS = ""; }; };
+2B27FE60C50C49D2A3DB9D30 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c */ = {isa = PBXBuildFile; fileRef = 9E099510AD714BE4A9FAE7CF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              5ECD829E44E44CBAB14CEF46 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              19B3B7CC7BDA47FA8A83E894 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              F23A2E5466304F7BB81E4B18 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+              CD117EFF174741E78553BF81 /* MinSizeRel */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = MinSizeRel;
+              };
+              C0D24FF10C564A96ADDB2205 /* RelWithDebInfo */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              74A6A27BB90F4BD58CF02EC9 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 254A7BA0680A437AB394A8BE /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = A8B3689CFBA1452697B8A4A6;
+                     remoteInfo = ZERO_CHECK;
+              };
+              7948EB5EBDA446429FA9B459 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 254A7BA0680A437AB394A8BE /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 7C7911C1C7F9481CB191E807;
+                     remoteInfo = glfw;
+              };
+              DDE097F632FA4116AD7F2628 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 254A7BA0680A437AB394A8BE /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 27754A6DDC5A4E9EBC1929AA;
+                     remoteInfo = ALL_BUILD;
+              };
+              7EC950243477430BAAF5E54A /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 254A7BA0680A437AB394A8BE /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = A8B3689CFBA1452697B8A4A6;
+                     remoteInfo = ZERO_CHECK;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+2CAE0D5D99D34969A2EB9A52 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text"; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+5A15E4B3E3D74197A7076DB9 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "glfw3.h"; path = "include/GLFW/glfw3.h"; sourceTree = SOURCE_ROOT; };
+705B98A4CDFF466F8641894C /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "glfw3native.h"; path = "include/GLFW/glfw3native.h"; sourceTree = SOURCE_ROOT; };
+5AFC57B3F1DD4103904AAB3F /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text"; name = "CMakeLists.txt"; path = "src/CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+00D709EFB78946509FC675C6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "clipboard.c"; path = "src/clipboard.c"; sourceTree = SOURCE_ROOT; };
+ED35ABA6C5DF443CB8EF25A6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.objc"; name = "cocoa_clipboard.m"; path = "src/cocoa_clipboard.m"; sourceTree = SOURCE_ROOT; };
+1FEBA5F7E21D46A6B4E5764A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "cocoa_gamma.c"; path = "src/cocoa_gamma.c"; sourceTree = SOURCE_ROOT; };
+7E4881C98AEE4245A8AA8C02 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.objc"; name = "cocoa_init.m"; path = "src/cocoa_init.m"; sourceTree = SOURCE_ROOT; };
+AF89E348FDC249CA9E758B5A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.objc"; name = "cocoa_joystick.m"; path = "src/cocoa_joystick.m"; sourceTree = SOURCE_ROOT; };
+4B77D9671D8D4010997F1260 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.objc"; name = "cocoa_monitor.m"; path = "src/cocoa_monitor.m"; sourceTree = SOURCE_ROOT; };
+44ACA36D0DD140D69DE3241F /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "cocoa_platform.h"; path = "src/cocoa_platform.h"; sourceTree = SOURCE_ROOT; };
+D1C97F0AB5A8416EBFAF3939 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "cocoa_time.c"; path = "src/cocoa_time.c"; sourceTree = SOURCE_ROOT; };
+70EA85A9ADC44CD0A5C000BB /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.objc"; name = "cocoa_window.m"; path = "src/cocoa_window.m"; sourceTree = SOURCE_ROOT; };
+5FC7DD9DE1734EA78DD0F75D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "config.h"; path = "src/config.h"; sourceTree = SOURCE_ROOT; };
+8D5D364965314FBF9848918A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "context.c"; path = "src/context.c"; sourceTree = SOURCE_ROOT; };
+8971EE1E22394A56A136CA45 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "gamma.c"; path = "src/gamma.c"; sourceTree = SOURCE_ROOT; };
+628CC0770C8944B9B78D4DEA /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "init.c"; path = "src/init.c"; sourceTree = SOURCE_ROOT; };
+328B294656384DCCBCCAE5B7 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "input.c"; path = "src/input.c"; sourceTree = SOURCE_ROOT; };
+94765203675B48AE918CA4B8 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "internal.h"; path = "src/internal.h"; sourceTree = SOURCE_ROOT; };
+A229CC3AC44E4971B4DC740E /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "joystick.c"; path = "src/joystick.c"; sourceTree = SOURCE_ROOT; };
+1AD45D4A330747A8A44100F6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "monitor.c"; path = "src/monitor.c"; sourceTree = SOURCE_ROOT; };
+E807CF0C0F9B421DA8F04E7D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.objc"; name = "nsgl_context.m"; path = "src/nsgl_context.m"; sourceTree = SOURCE_ROOT; };
+B5AC78EC66584885A7EC40B1 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "nsgl_platform.h"; path = "src/nsgl_platform.h"; sourceTree = SOURCE_ROOT; };
+643EDFAFED804024971EB4FD /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "time.c"; path = "src/time.c"; sourceTree = SOURCE_ROOT; };
+9E099510AD714BE4A9FAE7CF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "window.c"; path = "src/window.c"; sourceTree = SOURCE_ROOT; };
+CEF489C27DB7493D89F8A252 /* glfw */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libglfw3.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              CF6E43CF200D47B8AA803F64  = {
+                     isa = PBXGroup;
+                     children = (
+                            C324ED5C73FF4DCC8B11C19E /* Sources */,
+                            AD0A53814324419CA2073306 /* Resources */,
+                            263585C903FA4FA6A328913C /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              C324ED5C73FF4DCC8B11C19E /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            48E7CB0641434E908CB40A7F /* ALL_BUILD */,
+                            5575715B60E04AE4892D35AA /* ZERO_CHECK */,
+                            0A89412873E041BD8C38BCEC /* uninstall */,
+                            7E2A898F8C154D639AD1E571 /* glfw */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              AD0A53814324419CA2073306 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              48E7CB0641434E908CB40A7F /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            45AC6F28AAB746C89142EFBD /* CMake Rules */,
+                            2CAE0D5D99D34969A2EB9A52 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              45AC6F28AAB746C89142EFBD /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              5575715B60E04AE4892D35AA /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            801EB18DACD540EB90500E47 /* CMake Rules */,
+                            2CAE0D5D99D34969A2EB9A52 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              801EB18DACD540EB90500E47 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              0A89412873E041BD8C38BCEC /* uninstall */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AF030AC1CBFE464F8ACCB450 /* CMake Rules */,
+                            2CAE0D5D99D34969A2EB9A52 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/CMakeLists.txt */,
+                     );
+                     name = uninstall;
+                     sourceTree = "<group>";
+              };
+              AF030AC1CBFE464F8ACCB450 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              7E2A898F8C154D639AD1E571 /* glfw */ = {
+                     isa = PBXGroup;
+                     children = (
+                            DEAD913775F54BF391DD1980 /* Source Files */,
+                            F879D8A7FBCA491BBE38F870 /* Header Files */,
+                            5AFC57B3F1DD4103904AAB3F /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/CMakeLists.txt */,
+                     );
+                     name = glfw;
+                     sourceTree = "<group>";
+              };
+              DEAD913775F54BF391DD1980 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            00D709EFB78946509FC675C6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c */,
+                            ED35ABA6C5DF443CB8EF25A6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m */,
+                            1FEBA5F7E21D46A6B4E5764A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c */,
+                            7E4881C98AEE4245A8AA8C02 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m */,
+                            AF89E348FDC249CA9E758B5A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m */,
+                            4B77D9671D8D4010997F1260 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m */,
+                            D1C97F0AB5A8416EBFAF3939 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c */,
+                            70EA85A9ADC44CD0A5C000BB /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m */,
+                            8D5D364965314FBF9848918A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c */,
+                            8971EE1E22394A56A136CA45 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c */,
+                            628CC0770C8944B9B78D4DEA /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c */,
+                            328B294656384DCCBCCAE5B7 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c */,
+                            A229CC3AC44E4971B4DC740E /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c */,
+                            1AD45D4A330747A8A44100F6 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c */,
+                            E807CF0C0F9B421DA8F04E7D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m */,
+                            643EDFAFED804024971EB4FD /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c */,
+                            9E099510AD714BE4A9FAE7CF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              F879D8A7FBCA491BBE38F870 /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            5A15E4B3E3D74197A7076DB9 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3.h */,
+                            705B98A4CDFF466F8641894C /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3native.h */,
+                            44ACA36D0DD140D69DE3241F /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_platform.h */,
+                            5FC7DD9DE1734EA78DD0F75D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/config.h */,
+                            94765203675B48AE918CA4B8 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/internal.h */,
+                            B5AC78EC66584885A7EC40B1 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_platform.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              263585C903FA4FA6A328913C /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            CEF489C27DB7493D89F8A252 /* glfw */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              7C7911C1C7F9481CB191E807 /* glfw */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 9F3900969D7E423AB9F81BA6 /* Build configuration list for PBXNativeTarget "glfw" */;
+                     buildPhases = (
+                            068BDFD19F2D4F6BBE3C0B12 /* Sources */,
+                            474CD996DA85443FA81FB499 /* CMake PostBuild Rules */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                     );
+                     name = glfw;
+                     productName = glfw;
+                     productReference = CEF489C27DB7493D89F8A252 /* glfw */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              254A7BA0680A437AB394A8BE /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 0BEFCE2B63BC4E76941A8422 /* Build configuration list for PBXProject  "GLFW" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            19B3B7CC7BDA47FA8A83E894 /* Debug */,
+                            F23A2E5466304F7BB81E4B18 /* Release */,
+                            CD117EFF174741E78553BF81 /* MinSizeRel */,
+                            C0D24FF10C564A96ADDB2205 /* RelWithDebInfo */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = CF6E43CF200D47B8AA803F64;
+                     projectDirPath = ".";
+                     projectRoot = "";
+                     targets = (
+                            27754A6DDC5A4E9EBC1929AA /* ALL_BUILD */,
+                            A8B3689CFBA1452697B8A4A6 /* ZERO_CHECK */,
+                            EC000F9D4E9D41C2B69CB0AB /* install */,
+                            1F7C82A3F1FE4874B5DE0E61 /* uninstall */,
+                            7C7911C1C7F9481CB191E807 /* glfw */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              F5EED2AFC38340938D80BA7D /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              FAC749C352744EB6B34407BC /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              271BEDAA980E4340855AE681 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              E2608472E92C48138B927F73 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              ED39D08752D74D21871754DF /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              3B879C4E0E6C40AEA1A3789D /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              A86D65B552CE4EA6BFF4FC66 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              0B432F686F1F412885A25EB7 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3/CMakeScripts/uninstall_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              474CD996DA85443FA81FB499 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3/src -f /Users/Nancy/Documents/Edwin/ENPH\\ 479/project2/external/glfw-3.0.3/src/CMakeScripts/glfw_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              068BDFD19F2D4F6BBE3C0B12 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            FE4AD41727CC4A38B0E32B0A /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c */,
+                            3AAA030E39CE4E0186AF9746 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m */,
+                            E4052855F16D4BDABC0C2194 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c */,
+                            E0A897EFB9604DF8A4520FAE /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m */,
+                            25D20080CB56459796819B6C /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m */,
+                            E04E48FE76A341C4946609BF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m */,
+                            64380DA784884A8CA8C97BD8 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c */,
+                            06702F0F6A444AF09B9D4DA5 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m */,
+                            22559C56D04749EE807FC71D /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c */,
+                            D396D9162B614F689482B051 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c */,
+                            4C28E4A0D2F947059D3C4FBF /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c */,
+                            5EDEFC98F31D4E96A3211C19 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c */,
+                            21C4D50E7C824B9A86443CC0 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c */,
+                            575E3A4F6025439EBE2FB55C /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c */,
+                            6E6A109874FB47C28BAC9AF7 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m */,
+                            9752EC123C8D44D68FAAE707 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c */,
+                            2B27FE60C50C49D2A3DB9D30 /* /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              2DBABFA8EB5D485EBE93F8F8 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = A8B3689CFBA1452697B8A4A6 /* ZERO_CHECK */;
+                     targetProxy = 74A6A27BB90F4BD58CF02EC9 /* PBXContainerItemProxy */;
+              };
+              25AFA97950E04C5AB6799658 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 7C7911C1C7F9481CB191E807 /* glfw */;
+                     targetProxy = 7948EB5EBDA446429FA9B459 /* PBXContainerItemProxy */;
+              };
+              A20163925D364A36A30366B4 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 27754A6DDC5A4E9EBC1929AA /* ALL_BUILD */;
+                     targetProxy = DDE097F632FA4116AD7F2628 /* PBXContainerItemProxy */;
+              };
+              FA89EF708E7948B6AFB6E2DC /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = A8B3689CFBA1452697B8A4A6 /* ZERO_CHECK */;
+                     targetProxy = 7EC950243477430BAAF5E54A /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              E3E0530C99494BFF96DBA6C7 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Developer/SDKs/MacOSX10.7.sdk";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/build";
+                     };
+                     name = Debug;
+              };
+              B187589241D943C79393A56C /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Developer/SDKs/MacOSX10.7.sdk";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/build";
+                     };
+                     name = Release;
+              };
+              E426C65A8193406CA5E076F2 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Developer/SDKs/MacOSX10.7.sdk";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/build";
+                     };
+                     name = MinSizeRel;
+              };
+              0DFE92144802464D8F80520A /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Developer/SDKs/MacOSX10.7.sdk";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/build";
+                     };
+                     name = RelWithDebInfo;
+              };
+              386F16E4613349F393172BE5 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              4BB7F4F3BC8C4FBFBBB78369 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              EBC73A6ECC004090943A6EBB /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              CFEB2188A2764FBCBE3C96EE /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              27A9ADC30A014AAFADEA96AD /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              252E7123ACC94100BFF8A79A /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              97E16C61EC514BF581333E33 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              CDD8851ED4114BF09C73958E /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              96D749CA9E43495C99C4E4E6 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              0749BE02DA874CDFB154A351 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              36E10F9E754A429892EC7CFE /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              14F68F88357E406B92601BA0 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              B0EEE63C9CB64DEEAA7054FF /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = uninstall;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              DFF814AEA42B4501911E6F77 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = uninstall;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              C4BCF65D3E6C47D4A1E4F389 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = uninstall;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              EBA373E44AE64E98A2D7D7AA /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = uninstall;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              CF34C2A7ED184B3A855BD1DF /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("\"/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src\"", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "     -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              1313FBF556294518B5437A13 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("\"/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src\"", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    -DNDEBUG   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              66228044E7FE43F38700C8FF /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("\"/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src\"", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "    -DNDEBUG   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              48DD09DF940244DAB03DE532 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = ("\"/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src\"", );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            OTHER_CFLAGS = "       -DNDEBUG   -Wall";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = glfw3;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src";
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              0BEFCE2B63BC4E76941A8422 /* Build configuration list for PBXProject  "GLFW" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            E3E0530C99494BFF96DBA6C7 /* Debug */,
+                            B187589241D943C79393A56C /* Release */,
+                            E426C65A8193406CA5E076F2 /* MinSizeRel */,
+                            0DFE92144802464D8F80520A /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              FAD98E9CD66847F6AC409DC0 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            386F16E4613349F393172BE5 /* Debug */,
+                            4BB7F4F3BC8C4FBFBBB78369 /* Release */,
+                            EBC73A6ECC004090943A6EBB /* MinSizeRel */,
+                            CFEB2188A2764FBCBE3C96EE /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              F462E9FB69034558B246665F /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            27A9ADC30A014AAFADEA96AD /* Debug */,
+                            252E7123ACC94100BFF8A79A /* Release */,
+                            97E16C61EC514BF581333E33 /* MinSizeRel */,
+                            CDD8851ED4114BF09C73958E /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              2D538C62FAA345ACA6538CC3 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            96D749CA9E43495C99C4E4E6 /* Debug */,
+                            0749BE02DA874CDFB154A351 /* Release */,
+                            36E10F9E754A429892EC7CFE /* MinSizeRel */,
+                            14F68F88357E406B92601BA0 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              37EBDE0CF8E4494AA9A03375 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            B0EEE63C9CB64DEEAA7054FF /* Debug */,
+                            DFF814AEA42B4501911E6F77 /* Release */,
+                            C4BCF65D3E6C47D4A1E4F389 /* MinSizeRel */,
+                            EBA373E44AE64E98A2D7D7AA /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              9F3900969D7E423AB9F81BA6 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            CF34C2A7ED184B3A855BD1DF /* Debug */,
+                            1313FBF556294518B5437A13 /* Release */,
+                            66228044E7FE43F38700C8FF /* MinSizeRel */,
+                            48DD09DF940244DAB03DE532 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 254A7BA0680A437AB394A8BE;
+}
