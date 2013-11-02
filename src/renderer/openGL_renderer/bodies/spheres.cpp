@@ -15,7 +15,8 @@ void spheres::init_buffers() {
     std::vector<glm::vec3> vertices;
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals;
-	bool res = loadOBJ("sphere.obj", vertices, uvs, normals);
+	
+    loadOBJ("sphere.obj", vertices, uvs, normals);
     
     //Load Texture
     myTexture = loadBMP_custom("sphere.bmp");
