@@ -27,14 +27,25 @@ private:
     double *pos_z;
     glm::vec3 position;
     
-public:
-    glm::mat4 model_matrix;
+    float scaleSize=1.0;
     
 public:
-    rigidbody() {};
+    glm::mat4 model_matrix;
+    glm::mat4 scale_matrix;
+    glm::mat4 rotate_matrix;
+    
+public:
+    rigidbody() {
+        scale_matrix = glm::scale(glm::mat4(1.0f),glm::vec3(scaleSize));
+    };
     
     void setPosition(double *x, double *y, double *z) {
         pos_x=x; pos_y=y; pos_z=z;
+    }
+    
+    void setSize(float size) {
+        scaleSize = size;
+        scale_matrix = glm::scale(glm::mat4(1.0f),glm::vec3(scaleSize));
     }
     
     //Update MVP and Position (Position no longer part of MVP)
@@ -44,8 +55,10 @@ public:
         position.y = *pos_y;
         position.z = *pos_z;
         
-        model_matrix = glm::translate(glm::mat4(1.0f), position);
-        
+        glm::vec3 rotate_axis(1.0, 0.0, 0.0);
+        rotate_matrix = glm::rotate(glm::mat4(1.0f), 14.0f, rotate_axis);
+
+        model_matrix = glm::translate(glm::mat4(1.0f), position) * rotate_matrix * scale_matrix;
     };
 
     

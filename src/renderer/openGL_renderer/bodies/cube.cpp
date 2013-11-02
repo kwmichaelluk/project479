@@ -9,7 +9,7 @@
 #include "cube.h"
 
 void cube::init_buffers() {
-    rigidbodies::init_buffers();
+    /*rigidbodies::init_buffers();
 
     GLfloat cube_vertices[] = {
         // front
@@ -67,4 +67,5 @@ void cube::init_buffers() {
     glGenBuffers(1, &ibo_elements);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cube_elements), cube_elements, GL_STATIC_DRAW);
+     */
 }

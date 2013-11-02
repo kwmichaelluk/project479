@@ -32,11 +32,13 @@ namespace config {
     //Attribute Names
     static const std::string coord3d = "coord3d";
     static const std::string v_color = "v_color";
+    static const std::string vertex_uv = "vertex_uv";
     static const std::string model_matrix = "model_matrix";
     
     //Uniform Names
     static const std::string view_matrix = "view_matrix";
     static const std::string proj_matrix = "proj_matrix";
+    static const std::string texture_sampler = "myTextureSampler";
 
 }
 

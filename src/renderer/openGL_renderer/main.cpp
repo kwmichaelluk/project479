@@ -19,6 +19,7 @@
 #include "tools/shader_utils.h"
 #include "tools/camera.h"
 #include "bodies/cube.h"
+#include "bodies/spheres.h"
 #include "stage/stage.h"
 #include "tools/memmap_reader.h"
 
@@ -40,7 +41,8 @@ int main()
     
     //Define Objects
     
-    cube ta(num_obj);
+    //cube ta(num_obj);
+    spheres ta(num_obj);
     
     //Link Object Data
     for(int i=0;i<num_obj;i++) {
