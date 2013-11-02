@@ -28,16 +28,20 @@ protected:
     
     //Holds all instances of the same rigid body
     GLuint vbo_vertices;
-    GLuint vbo_colors;
-    GLuint ibo_elements;
+    //GLuint vbo_colors;
+    //GLuint ibo_elements;
+    GLuint vbo_uv;
     
     GLuint vbo_models;
+    
+    GLuint myTexture;
     
     rigidbody *myBodies;
     int instance_size; //Number of bodies within vbo
     
     GLint *uniform_view;
     GLint *uniform_proj;
+    GLint *uniform_texture;
 private:
     //Helper methods
     
@@ -69,10 +73,18 @@ private:
         glUniformMatrix4fv(*uniform_view, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(*uniform_proj, 1, GL_FALSE, glm::value_ptr(proj));
         
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
+        //Texture
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, myTexture);
+        glUniform1i(*uniform_texture, 0);
+        
+        //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
+        //int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_vertices);
         int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
         
-        glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, instance_size);
+        //glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, instance_size);
+        glDrawArraysInstanced(GL_TRIANGLES, 0, isize/sizeof(GLushort), instance_size);
     }
     
     
@@ -92,7 +104,7 @@ public:
         glBindVertexArray(vao);
     }
     
-    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_v_color, GLint &attribute_model) {
+    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_vertex_uv, GLint &attribute_model) {
         glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
         glEnableVertexAttribArray(attribute_coord3d);
         // Describe our vertices array to OpenGL (it can't guess its format automatically)
@@ -105,14 +117,14 @@ public:
                               0                  // offset of first element
                               );
         
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_colors);
-        glEnableVertexAttribArray(attribute_v_color);
+        glBindBuffer(GL_ARRAY_BUFFER, vbo_uv);
+        glEnableVertexAttribArray(attribute_vertex_uv);
         glVertexAttribPointer(
-                              attribute_v_color, // attribute
-                              3,                 // number of elements per vertex, here (R,G,B)
+                              attribute_vertex_uv, // attribute
+                              2,                 // number of elements per vertex, here (R,G,B)
                               GL_FLOAT,          // the type of each element
                               GL_FALSE,          // take our values as-is
-                              3*sizeof(GLfloat),
+                              2*sizeof(GLfloat),
                               0                  // offset of first element
                               );
         
@@ -137,9 +149,10 @@ public:
         
     }
     
-    void linkUniforms(GLint &uniform_view, GLint &uniform_proj) {
+    void linkUniforms(GLint &uniform_view, GLint &uniform_proj, GLint &uniform_texture) {
         this->uniform_view = &uniform_view;
         this->uniform_proj = &uniform_proj;
+        this->uniform_texture = &uniform_texture;
     }
     
     void updateMVP(glm::mat4 &view, glm::mat4 &projection) {
@@ -160,8 +173,9 @@ public:
     
     void free_resources() {
         glDeleteBuffers(1, &vbo_vertices);
-        glDeleteBuffers(1, &vbo_colors);
-        glDeleteBuffers(1, &ibo_elements);
+        //glDeleteBuffers(1, &vbo_colors);
+        //glDeleteBuffers(1, &ibo_elements);
+        glDeleteBuffers(1, &vbo_uv);
         glDeleteBuffers(1, &vbo_models);
     };  //Call on destroy
     

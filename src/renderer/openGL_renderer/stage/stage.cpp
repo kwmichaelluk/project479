@@ -17,12 +17,14 @@ GLuint stage::shader_program = 0;
 
 //Attribute Locations
 GLint stage::attribute_coord3d = 0;
-GLint stage::attribute_v_color = 1;
+//GLint stage::attribute_v_color = 1;
+GLint stage::attribute_vertex_uv = 1;
 
 GLint stage::attribute_model = 2;
 
 GLint stage::uniform_view = 0;
 GLint stage::uniform_proj = 0;
+GLint stage::uniform_texture = 0;
 glm::mat4 stage::m_mvp;
 
 camera* stage::myCamera = NULL;
@@ -98,7 +100,8 @@ bool stage::initShaders() {
 
     //Bind Attributes
     glBindAttribLocation(shader_program, attribute_coord3d, config::coord3d.c_str());
-    glBindAttribLocation(shader_program, attribute_v_color, config::v_color.c_str());
+    //glBindAttribLocation(shader_program, attribute_v_color, config::v_color.c_str());
+    glBindAttribLocation(shader_program, attribute_vertex_uv, config::vertex_uv.c_str());
     glBindAttribLocation(shader_program, attribute_model, config::model_matrix.c_str());
 
     
@@ -116,8 +119,12 @@ bool stage::initShaders() {
         fprintf(stderr, "Could not bind attribute %s\n", config::coord3d.c_str());
         return 0;
     }
-    if (glGetAttribLocation(shader_program,config::v_color.c_str()) == -1) {
+    /*if (glGetAttribLocation(shader_program,config::v_color.c_str()) == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", config::v_color.c_str());
+        return 0;
+    }*/
+    if (glGetAttribLocation(shader_program,config::vertex_uv.c_str()) == -1) {
+        fprintf(stderr, "Could not bind attribute %s\n", config::vertex_uv.c_str());
         return 0;
     }
     if (glGetAttribLocation(shader_program,config::model_matrix.c_str()) == -1) {
@@ -138,6 +145,12 @@ bool stage::initShaders() {
         return 0;
     }
     
+    uniform_texture = glGetUniformLocation(shader_program, config::texture_sampler.c_str());
+    if (uniform_texture == -1) {
+        fprintf(stderr, "Could not bind uniform %s\n", config::texture_sampler.c_str());
+        return 0;
+    }
+    
     return 1;
 }
 
@@ -147,14 +160,14 @@ int stage::initResources() {
     
     for(int i=0;i<numBodyTypes;i++) {
         myBodies.at(i)->init_buffers();
-        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_v_color, attribute_model);
+        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_vertex_uv, attribute_model);
     }
     return initShaders();
 }
 
 void stage::linkUniforms() {
     for(int i=0;i<numBodyTypes;i++) {
-        myBodies.at(i)->linkUniforms(uniform_view, uniform_proj);
+        myBodies.at(i)->linkUniforms(uniform_view, uniform_proj, uniform_texture);
     }
 }
 

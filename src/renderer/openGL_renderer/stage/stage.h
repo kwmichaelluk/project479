@@ -23,6 +23,9 @@
 #include <vector>
 #include "../config/config.h"
 
+#include "../bodies/texture.hpp"
+#include "../bodies/objloader.hpp"
+
 class stage {
 public:
     //Screen Size
@@ -41,10 +44,11 @@ public:
     static GLuint shader_program;
     static GLint attribute_coord3d;
     static GLint attribute_v_color;
+    static GLint attribute_vertex_uv;
 
     static GLint attribute_model;
     
-    static GLint uniform_view, uniform_proj;
+    static GLint uniform_view, uniform_proj, uniform_texture;
     static glm::mat4 m_mvp;
     //static GLuint vao;
     
