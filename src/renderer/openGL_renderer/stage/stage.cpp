@@ -1,4 +1,4 @@
-//
+ //
 //  stage.cpp
 //  openGL_renderer
 //
