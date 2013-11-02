@@ -46,6 +46,7 @@ int stage::run() {
     
     //Create Window
     window = glfwCreateWindow(screen_width, screen_height, "Renderer", NULL, NULL);
+
     if (!window) {
         glfwTerminate();
         exit(EXIT_FAILURE);
@@ -167,15 +168,19 @@ void stage::init_glSettings() {
 //Update Loop
 void stage::update_loop() {
     while (!glfwWindowShouldClose(window)) {
-        /* Render here */
-        onIdle();
-        
-        /* Swap front and back buffers */
-        glfwSwapBuffers(window);
-        
-        /* Poll for and process events */
-        glfwPollEvents();
+        loop();
     }
+}
+
+void stage::loop() {
+    /* Render here */
+    onIdle();
+    
+    /* Swap front and back buffers */
+    glfwSwapBuffers(window);
+    
+    /* Poll for and process events */
+    glfwPollEvents();
 }
 
 void stage::onIdle() {

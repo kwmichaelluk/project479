@@ -68,6 +68,7 @@ private:
     
     //Update loop
     static void update_loop();
+    static void loop();
     
     static void onIdle();
     static void updateDraw(); //Called in onIdle
