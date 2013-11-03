@@ -180,15 +180,19 @@ void stage::init_glSettings() {
 //Update Loop
 void stage::update_loop() {
     while (!glfwWindowShouldClose(window)) {
-        /* Render here */
-        onIdle();
-        
-        /* Swap front and back buffers */
-        glfwSwapBuffers(window);
-        
-        /* Poll for and process events */
-        glfwPollEvents();
+        update_step();
     }
+}
+
+void stage::update_step() {
+    /* Render here */
+    onIdle();
+    
+    /* Swap front and back buffers */
+    glfwSwapBuffers(window);
+    
+    /* Poll for and process events */
+    glfwPollEvents();
 }
 
 void stage::onIdle() {
