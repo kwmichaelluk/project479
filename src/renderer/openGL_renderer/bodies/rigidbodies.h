@@ -52,7 +52,8 @@ private:
     
     void init_rigidBody() {
         for(int i=0;i<instance_size;i++) {
-            //(myBodies+i)->setPosition(def_val_x, def_val_y, def_val_z);
+            //(myBodies+i) = new rigidbody();
+            
         }
     }
     
@@ -92,7 +93,6 @@ public:
     rigidbodies(int size) {
         this->instance_size = size;
         myBodies = new rigidbody[instance_size];
-        
         
         init_rigidBody();
         

@@ -64,14 +64,11 @@ public:
 private:
     //Below methods are used in run()
     static bool initShaders(); //Called in initResources()
-    static int initResources();
-    
-    static void linkUniforms();
-    
-    static void init_glSettings();
+
     
     //Update loop
     static void update_loop();
+    static void update_step();
     
     static void onIdle();
     static void updateDraw(); //Called in onIdle
@@ -79,6 +76,13 @@ private:
     static void onReshape(int width, int height); //TODO: Implement on Window resize
     
     static void freeResources();
+    
+public:
+    static int initResources();
+    
+    static void linkUniforms();
+    
+    static void init_glSettings();
 };
 
 #endif /* defined(__openGL_renderer__stage__) */

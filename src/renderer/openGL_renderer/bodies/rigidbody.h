@@ -18,7 +18,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "config.h"
+
 
 class rigidbody {
 private:
@@ -27,7 +27,7 @@ private:
     double *pos_z;
     glm::vec3 position;
     
-    float scaleSize=1.0;
+    float scaleSize;
     
 public:
     glm::mat4 model_matrix;
@@ -36,6 +36,7 @@ public:
     
 public:
     rigidbody() {
+        scaleSize=1.0;
         scale_matrix = glm::scale(glm::mat4(1.0f),glm::vec3(scaleSize));
     };
     

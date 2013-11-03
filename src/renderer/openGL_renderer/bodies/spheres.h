@@ -29,7 +29,9 @@ class spheres : public rigidbodies {
 private:
     
 public:
-    spheres(int size) : rigidbodies(size) {};
+    spheres(int size) : rigidbodies(size) {
+        
+    }
     
     void init_buffers();
     
