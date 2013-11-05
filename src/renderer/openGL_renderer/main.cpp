@@ -29,15 +29,15 @@
 int main()
 {
     printf("Renderer Begin Process\n");
-    int num_obj = 2;
+    int num_obj = 4;
     
     //Prepare Memory Map
     memmap_reader memmap(num_obj);
     
     //Define Camera
     camera myCam(stage::screen_width,stage::screen_height);
-    myCam.setView(glm::vec3(0.0, 2.0, 0.0), glm::vec3(0.0, 0.0, -4.0), glm::vec3(0.0, 1.0, 0.0));
-    myCam.setProjection(80.0f, 0.1f, 20.0f);
+    myCam.setView(glm::vec3(0.0, 2.0, -20.0), glm::vec3(0.0, 0.0, -4.0), glm::vec3(0.0, 1.0, 0.0));
+    myCam.setProjection(45.0f, 0.1f, 20.0f);
     
     //Define Objects
     
