@@ -68,14 +68,14 @@ private:
     
     //Update loop
     static void update_loop();
-    static void update_step();
+    
     
     static void onIdle();
     static void updateDraw(); //Called in onIdle
     
     static void onReshape(int width, int height); //TODO: Implement on Window resize
     
-    static void freeResources();
+
     
 public:
     static int initResources();
@@ -83,6 +83,9 @@ public:
     static void linkUniforms();
     
     static void init_glSettings();
+    
+    static void update_step();
+    static void freeResources();
 };
 
 #endif /* defined(__openGL_renderer__stage__) */
