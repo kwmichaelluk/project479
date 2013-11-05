@@ -20,7 +20,7 @@ start_renderer();
 %Pseudo Physics Engine - Testing movement
 tic;
 total_t=0;
-while ctrl_pos.Data(2) > -6
+while ctrl_pos.Data(2) > -8
     deltaT = toc;
     total_t = total_t + deltaT;
     if deltaT > 0.003

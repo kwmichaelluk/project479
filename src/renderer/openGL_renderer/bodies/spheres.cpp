@@ -30,4 +30,9 @@ void spheres::init_buffers() {
     glGenBuffers(1, &vbo_uv);
     glBindBuffer(GL_ARRAY_BUFFER, vbo_uv);
     glBufferData(GL_ARRAY_BUFFER, uvs.size() * sizeof(glm::vec2), &uvs[0], GL_STATIC_DRAW);
+    
+    //Bind Normals
+    glGenBuffers(1, &vbo_normals);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo_normals);
+	glBufferData(GL_ARRAY_BUFFER, normals.size() * sizeof(glm::vec3), &normals[0], GL_STATIC_DRAW);
 }
