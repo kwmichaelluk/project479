@@ -45,10 +45,11 @@ public:
     static GLint attribute_coord3d;
     static GLint attribute_v_color;
     static GLint attribute_vertex_uv;
+    static GLint attribute_vertex_normal;
 
     static GLint attribute_model;
     
-    static GLint uniform_view, uniform_proj, uniform_texture;
+    static GLint uniform_view, uniform_proj, uniform_texture, uniform_lightPos;
     static glm::mat4 m_mvp;
     //static GLuint vao;
     

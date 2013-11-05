@@ -28,9 +28,8 @@ protected:
     
     //Holds all instances of the same rigid body
     GLuint vbo_vertices;
-    //GLuint vbo_colors;
-    //GLuint ibo_elements;
     GLuint vbo_uv;
+    GLuint vbo_normals;
     
     GLuint vbo_models;
     
@@ -42,6 +41,7 @@ protected:
     GLint *uniform_view;
     GLint *uniform_proj;
     GLint *uniform_texture;
+    GLint *uniform_lightPos;
 private:
     //Helper methods
     
@@ -74,10 +74,15 @@ private:
         glUniformMatrix4fv(*uniform_view, 1, GL_FALSE, glm::value_ptr(view));
         glUniformMatrix4fv(*uniform_proj, 1, GL_FALSE, glm::value_ptr(proj));
         
+        //Lighting
+        glm::vec3 lightPos = glm::vec3(4,4,-14);
+		glUniform3f(*uniform_lightPos, lightPos.x, lightPos.y, lightPos.z);
+        
         //Texture
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, myTexture);
         glUniform1i(*uniform_texture, 0);
+        
         
         //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
         //int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
@@ -104,7 +109,7 @@ public:
         glBindVertexArray(vao);
     }
     
-    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_vertex_uv, GLint &attribute_model) {
+    void bind_buffers(GLint &attribute_coord3d, GLint &attribute_vertex_uv, GLint &attribute_vertex_normal, GLint &attribute_model) {
         glBindBuffer(GL_ARRAY_BUFFER, vbo_vertices);
         glEnableVertexAttribArray(attribute_coord3d);
         // Describe our vertices array to OpenGL (it can't guess its format automatically)
@@ -128,6 +133,19 @@ public:
                               0                  // offset of first element
                               );
         
+        glBindBuffer(GL_ARRAY_BUFFER, vbo_normals);
+        glEnableVertexAttribArray(attribute_vertex_normal);
+        glVertexAttribPointer(
+                              attribute_vertex_normal, // attribute
+                              3,                 // number of elements per vertex, here (R,G,B)
+                              GL_FLOAT,          // the type of each element
+                              GL_FALSE,          // take our values as-is
+                              3*sizeof(GLfloat),
+                              0                  // offset of first element
+                              );
+        
+        
+        
         //Instanced Model Matrix...
         glGenBuffers( 1, &vbo_models );
         glBindBuffer( GL_ARRAY_BUFFER, vbo_models );
@@ -149,10 +167,11 @@ public:
         
     }
     
-    void linkUniforms(GLint &uniform_view, GLint &uniform_proj, GLint &uniform_texture) {
+    void linkUniforms(GLint &uniform_view, GLint &uniform_proj, GLint &uniform_texture, GLint &uniform_lightPos) {
         this->uniform_view = &uniform_view;
         this->uniform_proj = &uniform_proj;
         this->uniform_texture = &uniform_texture;
+        this->uniform_lightPos = &uniform_lightPos;
     }
     
     void updateMVP(glm::mat4 &view, glm::mat4 &projection) {
