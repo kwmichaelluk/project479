@@ -200,6 +200,10 @@ public:
         glDeleteBuffers(1, &vbo_models);
     };  //Call on destroy
     
+    void setLighting(float x, float y, float z) {
+        lightPos = glm::vec3(x,y,z);
+    }
+    
     //Link the position of a specific object at INDEX
     void linkPosition(double *pos_x, double *pos_y, double *pos_z, int index) {
         if(index < instance_size) {
@@ -207,8 +211,6 @@ public:
         }
     }
     
-    void setLighting(float x, float y, float z) {
-        lightPos = glm::vec3(x,y,z);
-    }
+
 };
 #endif /* defined(__openGL_renderer__rigidbodies__) */
