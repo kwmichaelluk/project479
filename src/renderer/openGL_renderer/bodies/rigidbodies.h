@@ -42,6 +42,8 @@ protected:
     GLint *uniform_proj;
     GLint *uniform_texture;
     GLint *uniform_lightPos;
+    
+    glm::vec3 lightPos;
 private:
     //Helper methods
     
@@ -75,7 +77,7 @@ private:
         glUniformMatrix4fv(*uniform_proj, 1, GL_FALSE, glm::value_ptr(proj));
         
         //Lighting
-        glm::vec3 lightPos = glm::vec3(4,4,-14);
+        
 		glUniform3f(*uniform_lightPos, lightPos.x, lightPos.y, lightPos.z);
         
         //Texture
@@ -100,7 +102,7 @@ public:
         myBodies = new rigidbody[instance_size];
         
         init_rigidBody();
-        
+        setLighting(4,4,-14);
     };
     
     //Initializes vbo, ibo buffers and vertices (shape)
@@ -205,5 +207,8 @@ public:
         }
     }
     
+    void setLighting(float x, float y, float z) {
+        lightPos = glm::vec3(x,y,z);
+    }
 };
 #endif /* defined(__openGL_renderer__rigidbodies__) */
