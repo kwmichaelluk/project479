@@ -1,15 +1,30 @@
 %Define mmap file names
+mmap_data_cfg = ['data',filesep,'data_cfg'];
 mmap_data_pos = ['data',filesep,'data_pos'];
+mmap_data_siz = ['data',filesep,'data_siz'];
 
 %Receive data from engine
-engine_num_of_obj = 1;             %Number of rigid bodies
+engine_cfg = [4 1 1 1]';       %config data [size ? ? ?]
 engine_pos = [-4 2 -8
               5 -3 -5]';       %Fake data for now
+engine_size = ones(engine_cfg(1),1);
+for i=1:engine_cfg(1)
+   engine_size(i) = 1+engine_cfg(1)*0.5;
+end
 
 %Construct new mmap file. Dimension of mmap file is fixed on construction.
+fileID = fopen(mmap_data_cfg,'w');
+fwrite(fileID,engine_cfg,'double');
+fclose(fileID);
+
 fileID = fopen(mmap_data_pos,'w');
 fwrite(fileID,engine_pos,'double');
 fclose(fileID);
+
+fileID = fopen(mmap_data_siz,'w');
+fwrite(fileID,engine_size,'double');
+fclose(fileID);
+
 
 %Link controller values
 ctrl_pos= open_mmap(mmap_data_pos);
