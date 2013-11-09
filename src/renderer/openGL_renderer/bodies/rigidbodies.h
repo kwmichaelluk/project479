@@ -217,6 +217,12 @@ public:
         }
     }
     
+    void linkRotation(double *roll, double *pitch, double *yaw, int index) {
+        if(index < instance_size) {
+            (myBodies+index)->setAngles(pitch, yaw, roll);
+        }
+    }
+    
 
 };
 #endif /* defined(__openGL_renderer__rigidbodies__) */
