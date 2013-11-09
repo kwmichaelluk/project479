@@ -25,6 +25,7 @@ namespace config {
     static const std::string pos_data_file = "data_pos";
     
     static const std::string siz_data_file = "data_siz";
+    static const std::string rot_data_file = "data_rot";
     static const std::string cfg_ini_file = "cfg.ini";
 
     //File Paths - boost::filesystem
@@ -34,6 +35,7 @@ namespace config {
     
     static const boost::filesystem::path cfg_ini_path(data_dir+"/"+cfg_ini_file);
     static const boost::filesystem::path siz_data_path(data_dir+"/"+siz_data_file);
+    static const boost::filesystem::path rot_data_path(data_dir+"/"+rot_data_file);
     
     //Attribute Names
     static const std::string coord3d = "coord3d";
