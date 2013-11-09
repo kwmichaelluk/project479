@@ -211,6 +211,12 @@ public:
         }
     }
     
+    void linkSize(double *size, int index) {
+        if(index < instance_size) {
+            (myBodies+index)->setSize(size);
+        }
+    }
+    
 
 };
 #endif /* defined(__openGL_renderer__rigidbodies__) */
