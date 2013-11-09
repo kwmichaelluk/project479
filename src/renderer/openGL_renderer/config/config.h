@@ -23,11 +23,17 @@ namespace config {
     static const std::string frag_shader_file = "shader.frag";
     static const std::string vert_shader_file = "shader.vert";
     static const std::string pos_data_file = "data_pos";
+    
+    static const std::string siz_data_file = "data_siz";
+    static const std::string cfg_ini_file = "cfg.ini";
 
     //File Paths - boost::filesystem
     static const boost::filesystem::path frag_shader_path(shader_dir+"/"+frag_shader_file);
     static const boost::filesystem::path vert_shader_path(shader_dir+"/"+vert_shader_file);
     static const boost::filesystem::path pos_data_path(data_dir+"/"+pos_data_file);
+    
+    static const boost::filesystem::path cfg_ini_path(data_dir+"/"+cfg_ini_file);
+    static const boost::filesystem::path siz_data_path(data_dir+"/"+siz_data_file);
     
     //Attribute Names
     static const std::string coord3d = "coord3d";

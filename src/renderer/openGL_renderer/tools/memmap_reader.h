@@ -29,6 +29,7 @@ private:
     int data_size;
     
     mapped_region m_region;
+    mapped_region m_region2;
     
 public:
     memmap_reader(int size);
@@ -36,7 +37,9 @@ public:
     void dispose();
     
     //Data Pointers
+    //double *cfg_data;
     double *pos_data;
+    double *size_data;
 };
 
 #endif /* defined(__openGL_renderer__memmap_reader__) */

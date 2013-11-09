@@ -22,6 +22,7 @@
 #include "bodies/spheres.h"
 #include "stage/stage.h"
 #include "tools/memmap_reader.h"
+#include "tools/ini_reader.h"
 
 //#include "boost/filesystem.hpp"
 
@@ -29,7 +30,9 @@
 int main()
 {
     printf("Renderer Begin Process\n");
-    int num_obj = 4;
+    //Prepare Config Data
+    ini_reader iniread;
+    int num_obj = iniread.getSize();
     
     //Prepare Memory Map
     memmap_reader memmap(num_obj);
@@ -47,6 +50,7 @@ int main()
     //Link Object Data
     for(int i=0;i<num_obj;i++) {
         ta.linkPosition(memmap.pos_data+(i*3), memmap.pos_data+(i*3+1), memmap.pos_data+(i*3+2), i);
+        ta.linkSize(memmap.size_data, i);
     }
     
     //Prepare Stage

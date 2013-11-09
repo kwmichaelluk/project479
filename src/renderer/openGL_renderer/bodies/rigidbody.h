@@ -27,7 +27,7 @@ private:
     double *pos_z;
     glm::vec3 position;
     
-    float scaleSize;
+    double *scaleSize;
     
 public:
     glm::mat4 model_matrix;
@@ -36,17 +36,18 @@ public:
     
 public:
     rigidbody() {
-        scaleSize=1.0;
-        scale_matrix = glm::scale(glm::mat4(1.0f),glm::vec3(scaleSize));
+        scaleSize = new double;
+        *scaleSize=1.0;
+        scale_matrix = glm::scale(glm::mat4(1.0f),glm::vec3(*scaleSize));
     };
     
     void setPosition(double *x, double *y, double *z) {
         pos_x=x; pos_y=y; pos_z=z;
     }
     
-    void setSize(float size) {
+    void setSize(double *size) {
         scaleSize = size;
-        scale_matrix = glm::scale(glm::mat4(1.0f),glm::vec3(scaleSize));
+        scale_matrix = glm::scale(glm::mat4(1.0f),glm::vec3(*scaleSize));
     }
     
     //Update MVP and Position (Position no longer part of MVP)
