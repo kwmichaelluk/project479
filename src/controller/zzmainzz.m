@@ -53,7 +53,6 @@ for i=1:num_of_objs
    engine_pos((1-1)*3+1+1) = y(1);
    engine_pos((1-1)*3+2+1) = z(1);
     
-   
 end
 
 %Construct new mmap file. Dimension of mmap file is fixed on construction.
