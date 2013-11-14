@@ -123,8 +123,8 @@ classdef world1 < handle
                 phi = 2*pi*rand;  theta = 2*pi*rand;  psi = 2*pi*rand; 
                 Position = [x,y,z,phi,theta,psi];
                 
-                vx = 1*rand; vy = 1*rand; vz = 1*rand;
-                %vx = 0; vy =0; vz=0;
+                %vx = 1*rand; vy = 1*rand; vz = 1*rand;
+                vx = 0; vy =0; vz=0;
                 omega_phi = 0; omega_theta = 0; omega_psi = 0;
                 Velocity = [vx,vy,vz,omega_phi,omega_theta,omega_psi];
                 
@@ -200,9 +200,7 @@ classdef world1 < handle
 
             obj.JW = obj.Normal_wall*obj.JAW; 
             Jw = obj.JW; 
-            %%%%%%%%%%%%%%%%%%
-            CoR = 0.5;
-            b = -w_speed_bound+CoR*Jw*obj.global_velocity;
+            b = -w_speed_bound-0.5*Jw;
             constraint_count = wp;
 %%%%%%%%%%%%%%% End of wall-object distance function and Jw computation %%%%%%%%%
 
@@ -268,7 +266,7 @@ classdef world1 < handle
 %%%%%%%%%%%%%%% End of object-object distance function and Jo computation %%%%%%%%%
 
             J = vertcat(Jw,Jo);
-            b = vertcat(b,-speed_bound+CoR*Jo*obj.global_velocity);
+            b = vertcat(b,-speed_bound);
             constraint_count = constraint_count + p;
             
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

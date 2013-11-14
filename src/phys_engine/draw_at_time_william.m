@@ -6,17 +6,18 @@ function draw_at_time_william(S,t)
 %read data from S
 
 %%%%%% x, y %%%%%%%%%%%
-%{
+
 position(:,1) = S.x_log(:,t);
 position(:,2) = S.y_log(:,t);
 angle = S.angle_phi_log(:,t);
-%}
+
 %%%%%%%%%%%% x, z %%%%%%%%%%%
 %%% can only draw 2D handle
+%{
 position(:,1) = S.x_log(:,t);
 position(:,2) = S.z_log(:,t);
 angle = S.angle_phi_log(:,t);
-
+%}
 %%%%%%%%% y, z %%%%%%%%%%%%%
 %{
 position(:,1) = S.y_log(:,t);
