@@ -1,4 +1,5 @@
-phys_engine_path = ['..',filesep,'physics_engine_v9_william_OCT_1'];
+%phys_engine_path = ['..',filesep,'physics_engine_v9_william_OCT_1'];
+phys_engine_path = ['..',filesep,'phys_engine'];
 addpath(phys_engine_path);
 
 ax = axes;
@@ -7,7 +8,7 @@ world = world1(10,10,10, 20, ax, max_time, 0.01);
 world.draw_scene;
 
 % world1.initialize_configuration(number_of_disks,R,number_of_boxes,l,w,h)
-n_obj = 5;
+n_obj = 3;
 world.initialize_configuration(n_obj,1,0,0,0,0);
 
 % world1.jacobian_initialization();
