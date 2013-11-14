@@ -1,0 +1,1 @@
+To run the simple physics engine, just execute gui2.m in matlab.
