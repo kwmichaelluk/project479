@@ -260,7 +260,7 @@ classdef world1 < handle
             %spy(obj.JA)
             
 
-            
+            %%hi
             Jo = obj.Normal_object*obj.JA;  %constraints between objects
             
 %%%%%%%%%%%%%%% End of object-object distance function and Jo computation %%%%%%%%%
