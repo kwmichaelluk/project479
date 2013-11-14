@@ -201,7 +201,7 @@ classdef world1 < handle
             obj.JW = obj.Normal_wall*obj.JAW; 
             Jw = obj.JW; 
             %%%%%%%%%%%%%%%%%%
-            CoR = 0.5;
+            CoR = 0.5;  % this implementation would result in tiny penetration into wall
             b = -w_speed_bound+CoR*Jw*obj.global_velocity;
             constraint_count = wp;
 %%%%%%%%%%%%%%% End of wall-object distance function and Jw computation %%%%%%%%%
@@ -268,7 +268,8 @@ classdef world1 < handle
 %%%%%%%%%%%%%%% End of object-object distance function and Jo computation %%%%%%%%%
 
             J = vertcat(Jw,Jo);
-            b = vertcat(b,-speed_bound+CoR*Jo*obj.global_velocity);
+            CoR2 = 0.3;  % this implementation would result in tiny penetration into wall
+            b = vertcat(b,-speed_bound+CoR2*Jo*obj.global_velocity);
             constraint_count = constraint_count + p;
             
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
