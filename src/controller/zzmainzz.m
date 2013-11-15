@@ -8,7 +8,7 @@ world = world1(10,10,10, 20, ax, max_time, 0.01);
 world.draw_scene;
 
 % world1.initialize_configuration(number_of_disks,R,number_of_boxes,l,w,h)
-n_obj = 3;
+n_obj = 8;
 world.initialize_configuration(n_obj,1,0,0,0,0);
 
 % world1.jacobian_initialization();
@@ -25,7 +25,7 @@ phi = world.angle_phi_log(:,1);
 sig = world.angle_sig_log(:,1);
 psi = world.angle_psi_log(:,1);
 
-
+sphere_size = world.radius(:);
 
 %MATLAB folder search path
 addpath('iniconfig');
@@ -49,11 +49,11 @@ engine_pos = ones(num_of_objs,3);
 engine_size = ones(num_of_objs,1);
 engine_rot  = ones(num_of_objs,3);
 for i=1:num_of_objs
-
    engine_pos((1-1)*3+1) = x(1);
    engine_pos((1-1)*3+1+1) = y(1);
    engine_pos((1-1)*3+2+1) = z(1);
     
+   engine_size(i) = sphere_size(i);
 end
 
 %Construct new mmap file. Dimension of mmap file is fixed on construction.
@@ -94,9 +94,9 @@ for i = 1:max_time-1
         ctrl_pos.Data((j-1)*3+1+1) = y(j);
         ctrl_pos.Data((j-1)*3+2+1) = z(j);
         
-        ctrl_rot.Data((j-1)*3+1) = phi(j);
-        ctrl_rot.Data((j-1)*3+1+1) = sig(j);
-        ctrl_rot.Data((j-1)*3+2+1) = psi(j);
+        %ctrl_rot.Data((j-1)*3+1) = phi(j);
+        %ctrl_rot.Data((j-1)*3+1+1) = sig(j);
+        %ctrl_rot.Data((j-1)*3+2+1) = psi(j);
     end
     
 end

@@ -102,7 +102,7 @@ public:
         myBodies = new rigidbody[instance_size];
         
         init_rigidBody();
-        setLighting(4,4,-14);
+        setLighting(-9,-7,0);
     };
     
     //Initializes vbo, ibo buffers and vertices (shape)
