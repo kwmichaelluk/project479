@@ -123,9 +123,9 @@ classdef world1 < handle
                 phi = 2*pi*rand;  theta = 2*pi*rand;  psi = 2*pi*rand; 
                 Position = [x,y,z,phi,theta,psi];
                 
-                vx = 1*rand; vy = 1*rand; vz = 1*rand;
+                vx = 100*rand; vy = 100*rand; vz = 100*rand;
                 %vx = 0; vy =0; vz=0;
-                omega_phi = 0; omega_theta = 0; omega_psi = 0;
+                omega_phi = 2; omega_theta = 3; omega_psi = 4;
                 Velocity = [vx,vy,vz,omega_phi,omega_theta,omega_psi];
                 
                 %%%%%%%%%%%%%%%%%%%%

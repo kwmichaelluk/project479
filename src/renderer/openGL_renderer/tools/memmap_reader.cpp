@@ -10,22 +10,28 @@
 
 
 memmap_reader::memmap_reader(int size) {
-    /*FILE* in = fopen(config::pos_data_path.c_str(), "rb");
-    
-    data_size = size;
-    pos_data = (double*)mmap(0, data_size * sizeof(double), PROT_READ, MAP_FILE | MAP_SHARED, fileno(in),0);
-    
-    fclose(in);*/
-    
     data_size = size;
 
+    //Position
     //Memory Mapping
-    file_mapping m_file("data/data_pos",read_only);
+    file_mapping m_file(config::pos_data_path.c_str(),read_only);
     m_region = mapped_region(m_file, read_only,0,data_size * sizeof(double));
-    
     //Set Position Data
     pos_data = (double *)m_region.get_address();
     
+    //Size
+    //Memory Mapping
+    file_mapping m_file2(config::siz_data_path.c_str(),read_only);
+    m_region2 = mapped_region(m_file2, read_only,0,data_size * sizeof(double));
+    //Set Position Data
+    size_data = (double *)m_region2.get_address();
+    
+    //Rotation
+    //Memory Mapping
+    file_mapping m_file3(config::siz_data_path.c_str(),read_only);
+    m_region3 = mapped_region(m_file3, read_only,0,data_size * sizeof(double));
+    //Set Position Data
+    rot_data = (double *)m_region3.get_address();
 }
 
 void memmap_reader::dispose() {
