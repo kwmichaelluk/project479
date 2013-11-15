@@ -102,11 +102,9 @@ public:
         myBodies = new rigidbody[instance_size];
         
         init_rigidBody();
-<<<<<<< HEAD
-        setLighting(4,4,-14);
-=======
+
         setLighting(-9,-7,0);
->>>>>>> link/ctrlr
+
     };
     
     //Initializes vbo, ibo buffers and vertices (shape)
@@ -130,7 +128,7 @@ public:
         
         glBindBuffer(GL_ARRAY_BUFFER, vbo_uv);
         glEnableVertexAttribArray(attribute_vertex_uv);
-<<<<<<< HEAD
+
         glVertexAttribPointer(
                               attribute_vertex_uv, // attribute
                               2,                 // number of elements per vertex, here (R,G,B)
@@ -143,20 +141,7 @@ public:
         glBindBuffer(GL_ARRAY_BUFFER, vbo_normals);
         glEnableVertexAttribArray(attribute_vertex_normal);
         glVertexAttribPointer(
-=======
-        glVertexAttribPointer(
-                              attribute_vertex_uv, // attribute
-                              2,                 // number of elements per vertex, here (R,G,B)
-                              GL_FLOAT,          // the type of each element
-                              GL_FALSE,          // take our values as-is
-                              2*sizeof(GLfloat),
-                              0                  // offset of first element
-                              );
-        
-        glBindBuffer(GL_ARRAY_BUFFER, vbo_normals);
-        glEnableVertexAttribArray(attribute_vertex_normal);
-        glVertexAttribPointer(
->>>>>>> link/ctrlr
+
                               attribute_vertex_normal, // attribute
                               3,                 // number of elements per vertex, here (R,G,B)
                               GL_FLOAT,          // the type of each element
@@ -230,8 +215,7 @@ public:
         }
     }
     
-<<<<<<< HEAD
-=======
+
     void linkSize(double *size, int index) {
         if(index < instance_size) {
             (myBodies+index)->setSize(size);
@@ -244,7 +228,7 @@ public:
         }
     }
     
->>>>>>> link/ctrlr
+
 
 };
 #endif /* defined(__openGL_renderer__rigidbodies__) */

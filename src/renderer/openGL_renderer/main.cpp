@@ -30,27 +30,20 @@
 int main()
 {
     printf("Renderer Begin Process\n");
-<<<<<<< HEAD
-    int num_obj = 4;
-=======
+
     //Prepare Config Data
     ini_reader iniread;
     int num_obj = iniread.getSize();
->>>>>>> link/ctrlr
+
     
     //Prepare Memory Map
     memmap_reader memmap(num_obj);
     
     //Define Camera
     camera myCam(stage::screen_width,stage::screen_height);
-<<<<<<< HEAD
-    myCam.setView(glm::vec3(0.0, 2.0, -20.0), glm::vec3(0.0, 0.0, -4.0), glm::vec3(0.0, 1.0, 0.0));
-    myCam.setProjection(45.0f, 0.1f, 20.0f);
-=======
     //myCam.setView(glm::vec3(0.0, 2.0, -25.0), glm::vec3(0.0, 0.0, -4.0), glm::vec3(0.0, 1.0, 0.0));
     myCam.setView(glm::vec3(-23.0, -18.0, 6.0), glm::vec3(0.0, 0.0, -2.0), glm::vec3(0.0, 0.0, 1.0));
     myCam.setProjection(45.0f, 0.1f, 50.0f);
->>>>>>> link/ctrlr
     
     //Define Objects
     
