@@ -22,20 +22,32 @@ namespace config {
     //Files
     static const std::string frag_shader_file = "shader.frag";
     static const std::string vert_shader_file = "shader.vert";
-    static const std::string pos_data_file = "data_pos";
+    static const std::string posX_data_file = "dataX_pos";
+    static const std::string posY_data_file = "dataY_pos";
+    static const std::string posZ_data_file = "dataZ_pos";
     
     static const std::string siz_data_file = "data_siz";
-    static const std::string rot_data_file = "data_rot";
+    
+    static const std::string rotP_data_file = "dataP_rot";
+    static const std::string rotQ_data_file = "dataQ_rot";
+    static const std::string rotR_data_file = "dataR_rot";
+    
     static const std::string cfg_ini_file = "cfg.ini";
 
     //File Paths - boost::filesystem
     static const boost::filesystem::path frag_shader_path(shader_dir+"/"+frag_shader_file);
     static const boost::filesystem::path vert_shader_path(shader_dir+"/"+vert_shader_file);
-    static const boost::filesystem::path pos_data_path(data_dir+"/"+pos_data_file);
+    
+    static const boost::filesystem::path posX_data_path(data_dir+"/"+posX_data_file);
+    static const boost::filesystem::path posY_data_path(data_dir+"/"+posY_data_file);
+    static const boost::filesystem::path posZ_data_path(data_dir+"/"+posZ_data_file);
     
     static const boost::filesystem::path cfg_ini_path(data_dir+"/"+cfg_ini_file);
     static const boost::filesystem::path siz_data_path(data_dir+"/"+siz_data_file);
-    static const boost::filesystem::path rot_data_path(data_dir+"/"+rot_data_file);
+    
+    static const boost::filesystem::path rotP_data_path(data_dir+"/"+rotP_data_file);
+    static const boost::filesystem::path rotQ_data_path(data_dir+"/"+rotQ_data_file);
+    static const boost::filesystem::path rotR_data_path(data_dir+"/"+rotR_data_file);
     
     //Attribute Names
     static const std::string coord3d = "coord3d";

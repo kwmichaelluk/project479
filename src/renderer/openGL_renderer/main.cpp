@@ -52,9 +52,10 @@ int main()
     
     //Link Object Data
     for(int i=0;i<num_obj;i++) {
-        ta.linkPosition(memmap.pos_data+(i*3), memmap.pos_data+(i*3+1), memmap.pos_data+(i*3+2), i);
-        ta.linkSize(memmap.size_data, i);
-        ta.linkRotation(memmap.rot_data+(i*3), memmap.rot_data+(i*3+1), memmap.rot_data+(i*3+2), i);
+        //ta.linkPosition(memmap.pos_data+(i*3), memmap.pos_data+(i*3+1), memmap.pos_data+(i*3+2), i);
+        ta.linkPosition(memmap.posX_data+i, memmap.posY_data+i, memmap.posZ_data+i, i);
+        ta.linkSize(memmap.size_data+i, i);
+        ta.linkRotation(memmap.rotP_data+i, memmap.rotQ_data+i, memmap.rotR_data+i, i);
     }
     
     //Prepare Stage

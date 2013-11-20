@@ -28,9 +28,9 @@ private:
     //Number of data points, size of array
     int data_size;
     
-    mapped_region m_region;
+    mapped_region m_regionX, m_regionY, m_regionZ;
     mapped_region m_region2; //size
-    mapped_region m_region3; //rotation
+    mapped_region m_regionP, m_regionQ, m_regionR; //rotation
     
 public:
     memmap_reader(int size);
@@ -39,9 +39,9 @@ public:
     
     //Data Pointers
     //double *cfg_data;
-    double *pos_data;
+    double *posX_data; double *posY_data; double *posZ_data;
     double *size_data;
-    double *rot_data;
+    double *rotP_data; double *rotQ_data; double *rotR_data;
 };
 
 #endif /* defined(__openGL_renderer__memmap_reader__) */
