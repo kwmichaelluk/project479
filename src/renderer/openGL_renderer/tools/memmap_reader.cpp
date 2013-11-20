@@ -28,7 +28,7 @@ memmap_reader::memmap_reader(int size) {
     
     //Rotation
     //Memory Mapping
-    file_mapping m_file3(config::siz_data_path.c_str(),read_only);
+    file_mapping m_file3(config::rot_data_path.c_str(),read_only);
     m_region3 = mapped_region(m_file3, read_only,0,data_size * sizeof(double));
     //Set Position Data
     rot_data = (double *)m_region3.get_address();

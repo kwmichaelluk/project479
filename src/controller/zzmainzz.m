@@ -3,13 +3,13 @@ phys_engine_path = ['..',filesep,'phys_engine'];
 addpath(phys_engine_path);
 
 ax = axes;
-max_time = 100;
+max_time = 200;
 world = world1(10,10,10, 20, ax, max_time, 0.01); 
 world.draw_scene;
 
 % world1.initialize_configuration(number_of_disks,R,number_of_boxes,l,w,h)
-n_obj = 8;
-world.initialize_configuration(n_obj,1,0,0,0,0);
+n_obj = 3;
+world.initialize_configuration(n_obj,0.3,0,0,0,0);
 
 % world1.jacobian_initialization();
 world.jacobian_initialization();
@@ -78,6 +78,7 @@ ctrl_rot= open_mmap(mmap_data_rot);
 %Begin OpenGL Process
 start_renderer();
 
+tic
 for i = 1:max_time-1
     world.dynamics(i,solver_choice);
     
@@ -94,9 +95,10 @@ for i = 1:max_time-1
         ctrl_pos.Data((j-1)*3+1+1) = y(j);
         ctrl_pos.Data((j-1)*3+2+1) = z(j);
         
-        %ctrl_rot.Data((j-1)*3+1) = phi(j);
-        %ctrl_rot.Data((j-1)*3+1+1) = sig(j);
-        %ctrl_rot.Data((j-1)*3+2+1) = psi(j);
+        ctrl_rot.Data((j-1)*3+1) = psi(j);
+        ctrl_rot.Data((j-1)*3+1+1) = sig(j);
+        ctrl_rot.Data((j-1)*3+2+1) = phi(j);
     end
     
 end
+toc
