@@ -49,7 +49,7 @@ public:
 
     static GLint attribute_model;
     
-    static GLint uniform_view, uniform_proj, uniform_texture, uniform_lightPos;
+    static GLint uniform_view, uniform_proj, uniform_texture, uniform_lightPos, uniform_alpha;
     static glm::mat4 m_mvp;
     //static GLuint vao;
     

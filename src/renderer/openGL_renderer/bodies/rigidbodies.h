@@ -42,8 +42,10 @@ protected:
     GLint *uniform_proj;
     GLint *uniform_texture;
     GLint *uniform_lightPos;
+    GLint *uniform_alpha;
     
     glm::vec3 lightPos;
+    GLfloat alpha;
 private:
     //Helper methods
     
@@ -77,8 +79,10 @@ private:
         glUniformMatrix4fv(*uniform_proj, 1, GL_FALSE, glm::value_ptr(proj));
         
         //Lighting
-        
 		glUniform3f(*uniform_lightPos, lightPos.x, lightPos.y, lightPos.z);
+        
+        //Alpha Channel
+        glUniform1f(*uniform_alpha, 1);
         
         //Texture
         glActiveTexture(GL_TEXTURE0);
@@ -104,7 +108,6 @@ public:
         init_rigidBody();
 
         setLighting(-9,-7,0);
-
     };
     
     //Initializes vbo, ibo buffers and vertices (shape)
@@ -173,11 +176,12 @@ public:
         
     }
     
-    void linkUniforms(GLint &uniform_view, GLint &uniform_proj, GLint &uniform_texture, GLint &uniform_lightPos) {
+    void linkUniforms(GLint &uniform_view, GLint &uniform_proj, GLint &uniform_texture, GLint &uniform_lightPos, GLint &uniform_alpha) {
         this->uniform_view = &uniform_view;
         this->uniform_proj = &uniform_proj;
         this->uniform_texture = &uniform_texture;
         this->uniform_lightPos = &uniform_lightPos;
+        this->uniform_alpha = &uniform_alpha;
     }
     
     void updateMVP(glm::mat4 &view, glm::mat4 &projection) {

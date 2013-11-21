@@ -61,6 +61,7 @@ namespace config {
     static const std::string proj_matrix = "proj_matrix";
     static const std::string texture_sampler = "myTextureSampler";
     static const std::string light_pos = "LightPosition_worldspace";
+    static const std::string alpha_chn = "Alpha_chn";
 
 }
 

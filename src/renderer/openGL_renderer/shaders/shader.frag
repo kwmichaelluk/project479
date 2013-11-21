@@ -8,18 +8,16 @@ varying vec3 Normal_cameraspace;
 varying vec3 EyeDirection_cameraspace;
 varying vec3 LightDirection_cameraspace;
 
-
-
 //Uniform
 uniform sampler2D myTextureSampler;
 uniform vec3 LightPosition_worldspace;
+uniform float Alpha_chn;
 
 void main(void) {
     // Light emission properties
 	// You probably want to put them as uniforms
 	vec3 LightColor = vec3(1,1,1);
 	float LightPower = 50.0f;
-    
     
 	// Material properties
 	vec3 MaterialDiffuseColor = texture2D( myTextureSampler, UV ).rgb;
@@ -57,5 +55,5 @@ void main(void) {
                     MaterialDiffuseColor * LightColor * LightPower * cosTheta / (distance*distance) +
                     // Specular : reflective highlight, like a mirror
                     MaterialSpecularColor * LightColor * LightPower * pow(cosAlpha,5) / (distance*distance),
-                    1.0);
+                    Alpha_chn);
 }

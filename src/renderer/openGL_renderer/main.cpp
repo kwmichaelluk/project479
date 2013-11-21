@@ -24,9 +24,6 @@
 #include "tools/memmap_reader.h"
 #include "tools/ini_reader.h"
 
-//#include "boost/filesystem.hpp"
-
-
 int main()
 {
     printf("Renderer Begin Process\n");
@@ -34,25 +31,20 @@ int main()
     //Prepare Config Data
     ini_reader iniread;
     int num_obj = iniread.getSize();
-
     
     //Prepare Memory Map
     memmap_reader memmap(num_obj);
     
     //Define Camera
     camera myCam(stage::screen_width,stage::screen_height);
-    //myCam.setView(glm::vec3(0.0, 2.0, -25.0), glm::vec3(0.0, 0.0, -4.0), glm::vec3(0.0, 1.0, 0.0));
     myCam.setView(glm::vec3(-23.0, -18.0, 6.0), glm::vec3(0.0, 0.0, -2.0), glm::vec3(0.0, 0.0, 1.0));
     myCam.setProjection(45.0f, 0.1f, 50.0f);
     
     //Define Objects
-    
-    //cube ta(num_obj);
     spheres ta(num_obj);
     
     //Link Object Data
     for(int i=0;i<num_obj;i++) {
-        //ta.linkPosition(memmap.pos_data+(i*3), memmap.pos_data+(i*3+1), memmap.pos_data+(i*3+2), i);
         ta.linkPosition(memmap.posX_data+i, memmap.posY_data+i, memmap.posZ_data+i, i);
         ta.linkSize(memmap.size_data+i, i);
         ta.linkRotation(memmap.rotP_data+i, memmap.rotQ_data+i, memmap.rotR_data+i, i);

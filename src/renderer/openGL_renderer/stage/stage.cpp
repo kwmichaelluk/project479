@@ -27,6 +27,7 @@ GLint stage::uniform_view = 0;
 GLint stage::uniform_proj = 0;
 GLint stage::uniform_texture = 0;
 GLint stage::uniform_lightPos = 0;
+GLint stage::uniform_alpha = 0;
 glm::mat4 stage::m_mvp;
 
 camera* stage::myCamera = NULL;
@@ -164,6 +165,12 @@ bool stage::initShaders() {
         return 0;
     }
     
+    uniform_alpha = glGetUniformLocation(shader_program, config::alpha_chn.c_str());
+    if (uniform_alpha == -1) {
+        fprintf(stderr, "Could not bind uniform %s\n", config::alpha_chn.c_str());
+        return 0;
+    }
+    
     return 1;
 }
 
@@ -180,7 +187,7 @@ int stage::initResources() {
 
 void stage::linkUniforms() {
     for(int i=0;i<numBodyTypes;i++) {
-        myBodies.at(i)->linkUniforms(uniform_view, uniform_proj, uniform_texture, uniform_lightPos);
+        myBodies.at(i)->linkUniforms(uniform_view, uniform_proj, uniform_texture, uniform_lightPos, uniform_alpha);
     }
 }
 
@@ -217,10 +224,6 @@ void stage::onIdle() {
     
     //Bind shader program
     glUseProgram(shader_program);
-    
-    /*for( int i=0; i<numBodyTypes; i++) {
-        myBodies.at(i)->updateUniform(uniform_mvp);
-    }*/
     
     //Draw Again
     updateDraw();
