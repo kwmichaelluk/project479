@@ -3,12 +3,12 @@ phys_engine_path = ['..',filesep,'phys_engine'];
 addpath(phys_engine_path);
 
 ax = axes;
-max_time = 200;
+max_time = 150;
 world = world1(10,10,10, 20, ax, max_time, 0.01); 
 world.draw_scene;
 
 % world1.initialize_configuration(number_of_disks,R,number_of_boxes,l,w,h)
-n_obj = 6;
+n_obj = 8;
 world.initialize_configuration(n_obj,1,0,0,0,0);
 
 % world1.jacobian_initialization();
@@ -107,7 +107,6 @@ ctrl_rotR= open_mmap(mmap_dataR_rot);
 
 %Begin OpenGL Process
 start_renderer();
-
 tic
 for i = 1:max_time-1
     world.dynamics(i,solver_choice);
