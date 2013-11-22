@@ -242,6 +242,8 @@ void stage::updateDraw() {
     
     //Draw Stuff Here - NOTE: Each "bodies" each has their own VAO
     for( int i=0; i<numBodyTypes; i++) {
+        myBodies.at(i)->bind_buffers(attribute_coord3d,attribute_vertex_uv,attribute_vertex_normal, attribute_model);
+        
         myBodies.at(i)->initDrawBodies(myCamera->view,myCamera->projection);
     }
     

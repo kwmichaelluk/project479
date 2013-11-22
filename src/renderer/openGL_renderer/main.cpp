@@ -18,7 +18,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "tools/shader_utils.h"
 #include "tools/camera.h"
-#include "bodies/cube.h"
+#include "bodies/walls.h"
 #include "bodies/spheres.h"
 #include "stage/stage.h"
 #include "tools/memmap_reader.h"
@@ -50,9 +50,22 @@ int main()
         ta.linkRotation(memmap.rotP_data+i, memmap.rotQ_data+i, memmap.rotR_data+i, i);
     }
     
+    //Walls
+    walls myWalls(1);
+    double wall_x=0, wall_y=0, wall_z=-5;
+    double wall_size=10;
+    double wall_p=0, wall_q=0, wall_r=0;
+    myWalls.linkPosition(&wall_x, &wall_y, &wall_z, 0);
+    myWalls.linkSize(&wall_size, 0);
+    myWalls.linkRotation(&wall_p, &wall_q, &wall_r, 0);
+    
     //Prepare Stage
     stage::setCamera(myCam);
+
+    //Must add Walls AFTER Balls for transparency to work
     stage::addBody(ta);
+    stage::addBody(myWalls);
+
     
     //Run OpenGL
     stage::run();

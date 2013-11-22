@@ -1,19 +1,18 @@
 //
-//  spheres.h
+//  walls.h
 //  openGL_renderer
 //
-//  Created by Michael Luk on 11/2/2013.
+//  Created by Michael Luk on 11/20/2013.
 //  Copyright (c) 2013 Michael Luk. All rights reserved.
 //
 
-#ifndef __openGL_renderer__spheres__
-#define __openGL_renderer__spheres__
+#ifndef __openGL_renderer__walls__
+#define __openGL_renderer__walls__
 
 #include <iostream>
 #include "rigidbodies.h"
 
 #include <GL/glew.h>
-//#include <GLUT/glut.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -24,18 +23,15 @@
 #include "texture.hpp"
 #include "objloader.hpp"
 
-class spheres : public rigidbodies {
+class walls : public rigidbodies {
 private:
     
 public:
-    spheres(int size) : rigidbodies(size) {
-        alphaChn = 1.0f;
+    walls(int size) : rigidbodies(size) {
+        alphaChn = 0.4f;
     }
     
     void init_buffers();
-    
-    
 };
 
-
-#endif /* defined(__openGL_renderer__spheres__) */
+#endif /* defined(__openGL_renderer__walls__) */

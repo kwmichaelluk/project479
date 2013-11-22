@@ -45,7 +45,7 @@ protected:
     GLint *uniform_alpha;
     
     glm::vec3 lightPos;
-    GLfloat alpha;
+    GLfloat alphaChn;
 private:
     //Helper methods
     
@@ -82,7 +82,7 @@ private:
 		glUniform3f(*uniform_lightPos, lightPos.x, lightPos.y, lightPos.z);
         
         //Alpha Channel
-        glUniform1f(*uniform_alpha, 1);
+        glUniform1f(*uniform_alpha, alphaChn);
         
         //Texture
         glActiveTexture(GL_TEXTURE0);
@@ -108,6 +108,8 @@ public:
         init_rigidBody();
 
         setLighting(-9,-7,0);
+        
+        alphaChn = 1.0;
     };
     
     //Initializes vbo, ibo buffers and vertices (shape)
