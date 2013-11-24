@@ -15,10 +15,10 @@ void spheres::init_buffers() {
 	std::vector<glm::vec2> uvs;
 	std::vector<glm::vec3> normals;
 	
-    loadOBJ("sphere.obj", vertices, uvs, normals);
+    loadOBJ(config::sphere_obj_path.c_str(), vertices, uvs, normals);
     
     //Load Texture
-    myTexture = loadBMP_custom("sphere.bmp");
+    myTexture = loadBMP_custom(config::sphere_texture_path.c_str());
     
     //Bind Vertex Data
     glGenBuffers(1, &vbo_vertices);

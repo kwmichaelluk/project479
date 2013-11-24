@@ -18,6 +18,7 @@ namespace config {
     //Folders
     static const std::string shader_dir = "shaders";
     static const std::string data_dir = "data";
+    static const std::string obj_dir = "objects";
 
     //Files
     static const std::string frag_shader_file = "shader.frag";
@@ -31,6 +32,9 @@ namespace config {
     static const std::string rotP_data_file = "dataP_rot";
     static const std::string rotQ_data_file = "dataQ_rot";
     static const std::string rotR_data_file = "dataR_rot";
+    
+    static const std::string sphere_obj = "sphere.obj";
+    static const std::string sphere_texture = "sphere.bmp";
     
     static const std::string cfg_ini_file = "cfg.ini";
 
@@ -48,6 +52,9 @@ namespace config {
     static const boost::filesystem::path rotP_data_path(data_dir+"/"+rotP_data_file);
     static const boost::filesystem::path rotQ_data_path(data_dir+"/"+rotQ_data_file);
     static const boost::filesystem::path rotR_data_path(data_dir+"/"+rotR_data_file);
+    
+    static const boost::filesystem::path sphere_obj_path(obj_dir+"/"+sphere_obj);
+    static const boost::filesystem::path sphere_texture_path(obj_dir+"/"+sphere_texture);
     
     //Attribute Names
     static const std::string coord3d = "coord3d";

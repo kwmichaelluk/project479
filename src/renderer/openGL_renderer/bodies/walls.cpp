@@ -39,12 +39,11 @@ void walls::init_buffers() {
         0.0, -1.0,  0.0,
     };
 
-    
-    std::vector<glm::vec3> vertices;
-	std::vector<glm::vec2> uvs;
-	std::vector<glm::vec3> normals;
+    //std::vector<glm::vec3> vertices;
+	//std::vector<glm::vec2> uvs;
+	//std::vector<glm::vec3> normals;
 	
-    loadOBJ("sphere.obj", vertices, uvs, normals);
+    //loadOBJ("sphere.obj", vertices, uvs, normals);
     
     //Load Texture
     myTexture = loadBMP_custom("sphere.bmp");

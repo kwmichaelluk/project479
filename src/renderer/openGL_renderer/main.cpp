@@ -50,7 +50,7 @@ int main()
         ta.linkRotation(memmap.rotP_data+i, memmap.rotQ_data+i, memmap.rotR_data+i, i);
     }
     
-    //Walls
+    //Walls - Hard code wall properties for now
     walls myWalls(1);
     double wall_x=0, wall_y=0, wall_z=-5;
     double wall_size=10;
@@ -66,7 +66,6 @@ int main()
     stage::addBody(ta);
     stage::addBody(myWalls);
 
-    
     //Run OpenGL
     stage::run();
     

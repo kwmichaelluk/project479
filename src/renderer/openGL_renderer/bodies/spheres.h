@@ -24,6 +24,8 @@
 #include "texture.hpp"
 #include "objloader.hpp"
 
+#include "../config/config.h"
+
 class spheres : public rigidbodies {
 private:
     

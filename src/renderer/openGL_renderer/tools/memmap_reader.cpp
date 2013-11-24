@@ -25,7 +25,6 @@ memmap_reader::memmap_reader(int size) {
     posX_data = (double *)m_regionX.get_address();
     posY_data = (double *)m_regionY.get_address();
     posZ_data = (double *)m_regionZ.get_address();
-
     
     //Size
     //Memory Mapping
