@@ -23,6 +23,8 @@
 #include "texture.hpp"
 #include "objloader.hpp"
 
+#include "../config/config.h"
+
 class walls : public rigidbodies {
 private:
     

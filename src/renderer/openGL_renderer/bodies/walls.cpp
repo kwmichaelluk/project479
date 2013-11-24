@@ -46,7 +46,7 @@ void walls::init_buffers() {
     //loadOBJ("sphere.obj", vertices, uvs, normals);
     
     //Load Texture
-    myTexture = loadBMP_custom("sphere.bmp");
+    myTexture = loadBMP_custom(config::sphere_texture_path.c_str());
     
     //Bind Vertex Data
     glGenBuffers(1, &vbo_vertices);
