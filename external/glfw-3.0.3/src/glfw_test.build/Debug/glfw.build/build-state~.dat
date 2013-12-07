@@ -1,0 +1,560 @@
+Tglfw
+v4
+r1
+cCheck dependencies
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/clipboard.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_clipboard.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_gamma.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_init.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_joystick.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_monitor.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_time.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_window.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/context.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/gamma.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/init.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/input.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/joystick.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/monitor.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/nsgl_context.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/time.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/window.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/libglfw3.a" normal x86_64
+cPhaseScriptExecution "CMake PostBuild Rules" "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Script-7023CC7A05114D27A423E580.sh"
+
+N/Developer/SDKs/MacOSX10.7.sdk
+c000000004E7AD70B00000000000000EE
+t1316673291
+s238
+
+N/Developer/SDKs/MacOSX10.7.sdk/usr/include/math.h
+c000000004DDD287300000000000004F1
+t1306339443
+s1265
+
+N/Developer/SDKs/MacOSX10.7.sdk/usr/include/string.h
+c000000004E360D4E0000000000001A3A
+t1312165198
+s6714
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/libglfw3.a
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c
+c00000000523B6D080000000000000772
+t1379626248
+s1906
+i"internal.h"
+i<math.h>
+i<string.h>
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m
+c00000000523B6D0800000000000009F0
+t1379626248
+s2544
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c
+c00000000523B6D080000000000000BEB
+t1379626248
+s3051
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m
+c00000000523B6D080000000000000EF0
+t1379626248
+s3824
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m
+c00000000523B6D0800000000000040A6
+t1379626248
+s16550
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m
+c00000000523B6D080000000000002A6C
+t1379626248
+s10860
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c
+c00000000523B6D080000000000000910
+t1379626248
+s2320
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m
+c000000005245FAD70000000000007B09
+t1380317911
+s31497
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c
+c00000000523B6D080000000000004CEE
+t1379626248
+s19694
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c
+c00000000523B6D080000000000000E35
+t1379626248
+s3637
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/clipboard.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_clipboard.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_gamma.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_init.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_joystick.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_monitor.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_time.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_window.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/context.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/gamma.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/glfw3.LinkFileList
+c0000000052460A080000000000000929
+t1380321800
+s2345
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/init.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/input.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/joystick.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/monitor.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/nsgl_context.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/time.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/window.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Script-7023CC7A05114D27A423E580.sh
+c0000000052460A0800000000000000DD
+t1380321800
+s221
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c
+c00000000523B6D0800000000000015DA
+t1379626248
+s5594
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c
+c00000000523B6D080000000000002C12
+t1379626248
+s11282
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/internal.h
+c00000000523B6D080000000000005F6D
+t1379626248
+s24429
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c
+c00000000523B6D080000000000000A5B
+t1379626248
+s2651
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c
+c00000000523B6D080000000000002707
+t1379626248
+s9991
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m
+c00000000523B6D08000000000000236D
+t1379626248
+s9069
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c
+c00000000523B6D0800000000000006AE
+t1379626248
+s1710
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c
+c00000000523B6D080000000000004F22
+t1379626248
+s20258
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c"
+r0
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c"
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies57798e8841f6b741^43758f8841f6b741^---0#1#0#--18"Check dependencies36"6B60A4E8-BA9B-4436-B95D-0362D8DA16CD-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/clipboard.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014600.567448
+e402014601.481913
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/clipboard.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.cf86c918841f6b741^9a5d7b8941f6b741^---0#0#0#-19%DVTDocumentLocation2@100"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/clipboard.c0000000000000000^1697"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/clipboard.o external/glfw-3.0.3/src/clipboard.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/clipboard.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/clipboard.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/clipboard.o"36"E468766E-1F1F-4E95-B276-FF3FE90D4D67-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_clipboard.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402014600.567475
+e402014602.047860
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_clipboard.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.md76c918841f6b741^a33f0c8a41f6b741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m0000000000000000^1910"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_clipboard.o external/glfw-3.0.3/src/cocoa_clipboard.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_clipboard.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_clipboard.m" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_clipboard.o"36"3D2EB72E-E196-4DC5-A28A-0B80BD7C4BE3-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_gamma.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014600.568166
+e402014601.470231
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_gamma.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.ce3a7918841f6b741^9770788941f6b741^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/cocoa_gamma.c0000000000000000^1707"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_gamma.o external/glfw-3.0.3/src/cocoa_gamma.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_gamma.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_gamma.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_gamma.o"36"3EC497DB-739D-4D7E-B704-E0BCFC4BDC56-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_init.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402014600.569076
+e402014602.040855
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_init.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m7521928841f6b741^13810a8a41f6b741^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/cocoa_init.m0000000000000000^1885"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_init.o external/glfw-3.0.3/src/cocoa_init.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_init.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_init.m" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_init.o"36"EE1B3040-49FB-4D50-AA03-CF0301FC54BD-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_joystick.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402014601.471513
+e402014602.756465
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_joystick.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.mdbdc788941f6b741^d7a6c18a41f6b741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/cocoa_joystick.m0000000000000000^1905"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_joystick.o external/glfw-3.0.3/src/cocoa_joystick.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_joystick.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_joystick.m" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_joystick.o"36"FC6DE7FE-B499-41B3-8EC8-8DBE6A2946E4-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_monitor.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402014601.483294
+e402014602.695254
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_monitor.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.ma4e27b8941f6b741^40fbb18a41f6b741^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/cocoa_monitor.m0000000000000000^1900"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_monitor.o external/glfw-3.0.3/src/cocoa_monitor.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_monitor.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_monitor.m" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_monitor.o"36"8EC4DEFA-E38C-4E03-A2C5-6935ABB2D3CD-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_time.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014602.042151
+e402014602.722076
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_time.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c4eef0a8a41f6b741^6adfb88a41f6b741^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/cocoa_time.c0000000000000000^1702"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_time.o external/glfw-3.0.3/src/cocoa_time.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_time.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_time.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_time.o"36"0D54B119-C2C3-46AF-AD8F-A65CECFF2DBD-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_window.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402014602.049970
+e402014603.026983
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_window.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m06f60c8a41f6b741^89ed068b41f6b741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/cocoa_window.m0000000000000000^1895"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_window.o external/glfw-3.0.3/src/cocoa_window.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_window.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/cocoa_window.m" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/cocoa_window.o"36"D075DD86-22DB-4A54-9BC1-7173DBB7B97B-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/context.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014602.696659
+e402014603.169104
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/context.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.cca89b28a41f6b741^bf492b8b41f6b741^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/context.c0000000000000000^1687"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/context.o external/glfw-3.0.3/src/context.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/context.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/context.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/context.o"36"4F01F95A-EF64-485F-AA75-73CF2F647E43-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/gamma.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014603.028305
+e402014603.389871
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/gamma.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c3964078b41f6b741^9acd638b41f6b741^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/gamma.c0000000000000000^1677"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/gamma.o external/glfw-3.0.3/src/gamma.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/gamma.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/gamma.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/gamma.o"36"979581FB-A637-4387-9EA5-E4082BF4CC87-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/init.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014603.170484
+e402014603.525315
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/init.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.cc0cc2b8b41f6b741^317a868b41f6b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/init.c0000000000000000^1672"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/init.o external/glfw-3.0.3/src/init.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/init.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/init.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/init.o"36"F8588627-B292-4DA2-AD3C-A1231655AD87-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/input.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014603.391176
+e402014603.751760
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/input.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.cb43b648b41f6b741^3274c08b41f6b741^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/input.c0000000000000000^1677"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/input.o external/glfw-3.0.3/src/input.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/input.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/input.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/input.o"36"C5B6BE03-996B-4C28-8885-A01742F3692A-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/joystick.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014603.526692
+e402014603.873298
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/joystick.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c44fd868b41f6b741^7590df8b41f6b741^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/joystick.c0000000000000000^1692"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/joystick.o external/glfw-3.0.3/src/joystick.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/joystick.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/joystick.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/joystick.o"36"20DDEA19-6A3A-4AE0-9F35-8DDE9DFDBB1A-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/monitor.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014603.753057
+e402014604.118300
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/monitor.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.cb5e1c08b41f6b741^5e491e8c41f6b741^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/monitor.c0000000000000000^1687"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/monitor.o external/glfw-3.0.3/src/monitor.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/monitor.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/monitor.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/monitor.o"36"35FE8B67-089D-4961-9CF0-9DD8FEF947FB-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/nsgl_context.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m" normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s402014603.874638
+e402014604.459572
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/nsgl_context.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.me910e08b41f6b741^1aa7758c41f6b741^---0#0#0#-19%DVTDocumentLocation2@103"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/nsgl_context.m0000000000000000^1895"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/nsgl_context.o external/glfw-3.0.3/src/nsgl_context.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/nsgl_context.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/nsgl_context.m" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/nsgl_context.o"36"0D2BD45A-4ABA-468C-82C3-48F8A7ECE335-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/time.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014604.119612
+e402014604.476262
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/time.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c26c61e8c41f6b741^5fec798c41f6b741^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/time.c0000000000000000^1672"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/time.o external/glfw-3.0.3/src/time.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/time.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/time.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/time.o"36"DF8BF97B-9BC4-4513-A52E-B75AE70379FE-
+
+CCompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/window.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014604.460924
+e402014604.745245
+r1
+xCompileC
+xexternal/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/window.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c0e16768c41f6b741^47cabe8c41f6b741^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/src/window.c0000000000000000^1682"CompileC external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/window.o external/glfw-3.0.3/src/window.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/window.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/window.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/window.o"36"CA856D79-679A-462E-8E33-56E761524061-
+
+CLibtool "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/libglfw3.a" normal x86_64
+s402014604.752306
+e402014604.763902
+r1
+xLibtool
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/libglfw3.a
+xnormal
+xx86_64
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Libtool external/glfw-3.0.3/src/Debug/libglfw3.a normal x86_64b4afc08c41f6b741^f38ec38c41f6b741^---0#0#0#--591"Libtool external/glfw-3.0.3/src/Debug/libglfw3.a normal x86_64    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Developer/usr/bin/libtool -static -arch_only x86_64 -syslibroot /Developer/SDKs/MacOSX10.7.sdk "-L/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug" -filelist "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Objects-normal/x86_64/glfw3.LinkFileList" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/libglfw3.a"36"FA31ADCF-76A6-4DFD-82FA-94F5A50BDD38-
+
+CPhaseScriptExecution "CMake PostBuild Rules" "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Script-7023CC7A05114D27A423E580.sh"
+s402014604.772974
+e402014604.871263
+r1
+xPhaseScriptExecution
+xCMake PostBuild Rules
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Script-7023CC7A05114D27A423E580.sh
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.glfw.Debug
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Boing.app/Contents/MacOS/Boing
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Gears.app/Contents/MacOS/Gears
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Simple.app/Contents/MacOS/Simple
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Split\ View.app/Contents/MacOS/Split\ View
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Wave.app/Contents/MacOS/Wave
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/accuracy.app/Contents/MacOS/accuracy
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/clipboard
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/defaults
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/events
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/fsaa
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/gamma
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/glfwinfo
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/iconify
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/joysticks
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/modes
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/peter
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/reopen
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/sharing.app/Contents/MacOS/sharing
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/tearing.app/Contents/MacOS/tearing
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/threads.app/Contents/MacOS/threads
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/title.app/Contents/MacOS/title
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/windows.app/Contents/MacOS/windows
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.glfw.Debug
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/Debug/glfw_test
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Boing.app/Contents/MacOS/Boing
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Gears.app/Contents/MacOS/Gears
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Simple.app/Contents/MacOS/Simple
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Split\ View.app/Contents/MacOS/Split\ View
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Wave.app/Contents/MacOS/Wave
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/accuracy.app/Contents/MacOS/accuracy
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/clipboard
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/defaults
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/events
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/fsaa
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/gamma
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/glfwinfo
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/iconify
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/joysticks
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/modes
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/peter
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/reopen
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/sharing.app/Contents/MacOS/sharing
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/tearing.app/Contents/MacOS/tearing
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/threads.app/Contents/MacOS/threads
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/title.app/Contents/MacOS/title
+o/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/windows.app/Contents/MacOS/windows
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Run custom shell script 'CMake PostBuild Rules'bf65c68c41f6b741^f60adf8c41f6b741^-5631"echo "Depend check for xcode"Depend check for xcodecd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.glfw.Debug/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Boing.app/Contents/MacOS/Boing/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Gears.app/Contents/MacOS/Gears/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Simple.app/Contents/MacOS/Simple/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Split\ View.app/Contents/MacOS/Split\ View/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Wave.app/Contents/MacOS/Wave/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/accuracy.app/Contents/MacOS/accuracy/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/clipboard/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/defaults/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/events/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/fsaa/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/gamma/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/glfwinfo/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/iconify/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/joysticks/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/modes/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/peter/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/reopen/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/sharing.app/Contents/MacOS/sharing/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/tearing.app/Contents/MacOS/tearing/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/threads.app/Contents/MacOS/threads/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/title.app/Contents/MacOS/title/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/windows.app/Contents/MacOS/windowsecho "Depend check for xcode"Depend check for xcodecd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.glfw.Debug/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/Debug/glfw_test/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Boing.app/Contents/MacOS/Boing/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Gears.app/Contents/MacOS/Gears/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Simple.app/Contents/MacOS/Simple/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Split\ View.app/Contents/MacOS/Split\ View/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Wave.app/Contents/MacOS/Wave/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/accuracy.app/Contents/MacOS/accuracy/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/clipboard/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/defaults/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/events/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/fsaa/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/gamma/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/glfwinfo/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/iconify/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/joysticks/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/modes/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/peter/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/reopen/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/sharing.app/Contents/MacOS/sharing/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/tearing.app/Contents/MacOS/tearing/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/threads.app/Contents/MacOS/threads/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/title.app/Contents/MacOS/title/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/windows.app/Contents/MacOS/windows51(21%IDEActivityLogMessage2@30"echo "Depend check for xcode"-402014604#0#30#-0#-----2@23"Depend check for xcode-402014604#30#23#-0#-----2@280"cd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.glfw.Debug-402014604#53#280#-0#-----2@125"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Boing.app/Contents/MacOS/Boing-402014604#333#125#-0#-----2@125"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Gears.app/Contents/MacOS/Gears-402014604#458#125#-0#-----2@127"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Simple.app/Contents/MacOS/Simple-402014604#583#127#-0#-----2@137"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Split\ View.app/Contents/MacOS/Split\ View-402014604#710#137#-0#-----2@123"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Wave.app/Contents/MacOS/Wave-402014604#847#123#-0#-----2@128"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/accuracy.app/Contents/MacOS/accuracy-402014604#970#128#-0#-----2@101"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/clipboard-402014604#1098#101#-0#-----2@100"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/defaults-402014604#1199#100#-0#-----2@98"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/events-402014604#1299#98#-0#-----2@96"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/fsaa-402014604#1397#96#-0#-----2@97"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/gamma-402014604#1493#97#-0#-----2@100"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/glfwinfo-402014604#1590#100#-0#-----2@99"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/iconify-402014604#1690#99#-0#-----2@101"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/joysticks-402014604#1789#101#-0#-----2@97"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/modes-402014604#1890#97#-0#-----2@97"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/peter-402014604#1987#97#-0#-----2@98"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/reopen-402014604#2084#98#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/sharing.app/Contents/MacOS/sharing-402014604#2182#126#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/tearing.app/Contents/MacOS/tearing-402014604#2308#126#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/threads.app/Contents/MacOS/threads-402014604#2434#126#-0#-----2@122"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/title.app/Contents/MacOS/title-402014604#2560#122#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/windows.app/Contents/MacOS/windows-402014604#2682#126#-0#-----2@30"echo "Depend check for xcode"-402014604#2808#30#-0#-----2@23"Depend check for xcode-402014604#2838#23#-0#-----2@220"cd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.glfw.Debug-402014604#2861#220#-0#-----2@75"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/Debug/glfw_test-402014604#3081#75#-0#-----2@125"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Boing.app/Contents/MacOS/Boing-402014604#3156#125#-0#-----2@125"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Gears.app/Contents/MacOS/Gears-402014604#3281#125#-0#-----2@127"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Simple.app/Contents/MacOS/Simple-402014604#3406#127#-0#-----2@137"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Split\ View.app/Contents/MacOS/Split\ View-402014604#3533#137#-0#-----2@123"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/examples/Debug/Wave.app/Contents/MacOS/Wave-402014604#3670#123#-0#-----2@128"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/accuracy.app/Contents/MacOS/accuracy-402014604#3793#128#-0#-----2@101"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/clipboard-402014604#3921#101#-0#-----2@100"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/defaults-402014604#4022#100#-0#-----2@98"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/events-402014604#4122#98#-0#-----2@96"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/fsaa-402014604#4220#96#-0#-----2@97"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/gamma-402014604#4316#97#-0#-----2@100"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/glfwinfo-402014604#4413#100#-0#-----2@99"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/iconify-402014604#4513#99#-0#-----2@101"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/joysticks-402014604#4612#101#-0#-----2@97"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/modes-402014604#4713#97#-0#-----2@97"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/peter-402014604#4810#97#-0#-----2@98"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/reopen-402014604#4907#98#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/sharing.app/Contents/MacOS/sharing-402014604#5005#126#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/tearing.app/Contents/MacOS/tearing-402014604#5131#126#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/threads.app/Contents/MacOS/threads-402014604#5257#126#-0#-----2@122"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/title.app/Contents/MacOS/title-402014604#5383#122#-0#-----2@126"/bin/rm -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/tests/Debug/windows.app/Contents/MacOS/windows-402014604#5505#126#-0#-----0#0#0#--353"PhaseScriptExecution "CMake PostBuild Rules" external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Script-7023CC7A05114D27A423E580.sh    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    /bin/sh -c "\"/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/glfw_test.build/Debug/glfw.build/Script-7023CC7A05114D27A423E580.sh\""36"4D43B9B8-EAEF-4663-B399-1E62674194D4-
+

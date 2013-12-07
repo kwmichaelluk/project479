@@ -1,0 +1,101 @@
+Tpeter
+v4
+r1
+cCheck dependencies
+cCompileC external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/peter.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+cLd "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug/peter" normal x86_64
+cPhaseScriptExecution "CMake PostBuild Rules" "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Script-613136BBCAF04568B7401674.sh"
+
+N/Developer/SDKs/MacOSX10.7.sdk
+c000000004E7AD70B00000000000000EE
+t1316673291
+s238
+
+N/Developer/SDKs/MacOSX10.7.sdk/usr/include/stdio.h
+c000000004E360D4E0000000000004763
+t1312165198
+s18275
+
+N/Developer/SDKs/MacOSX10.7.sdk/usr/include/stdlib.h
+c000000004E360D4E00000000000030A7
+t1312165198
+s12455
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include/GLFW/glfw3.h
+c00000000523B6D0800000000000139F4
+t1379626248
+s80372
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug/peter
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.LinkFileList
+c0000000052460A0C0000000000000089
+t1380321804
+s137
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.o
+t2
+s0
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Script-613136BBCAF04568B7401674.sh
+c0000000052460A0C00000000000000E2
+t1380321804
+s226
+
+N/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/peter.c
+c00000000523B6D080000000000000FD7
+t1379626248
+s4055
+i<GLFW/glfw3.h>
+i<stdio.h>
+i<stdlib.h>
+
+CBuild AST from "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/peter.c"
+r0
+
+CCheck dependencies
+r0
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd82be48c41f6b741^e3fde48c41f6b741^---0#1#0#--18"Check dependencies36"C14CB16D-D4F2-4720-8C8D-2C1BB920F5DB-
+
+CCompileC external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/peter.c" normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
+s402014604.914725
+e402014604.950834
+r1
+xCompileC
+xexternal/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.o
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/peter.c
+xnormal
+xx86_64
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/peter.cb94fea8c41f6b741^6669f38c41f6b741^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/Nancy/Documents/Edwin/ENPH%20479/project2/external/glfw-3.0.3/tests/peter.c0000000000000000^1780"CompileC external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.o external/glfw-3.0.3/tests/peter.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv LANG en_US.US-ASCII    /Developer/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-print-source-range-info -fdiagnostics-show-category=id -fdiagnostics-parseable-fixits -Wno-trigraphs -fpascal-strings -O0 -Wno-return-type -Wparentheses -Wswitch -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-shorten-64-to-32 "-DCMAKE_INTDIR=\"Debug\"" -isysroot /Developer/SDKs/MacOSX10.7.sdk -fasm-blocks -mmacosx-version-min=10.7 -gdwarf-2 -Wno-sign-conversion "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/include" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/deps" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/DerivedSources/x86_64" "-I/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/DerivedSources" -Wmost -Wno-four-char-constants -Wno-unknown-pragmas "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug" -Wall -MMD -MT dependencies -MF "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.d" -c "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/peter.c" -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.o"36"BABAF93C-55D4-400C-B5EF-FA8B0AD2759D-
+
+CLd "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug/peter" normal x86_64
+s402014604.958455
+e402014605.035587
+r1
+xLd
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug/peter
+xnormal
+xx86_64
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Link /Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug/petera67bf58c41f6b741^041d098d41f6b741^---0#0#0#--917"Ld external/glfw-3.0.3/tests/Debug/peter normal x86_64    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    setenv MACOSX_DEPLOYMENT_TARGET 10.7    /Developer/usr/bin/clang -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.7.sdk "-L/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug" "-F/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug" -filelist "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Objects-normal/x86_64/peter.LinkFileList" -mmacosx-version-min=10.7 -Wl,-search_paths_first -Wl,-headerpad_max_install_names "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/src/Debug/libglfw3.a" -framework AGL -framework Cocoa -framework OpenGL -framework IOKit -framework CoreFoundation -o "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/Debug/peter"36"336E8D7E-17A6-4351-B207-36A236CDE089-
+
+CPhaseScriptExecution "CMake PostBuild Rules" "/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Script-613136BBCAF04568B7401674.sh"
+s402014605.044438
+e402014605.082482
+r1
+xPhaseScriptExecution
+xCMake PostBuild Rules
+x/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Script-613136BBCAF04568B7401674.sh
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.peter.Debug
+omake[1]: Nothing to be done for `PostBuild.peter.Debug'.
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.peter.Debug
+omake[1]: Nothing to be done for `PostBuild.peter.Debug'.
+lSLF04#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Run custom shell script 'CMake PostBuild Rules'5fcf0b8d41f6b741^ef1d158d41f6b741^-722"echo "Depend check for xcode"Depend check for xcodecd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.peter.Debugmake[1]: Nothing to be done for `PostBuild.peter.Debug'.echo "Depend check for xcode"Depend check for xcodecd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.peter.Debugmake[1]: Nothing to be done for `PostBuild.peter.Debug'.8(21%IDEActivityLogMessage2@30"echo "Depend check for xcode"-402014605#0#30#-0#-----2@23"Depend check for xcode-402014605#30#23#-0#-----2@281"cd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/external/glfw-3.0.3/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.peter.Debug-402014605#53#281#-0#-----2@57"make[1]: Nothing to be done for `PostBuild.peter.Debug'.-402014605#334#57#-0#-----2@30"echo "Depend check for xcode"-402014605#391#30#-0#-----2@23"Depend check for xcode-402014605#421#23#-0#-----2@221"cd /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 && make -C /Users/Nancy/Documents/Edwin/ENPH\ 479/project2 -f /Users/Nancy/Documents/Edwin/ENPH\ 479/project2/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.peter.Debug-402014605#444#221#-0#-----2@57"make[1]: Nothing to be done for `PostBuild.peter.Debug'.-402014605#665#57#-0#-----0#0#0#--359"PhaseScriptExecution "CMake PostBuild Rules" external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Script-613136BBCAF04568B7401674.sh    cd "/Users/Nancy/Documents/Edwin/ENPH 479/project2"    /bin/sh -c "\"/Users/Nancy/Documents/Edwin/ENPH 479/project2/external/glfw-3.0.3/tests/glfw_test.build/Debug/peter.build/Script-613136BBCAF04568B7401674.sh\""36"A3A3E9AB-4FB5-4CC7-854D-28C144925724-
+
