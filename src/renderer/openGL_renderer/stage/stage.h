@@ -5,7 +5,6 @@
 //  Created by Michael Luk on 2013-09-11.
 //  Copyright (c) 2013 Michael Luk. All rights reserved.
 //
-//  STAGE is for controlling OpenGL Rendering of Rigid Bodies, and controlling GLFW and initializing GLEW
 
 #ifndef __openGL_renderer__stage__
 #define __openGL_renderer__stage__
@@ -17,13 +16,17 @@
 #include "../bodies/rigidbodies.h"
 
 #include <GL/glew.h>
-//#include <GLUT/glut.h>
-#include <GLFW/glfw3.h>
+#include <GLUT/glut.h>
+//#include <GLFW/glfw3.h>
 
 #include <vector>
 #include "../config/config.h"
 
 class stage {
+private:
+    //static const char *vert_shader_path;
+    //static const char *frag_shader_path;
+
 public:
     //Screen Size
     static int screen_width;
@@ -32,21 +35,16 @@ public:
 private:
     //For Rendering
     static camera *myCamera;
+    //static rigidbodies* myBodies;
     static std::vector<rigidbodies*> myBodies;
     static int numBodyTypes;
-    static GLFWwindow* window;
     
 public:
     //Declare Shader Variables
-    static GLuint shader_program;
+    static GLuint program;
     static GLint attribute_coord3d;
     static GLint attribute_v_color;
-
-    static GLint attribute_model;
-    
-    static GLint uniform_view, uniform_proj;
-    static glm::mat4 m_mvp;
-    //static GLuint vao;
+    static GLint uniform_mvp;
     
 public:
     static void initStage();
@@ -62,17 +60,12 @@ private:
     static bool initShaders(); //Called in initResources()
     static int initResources();
     
-    static void linkUniforms();
-    
-    static void init_glSettings();
-    
     //Update loop
-    static void update_loop();
-    
     static void onIdle();
-    static void updateDraw(); //Called in onIdle
     
-    static void onReshape(int width, int height); //TODO: Implement on Window resize
+    static void onDisplay();
+    
+    static void onReshape(int width, int height);
     
     static void freeResources();
 };

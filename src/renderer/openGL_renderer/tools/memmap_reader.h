@@ -9,17 +9,10 @@
 #ifndef __openGL_renderer__memmap_reader__
 #define __openGL_renderer__memmap_reader__
 
-//#include <boost/iostreams/device/mapped_file.hpp>
-#include <boost/interprocess/file_mapping.hpp>
-#include <boost/interprocess/mapped_region.hpp>
-//#include "boost/filesystem.hpp"
-
 #include <iostream>
-//#include <sys/mman.h>
+#include <sys/mman.h>
 
 #include "../config/config.h"
-
-using namespace boost::interprocess;
 
 class memmap_reader {
 private:
@@ -27,9 +20,6 @@ private:
     
     //Number of data points, size of array
     int data_size;
-    
-    mapped_region m_region;
-    
 public:
     memmap_reader(int size);
 

@@ -11,7 +11,9 @@
 #include <math.h>
 
 #include <GL/glew.h>
-#include <GLFW/glfw3.h>
+#include <GLUT/glut.h>
+
+//#include <GLFW/glfw3.h>
 
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
@@ -22,30 +24,25 @@
 #include "stage/stage.h"
 #include "tools/memmap_reader.h"
 
-//#include "boost/filesystem.hpp"
-
+using namespace std;
 
 int main()
 {
-    printf("Renderer Begin Process\n");
-    int num_obj = 2;
+    printf("RUN START/n");
     
     //Prepare Memory Map
-    memmap_reader memmap(num_obj);
+    memmap_reader memmap(4);
     
-    //Define Camera
+    //Set Camera
     camera myCam(stage::screen_width,stage::screen_height);
     myCam.setView(glm::vec3(0.0, 2.0, 0.0), glm::vec3(0.0, 0.0, -4.0), glm::vec3(0.0, 1.0, 0.0));
     myCam.setProjection(80.0f, 0.1f, 20.0f);
     
-    //Define Objects
-    
-    cube ta(num_obj);
+    //Set Objects
+    cube ta(1, stage::uniform_mvp);
     
     //Link Object Data
-    for(int i=0;i<num_obj;i++) {
-        ta.linkPosition(memmap.pos_data+(i*3), memmap.pos_data+(i*3+1), memmap.pos_data+(i*3+2), i);
-    }
+    ta.setPosition(memmap.pos_data+0, memmap.pos_data+1, memmap.pos_data+2, 0);
     
     //Prepare Stage
     stage::setCamera(myCam);
@@ -56,7 +53,7 @@ int main()
     
     memmap.dispose();
     
-    printf("Renderer End Process\n");
+    printf("RUN END/n");
     return 0;
 }
 
