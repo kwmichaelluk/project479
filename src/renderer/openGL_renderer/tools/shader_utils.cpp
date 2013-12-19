@@ -3,7 +3,7 @@
  * This file is in the public domain.
  * Contributors: Sylvain Beucler
  */
-
+#define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
 #include <stdlib.h>
 #include <GL/glew.h>

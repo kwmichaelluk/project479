@@ -5,7 +5,7 @@
 //  Created by Michael Luk on 2013-09-08.
 //  Copyright (c) 2013 Michael Luk. All rights reserved.
 //
-
+#define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
