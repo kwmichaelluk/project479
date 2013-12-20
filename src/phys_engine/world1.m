@@ -321,6 +321,16 @@ classdef world1 < handle
                     obj.global_velocity = x_pdasm1;
                     obj.previous_set = active_set;
 
+%%%%%%%%%%%%%% Friction Trial %%%%%%
+                    alpha = lambda1; % impulse magnitude
+                    c = J' * alpha; % contact impulse
+                    v = inv(M_matrix) * (f_g + c);
+                    
+                    % Construction the frictional plane
+                    % Extracting the contact normal from the active set
+                    % for i = 1 : nw*nb % the normal to the walls
+                    %    if(active_set(i)
+                        
                 end
                 obj.velocity_log(:,t+1)= obj.global_velocity;
             end
