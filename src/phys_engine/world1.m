@@ -328,8 +328,16 @@ classdef world1 < handle
                     
                     % Construction the frictional plane
                     % Extracting the contact normal from the active set
-                    % for i = 1 : nw*nb % the normal to the walls
-                    %    if(active_set(i)
+                    % 1) the normal to the walls
+                    wall_contact_indices = active_set(1:nw*nb);
+                    wall_contact_normal = bsxfun(@times, obj.wall_normal, -obj.wall_direction); % binary operationn
+                    wall_contact_normal = repmat(wall_contact_normal, nb,1);
+                    wall_contact_normal = wall_contact_normal(logical(wall_contact_indices),:);
+                    
+                    % 2) the normal between the objects
+                    obj_contact_indices = active_set(nw*nb+1:end);
+                    obj_contact_normal = normal(logical(obj_contact_indices),:);
+                    
                         
                 end
                 obj.velocity_log(:,t+1)= obj.global_velocity;
