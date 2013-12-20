@@ -93,8 +93,8 @@ bool stage::initShaders() {
     GLint link_ok = GL_FALSE;
     
     GLuint vs, fs;
-    if ((vs = create_shader(config::vert_shader_path.c_str(), GL_VERTEX_SHADER))   == 0) return 0;
-    if ((fs = create_shader(config::frag_shader_path.c_str(), GL_FRAGMENT_SHADER)) == 0) return 0;
+    if ((vs = create_shader((const char*)config::vert_shader_path.c_str(), GL_VERTEX_SHADER))   == 0) return 0;
+    if ((fs = create_shader((const char*)config::frag_shader_path.c_str(), GL_FRAGMENT_SHADER)) == 0) return 0;
     
     //Create Program and Attach Shaders
     shader_program = glCreateProgram();
