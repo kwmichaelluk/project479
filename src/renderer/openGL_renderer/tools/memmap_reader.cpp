@@ -14,11 +14,11 @@ memmap_reader::memmap_reader(int size) {
 
     //Position
     //Memory Mapping
-    file_mapping m_fileX(config::posX_data_path.c_str(),read_only);
+    file_mapping m_fileX((const char*)config::posX_data_path.c_str(),read_only);
     m_regionX = mapped_region(m_fileX, read_only,0,data_size * sizeof(double));
-    file_mapping m_fileY(config::posY_data_path.c_str(),read_only);
+    file_mapping m_fileY((const char*)config::posY_data_path.c_str(),read_only);
     m_regionY = mapped_region(m_fileY, read_only,0,data_size * sizeof(double));
-    file_mapping m_fileZ(config::posZ_data_path.c_str(),read_only);
+    file_mapping m_fileZ((const char*)config::posZ_data_path.c_str(),read_only);
     m_regionZ = mapped_region(m_fileZ, read_only,0,data_size * sizeof(double));
     
     //Set Position Data
@@ -28,24 +28,24 @@ memmap_reader::memmap_reader(int size) {
     
     //Size
     //Memory Mapping
-    file_mapping m_file2(config::siz_data_path.c_str(),read_only);
+    file_mapping m_file2((const char*)config::siz_data_path.c_str(),read_only);
     m_region2 = mapped_region(m_file2, read_only,0,data_size * sizeof(double));
     //Set Position Data
     size_data = (double *)m_region2.get_address();
     
     //Rotation
     //Memory Mapping
-    file_mapping m_fileP(config::rotP_data_path.c_str(),read_only);
+    file_mapping m_fileP((const char*)config::rotP_data_path.c_str(),read_only);
     m_regionP = mapped_region(m_fileP, read_only,0,data_size * sizeof(double));
     //Set Position Data
     rotP_data = (double *)m_regionP.get_address();
     
-    file_mapping m_fileQ(config::rotQ_data_path.c_str(),read_only);
+    file_mapping m_fileQ((const char*)config::rotQ_data_path.c_str(),read_only);
     m_regionQ = mapped_region(m_fileQ, read_only,0,data_size * sizeof(double));
     //Set Position Data
     rotQ_data = (double *)m_regionQ.get_address();
     
-    file_mapping m_fileR(config::rotR_data_path.c_str(),read_only);
+    file_mapping m_fileR((const char*)config::rotR_data_path.c_str(),read_only);
     m_regionR = mapped_region(m_fileR, read_only,0,data_size * sizeof(double));
     //Set Position Data
     rotR_data = (double *)m_regionR.get_address();
