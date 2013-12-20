@@ -10,7 +10,7 @@
 
 
 ini_reader::ini_reader() {
-    boost::property_tree::ini_parser::read_ini((const std::string)config::cfg_ini_path.c_str(), pt);
+    boost::property_tree::ini_parser::read_ini(config::cfg_ini_path.string(), pt);
 }
 
 int ini_reader::getSize() {
