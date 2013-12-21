@@ -31,7 +31,7 @@ private:
     
 public:
     spheres(int size) : rigidbodies(size) {
-        alphaChn = 1.0f;
+        alphaChn = 0.0f;
     }
     
     void init_buffers();

@@ -30,7 +30,7 @@ private:
     
 public:
     walls(int size) : rigidbodies(size) {
-        alphaChn = 0.4f;
+        alphaChn = 1.0f;
     }
     
     void init_buffers();

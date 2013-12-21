@@ -10,6 +10,7 @@
 
 
 ini_reader::ini_reader() {
+	//std::cout<<config::cfg_ini_path.string()<<'\n';
     boost::property_tree::ini_parser::read_ini(config::cfg_ini_path.string(), pt);
 }
 

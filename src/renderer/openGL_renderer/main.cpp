@@ -31,18 +31,19 @@ int main()
     //Prepare Config Data
     ini_reader iniread;
     int num_obj = iniread.getSize();
+	//num_obj = 0;
     
     //Prepare Memory Map
     memmap_reader memmap(num_obj);
     
     //Define Camera
     camera myCam(stage::screen_width,stage::screen_height);
-    myCam.setView(glm::vec3(-23.0, -18.0, 6.0), glm::vec3(0.0, 0.0, -2.0), glm::vec3(0.0, 0.0, 1.0));
+    myCam.setView(glm::vec3(-2.0, -1.0, 6.0), glm::vec3(0.0, 0.0, -2.0), glm::vec3(0.0, 0.0, 1.0));
     myCam.setProjection(45.0f, 0.1f, 80.0f);
     
     //Define Objects
     spheres ta(num_obj);
-    
+
     //Link Object Data
     for(int i=0;i<num_obj;i++) {
         ta.linkPosition(memmap.posX_data+i, memmap.posY_data+i, memmap.posZ_data+i, i);
