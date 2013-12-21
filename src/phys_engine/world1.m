@@ -333,12 +333,30 @@ classdef world1 < handle
                     wall_contact_normal = bsxfun(@times, obj.wall_normal, -obj.wall_direction); % binary operationn
                     wall_contact_normal = repmat(wall_contact_normal, nb,1);
                     wall_contact_normal = wall_contact_normal(logical(wall_contact_indices),:);
-                    
+                    wcn = sum(wall_contact_indices);
+                    Tw = zeros(wcn,3);  % tangent to the wall contacts
+                    Tw2 = zeros(wcn,3);
+                    for i = 1:wcn
+                        Tw(i,:) = cross(wall_contact_normal(i,:),[0 0 1]);
+                        Tw2(i,:) = cross(Tw(i,:),wall_contact_normal(i,:));
+                    end
                     % 2) the normal between the objects
                     obj_contact_indices = active_set(nw*nb+1:end);
                     obj_contact_normal = normal(logical(obj_contact_indices),:);
-                    
-                        
+                    ocn = sum(obj_contact_indices);
+                    To = zeros(ocn,3);  % tangent to the obj contacts
+                    for i = 1:ocn;
+                        To(i,:) = cross(obj_contact_normal(i,:),[0 0 1]);
+                        To2(i,:) = cross(To(i,:),obj_contact_normal(i,:));
+                    end
+                    T = [Tw; To];
+                    twoNorm = sqrt(sum(abs(T).^2,2));
+                    zTangent = ~logical(twoNorm);
+                    nz = sum(zTangent);
+                    twoNorm(zTangent) = ones(nz,1);
+                    T(zTangent) = [zeros(zTangent,2), ones(zTangent,1)];
+                    T = T./[twoNorm twoNorm twoNorm];
+                    T2 = T
                 end
                 obj.velocity_log(:,t+1)= obj.global_velocity;
             end
