@@ -334,29 +334,38 @@ classdef world1 < handle
                     wall_contact_normal = repmat(wall_contact_normal, nb,1);
                     wall_contact_normal = wall_contact_normal(logical(wall_contact_indices),:);
                     wcn = sum(wall_contact_indices);
-                    Tw = zeros(wcn,3);  % tangent to the wall contacts
-                    Tw2 = zeros(wcn,3);
+                    Tw = zeros(4*wcn,3);  % tangent to the wall contacts. 4 tangents per contact plane
+
                     for i = 1:wcn
                         Tw(i,:) = cross(wall_contact_normal(i,:),[0 0 1]);
-                        Tw2(i,:) = cross(Tw(i,:),wall_contact_normal(i,:));
+                        Tw(i+1,:) = cross(Tw(i,:),wall_contact_normal(i,:));
+                        Tw(i+2,:) = -Tw(i,:);
+                        Tw(i+3,:) = -Tw(i+1,:);
                     end
                     % 2) the normal between the objects
                     obj_contact_indices = active_set(nw*nb+1:end);
                     obj_contact_normal = normal(logical(obj_contact_indices),:);
                     ocn = sum(obj_contact_indices);
-                    To = zeros(ocn,3);  % tangent to the obj contacts
+                    To = zeros(4*ocn,3);  % tangent to the obj contacts. 4 tangents per contact plane
                     for i = 1:ocn;
                         To(i,:) = cross(obj_contact_normal(i,:),[0 0 1]);
-                        To2(i,:) = cross(To(i,:),obj_contact_normal(i,:));
+                        To(i+1,:) = cross(To(i,:),obj_contact_normal(i,:));
+                        To(i+2,:) = -To(i,:);
+                        To(i+3,:) = -To(i+1,:);
                     end
                     T = [Tw; To];
                     twoNorm = sqrt(sum(abs(T).^2,2));
+                    
+                    % looking for the tangents that are perpendicular to
+                    % the z axis ( so the cross with [0 0 1] is zero )
                     zTangent = ~logical(twoNorm);
                     nz = sum(zTangent);
                     twoNorm(zTangent) = ones(nz,1);
                     T(zTangent) = [zeros(zTangent,2), ones(zTangent,1)];
                     T = T./[twoNorm twoNorm twoNorm];
-                    T2 = T
+                    
+                    % Now, each of the 3 vector must be converted to a 6
+                    % vector through the Jacobian
                 end
                 obj.velocity_log(:,t+1)= obj.global_velocity;
             end
