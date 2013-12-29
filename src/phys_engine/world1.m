@@ -361,7 +361,7 @@ classdef world1 < handle
                     zTangent = ~logical(twoNorm);
                     nz = sum(zTangent);
                     twoNorm(zTangent) = ones(nz,1);
-                    T(zTangent) = [zeros(zTangent,2), ones(zTangent,1)];
+                    T(zTangent,:) = [zeros(sum(zTangent),2), ones(sum(zTangent),1)];
                     T = T./[twoNorm twoNorm twoNorm];
                     
                     % Now, each of the 3 vector must be converted to a 6
