@@ -102,11 +102,11 @@ bool stage::initShaders() {
     glAttachShader(shader_program, fs);
 
     //Bind Attributes
-    glBindAttribLocation(shader_program, attribute_coord3d, config::coord3d.c_str());
+    //glBindAttribLocation(shader_program, attribute_coord3d, config::coord3d.c_str());
     //glBindAttribLocation(shader_program, attribute_v_color, config::v_color.c_str());
-    glBindAttribLocation(shader_program, attribute_vertex_uv, config::vertex_uv.c_str());
-    glBindAttribLocation(shader_program, attribute_vertex_normal, config::vertex_normal.c_str());
-    glBindAttribLocation(shader_program, attribute_model, config::model_matrix.c_str());
+    //glBindAttribLocation(shader_program, attribute_vertex_uv, config::vertex_uv.c_str());
+    //glBindAttribLocation(shader_program, attribute_vertex_normal, config::vertex_normal.c_str());
+    //glBindAttribLocation(shader_program, attribute_model, config::model_matrix.c_str());
 
     
     //Link Shader
