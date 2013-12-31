@@ -93,17 +93,17 @@ bool stage::initShaders() {
     GLint link_ok = GL_FALSE;
     
     GLuint vs, fs;
-    if ((vs = create_shader((const char*)config::vert_shader_path.c_str(), GL_VERTEX_SHADER))   == 0) return 0;
-    if ((fs = create_shader((const char*)config::frag_shader_path.c_str(), GL_FRAGMENT_SHADER)) == 0) return 0;
+    if ((vs = create_shader((const char*)config::vert_shader_path.string().c_str(), GL_VERTEX_SHADER))   == 0) return 0;
+    if ((fs = create_shader((const char*)config::frag_shader_path.string().c_str(), GL_FRAGMENT_SHADER)) == 0) return 0;
     
     //Create Program and Attach Shaders
     shader_program = glCreateProgram();
     glAttachShader(shader_program, vs);
     glAttachShader(shader_program, fs);
 
+	// Old way to communicate with the vertex shader
     //Bind Attributes
     glBindAttribLocation(shader_program, attribute_coord3d, config::coord3d.c_str());
-    //glBindAttribLocation(shader_program, attribute_v_color, config::v_color.c_str());
     glBindAttribLocation(shader_program, attribute_vertex_uv, config::vertex_uv.c_str());
     glBindAttribLocation(shader_program, attribute_vertex_normal, config::vertex_normal.c_str());
     glBindAttribLocation(shader_program, attribute_model, config::model_matrix.c_str());
@@ -119,26 +119,26 @@ bool stage::initShaders() {
     }
     
     //Check Attributes
-    if (glGetAttribLocation(shader_program,config::coord3d.c_str()) == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", config::coord3d.c_str());
-        return 0;
-    }
+    //if (glGetAttribLocation(shader_program,config::coord3d.c_str()) == -1) {
+    //    fprintf(stderr, "Could not bind attribute %s\n", config::coord3d.c_str());
+    //    return 0;
+    //}
     /*if (glGetAttribLocation(shader_program,config::v_color.c_str()) == -1) {
         fprintf(stderr, "Could not bind attribute %s\n", config::v_color.c_str());
         return 0;
     }*/
-    if (glGetAttribLocation(shader_program,config::vertex_uv.c_str()) == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", config::vertex_uv.c_str());
-        return 0;
-    }
-    if (glGetAttribLocation(shader_program,config::vertex_normal.c_str()) == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", config::vertex_normal.c_str());
-        return 0;
-    }
-    if (glGetAttribLocation(shader_program,config::model_matrix.c_str()) == -1) {
-        fprintf(stderr, "Could not bind attribute %s\n", config::model_matrix.c_str());
-        return 0;
-    }
+    //if (glGetAttribLocation(shader_program,config::vertex_uv.c_str()) == -1) {
+    //    fprintf(stderr, "Could not bind attribute %s\n", config::vertex_uv.c_str());
+    //    return 0;
+    //}
+    //if (glGetAttribLocation(shader_program,config::vertex_normal.c_str()) == -1) {
+    //    fprintf(stderr, "Could not bind attribute %s\n", config::vertex_normal.c_str());
+    //    return 0;
+    //}
+    //if (glGetAttribLocation(shader_program,config::model_matrix.c_str()) == -1) {
+    //    fprintf(stderr, "Could not bind attribute %s\n", config::model_matrix.c_str());
+    //    return 0;
+    //}
     
     //Get Uniform Locations
     uniform_view = glGetUniformLocation(shader_program, config::view_matrix.c_str());
@@ -165,12 +165,13 @@ bool stage::initShaders() {
         return 0;
     }
     
-    uniform_alpha = glGetUniformLocation(shader_program, config::alpha_chn.c_str());
-    if (uniform_alpha == -1) {
-        fprintf(stderr, "Could not bind uniform %s\n", config::alpha_chn.c_str());
-        return 0;
-    }
+    //uniform_alpha = glGetUniformLocation(shader_program, config::alpha_chn.c_str());
+    //if (uniform_alpha == -1) {
+    //    fprintf(stderr, "Could not bind uniform %s\n", config::alpha_chn.c_str());
+    //    return 0;
+    //}
     
+	glBindFragDataLocation(shader_program, 0, "color");
     return 1;
 }
 
