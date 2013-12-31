@@ -1,24 +1,26 @@
-#version 120
+#version 330
 
 //Input Data
-varying vec2 UV;
+in vec2 UV;
 
-varying vec3 Position_worldspace;
-varying vec3 Normal_cameraspace;
-varying vec3 EyeDirection_cameraspace;
-varying vec3 LightDirection_cameraspace;
+in vec3 Position_worldspace;
+in vec3 Normal_cameraspace;
+in vec3 EyeDirection_cameraspace;
+in vec3 LightDirection_cameraspace;
 
 //Uniform
 uniform sampler2D myTextureSampler;
 uniform vec3 LightPosition_worldspace;
 uniform float Alpha_chn;
 
+out vec4 color;
+
 void main(void) {
     // Light emission properties
 	// You probably want to put them as uniforms
 	vec3 LightColor = vec3(1,1,1);
 	float LightPower = 50.0f;
-    
+
 	// Material properties
 	vec3 MaterialDiffuseColor = texture2D( myTextureSampler, UV ).rgb;
 	vec3 MaterialAmbiantColor = vec3(0.1,0.1,0.1) * MaterialDiffuseColor;
@@ -48,7 +50,7 @@ void main(void) {
 	float cosAlpha = clamp( dot( E,R ), 0,1 );
     
     
-    gl_FragColor =  vec4(
+    color =  vec4(
                     // Ambiant : simulates indirect lighting
                     MaterialAmbiantColor +
                     // Diffuse : "color" of the object
