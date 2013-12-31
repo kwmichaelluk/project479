@@ -1,19 +1,17 @@
-#version 330
+#version 120
 
 //Input Data
-in vec2 UV;
+varying vec2 UV;
 
-in vec3 Position_worldspace;
-in vec3 Normal_cameraspace;
-in vec3 EyeDirection_cameraspace;
-in vec3 LightDirection_cameraspace;
+varying vec3 Position_worldspace;
+varying vec3 Normal_cameraspace;
+varying vec3 EyeDirection_cameraspace;
+varying vec3 LightDirection_cameraspace;
 
 //Uniform
 uniform sampler2D myTextureSampler;
 uniform vec3 LightPosition_worldspace;
 uniform float Alpha_chn;
-
-out vec4 color;
 
 void main(void) {
     // Light emission properties
@@ -50,7 +48,7 @@ void main(void) {
 	float cosAlpha = clamp( dot( E,R ), 0,1 );
     
     
-    color =  vec4(
+    gl_FragColor =  vec4(
                     // Ambiant : simulates indirect lighting
                     MaterialAmbiantColor +
                     // Diffuse : "color" of the object

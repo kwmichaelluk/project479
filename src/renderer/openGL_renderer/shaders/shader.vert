@@ -1,10 +1,10 @@
-#version 330
+#version 120
 
 //layout(location=0) in vec3 coord3d;
-layout(location = 0) in vec3 coord3d;
-layout(location = 1) in vec2 vertex_uv;
-layout(location = 2) in vec3 vertex_normal;
-layout(location = 3) in mat4 model_matrix;
+attribute vec3 coord3d;
+attribute vec2 vertex_uv;
+attribute vec3 vertex_normal;
+attribute mat4 model_matrix;
 
 
 
@@ -13,12 +13,12 @@ uniform mat4 proj_matrix;
 
 uniform vec3 LightPosition_worldspace;
 
-out vec3 Position_worldspace;
-out vec3 Normal_cameraspace;
-out vec3 EyeDirection_cameraspace;
-out vec3 LightDirection_cameraspace;
+varying vec3 Position_worldspace;
+varying vec3 Normal_cameraspace;
+varying vec3 EyeDirection_cameraspace;
+varying vec3 LightDirection_cameraspace;
 
-out vec2 UV;
+varying vec2 UV;
 
 void main(void) {
     gl_Position = proj_matrix * view_matrix * model_matrix * vec4(coord3d, 1.0) ;
