@@ -170,6 +170,8 @@ bool stage::initShaders() {
         fprintf(stderr, "Could not bind uniform %s\n", config::alpha_chn.c_str());
         return 0;
     }
+
+	glBindFragDataLocation(shader_program, 0, "color");
     
     return 1;
 }
