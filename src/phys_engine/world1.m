@@ -198,7 +198,8 @@ classdef world1 < handle
             %spy(obj.JAW)
             
 
-            obj.JW = obj.Normal_wall*obj.JAW; 
+            obj.JW = obj.Normal_wall*obj.JAW;
+            % JAW is the 3x6 Jacobian
             Jw = obj.JW; 
             %%%%%%%%%%%%%%%%%%
             CoR = 0.5;  % this implementation would result in tiny penetration into wall
@@ -261,7 +262,7 @@ classdef world1 < handle
             %full(obj.JA)
             %spy(obj.JA)
             
-
+            % JA is the 3x6 Jacobian
             %%hi
             Jo = obj.Normal_object*obj.JA;  %constraints between objects
             
