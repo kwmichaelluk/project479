@@ -93,7 +93,7 @@ private:
         //glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ibo_elements);
         //int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vbo_vertices);
-        int isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
+        GLint isize;  glGetBufferParameteriv(GL_ELEMENT_ARRAY_BUFFER, GL_BUFFER_SIZE, &isize);
         
         //glDrawElementsInstanced(GL_TRIANGLES, isize/sizeof(GLushort), GL_UNSIGNED_SHORT, 0, instance_size);
         glDrawArraysInstanced(GL_TRIANGLES, 0, isize/sizeof(GLushort), instance_size);

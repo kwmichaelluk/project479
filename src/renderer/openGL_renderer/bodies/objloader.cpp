@@ -6,7 +6,7 @@
 #include <glm/glm.hpp>
 
 #include "objloader.hpp"
-
+#include <iostream>
 
 bool loadOBJ(
 	const char * path, 
@@ -21,8 +21,7 @@ bool loadOBJ(
 	std::vector<glm::vec2> temp_uvs;
 	std::vector<glm::vec3> temp_normals;
 
-
-	FILE * file = fopen(path, "r");
+	FILE * file = fopen(path, "rb");
 	if( file == NULL ){
 		printf("Impossible to open the file ! Are you in the right path ? See Tutorial 1 for details\n");
 		return false;
@@ -42,6 +41,7 @@ bool loadOBJ(
 			glm::vec3 vertex;
 			fscanf(file, "%f %f %f\n", &vertex.x, &vertex.y, &vertex.z );
 			temp_vertices.push_back(vertex);
+            //std::cout << vertex.x << " " << vertex.y << " " << vertex.z << std::endl;
 		}else if ( strcmp( lineHeader, "vt" ) == 0 ){
 			glm::vec2 uv;
 			fscanf(file, "%f %f\n", &uv.x, &uv.y );

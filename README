@@ -1,2 +1,20 @@
+----------------------------------------------
 ENPH 479 Project - 3D Rigid Body Physics Engine, OpenGL Rendering with Compute Shaders
--Implementing Instancing and maybe VAO
+----------------------------------------------
+- Rendering Engine code is located in directory "renderer"
+
+- To build the Rendering Engine code, the following libraries are required:
+	-OpenGL
+	-GLEW
+	-GLFW3
+	-Boost
+	-GLM
+
+- On OS X, the following linker flags are required:
+	-lGLEW, -lboost_system, -lboost_filesystem, -lboost_iostreams
+
+- Once Rendering Engine is built and compiled, the executable and the folders "data" "shaders" and "objects" needs to be copied to the "controller" folder.
+
+- Physics Engine code is located in "phys_engine"
+- Run zzmainzz.m in "controller" to run physics simulation
+

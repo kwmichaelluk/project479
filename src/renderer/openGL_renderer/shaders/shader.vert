@@ -23,7 +23,6 @@ varying vec2 UV;
 void main(void) {
     gl_Position = proj_matrix * view_matrix * model_matrix * vec4(coord3d, 1.0) ;
     
-    
     Position_worldspace = (model_matrix * vec4(coord3d,1)).xyz;
     
     vec3 vertexPosition_cameraspace = ( view_matrix * model_matrix * vec4(coord3d,1)).xyz;
