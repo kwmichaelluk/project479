@@ -99,33 +99,33 @@ classdef world1 < handle
         function initialize_configuration(obj,n_sphere,r,n_box,l,w,h)
             %initialize the configuration of n shperes with the same radius r
             no = n_sphere + n_box;  %number of objects
-            
+            r = 0.5;
             xstart = -obj.lengthhh/2 + 1*r;
             xend = obj.lengthhh/2 - 1*r;
             zstart = -obj.height/2 + 1*r;
-            zend = obj.height/2 - 1*r;
+            zend = obj.height/2 - 1*r - 1;
             ystart = -obj.width/2 + 1*r;
             yend = obj.width/2 - 1*r;
             
             xinterval = 2.1*r;
             yinterval = 2.1*r;
             zinterval = 2.1*r;
-            xnumber = floor((xend - xstart)/xinterval);
-            ynumber = floor((yend - ystart)/yinterval);
-            znumber = floor((zend - zstart)/zinterval);
+            xnumber = floor(abs(xend - xstart)/xinterval);
+            ynumber = floor(abs(yend - ystart)/yinterval);
+            znumber = floor(abs(zend - zstart)/zinterval);
 
             %create n number of shperes
             for i = 1:n_sphere
                 % distribute the shperes so they won't overlap when created
                 x = xstart + (mod((i-1),xnumber)+1)*xinterval;  
-                y = yend - floor((i-1)/ynumber)*yinterval; 
-                z = zend - floor((i-1)/znumber)*zinterval;
+                y = yend - floor((i-1)/xnumber)*yinterval + abs(yend - ystart)*floor((i-1)/(xnumber*ynumber)); 
+                z = zend - floor((i-1)/(xnumber*ynumber))*zinterval;
                 phi = 2*pi*rand;  theta = 2*pi*rand;  psi = 2*pi*rand; 
                 Position = [x,y,z,phi,theta,psi];
                 
-                vx = 100*rand; vy = 100*rand; vz = 100*rand;
+                vx = 1*rand; vy = 1*rand; vz = 1*rand;
                 %vx = 0; vy =0; vz=0;
-                omega_phi = 2; omega_theta = 3; omega_psi = 4;
+                omega_phi = 10; omega_theta = 5; omega_psi = 40;
                 Velocity = [vx,vy,vz,omega_phi,omega_theta,omega_psi];
                 
                 %%%%%%%%%%%%%%%%%%%%
@@ -155,6 +155,12 @@ classdef world1 < handle
             obj.angle_sig_log(:,1) = obj.global_position(:,5);
             obj.angle_psi_log(:,1) = obj.global_position(:,6);
             obj.velocity_log(:,1) = obj.global_velocity;
+            
+            for i = 1:n_sphere
+                obj.radius(i) = r;
+            end
+            obj.radius(2)=0.3; obj.radius(3)=0.3; obj.radius(5)=1;
+            
         
         end
    end
@@ -185,7 +191,8 @@ classdef world1 < handle
             repmat(sqrt(sum(abs(obj.wall_normal).^2,2)),1,nb);
         
             % repmat(radius_vec',nw,1) is nw by nb 
-            distance_to_wall = distance - repmat(radius_vec',nw,1);
+            oscillation = 0.1 * sin(10*t);
+            distance_to_wall = distance - repmat(radius_vec',nw,1) + oscillation;
             
             w_speed_bound = distance_to_wall(:)/dt; 
     
