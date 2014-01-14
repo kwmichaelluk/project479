@@ -3,12 +3,12 @@ phys_engine_path = ['..',filesep,'phys_engine'];
 addpath(phys_engine_path);
 
 ax = axes;
-max_time = 250;
+max_time = 20;
 world = world1(10,10,10, 20, ax, max_time, 0.01); 
 world.draw_scene;
 
 % world1.initialize_configuration(number_of_disks,R,number_of_boxes,l,w,h)
-n_obj = 150;
+n_obj = 10;
 world.initialize_configuration(n_obj,1,0,0,0,0);
 
 % world1.jacobian_initialization();
@@ -65,6 +65,32 @@ for i=1:num_of_objs
    engine_size(i) = sphere_size(i);
 end
 
+
+
+%Storing all simulation data for all time
+store_posX = ones(max_time,n_obj); store_posY = ones(max_time,n_obj); 
+store_posZ = ones(max_time,n_obj);
+store_rotP = ones(max_time,n_obj); store_rotQ = ones(max_time,n_obj);
+store_rotR = ones(max_time,n_obj);
+
+%Simulate and Store All Data
+tic
+for i = 1:max_time-1
+    disp(i)
+    world.dynamics(i,solver_choice);
+
+    %Storing Data
+    store_posX(i,:) = world.x_log(:,i+1);
+    store_posY(i,:) = world.y_log(:,i+1);
+    store_posZ(i,:) = world.z_log(:,i+1);
+
+    store_rotP(i,:) = world.angle_phi_log(:,i+1);
+    store_rotQ(i,:) = world.angle_sig_log(:,i+1);
+    store_rotR(i,:) = world.angle_psi_log(:,i+1);
+    
+end
+toc
+
 %Construct new mmap file. Dimension of mmap file is fixed on construction.
 fileID = fopen(mmap_dataX_pos,'w');
 fwrite(fileID,engine_posX,'double');
@@ -94,7 +120,6 @@ fileID = fopen(mmap_dataR_rot,'w');
 fwrite(fileID,engine_rotR,'double');
 fclose(fileID);
 
-
 %Link controller values
 ctrl_posX= open_mmap(mmap_dataX_pos);
 ctrl_posY= open_mmap(mmap_dataY_pos);
@@ -103,30 +128,6 @@ ctrl_posZ= open_mmap(mmap_dataZ_pos);
 ctrl_rotP= open_mmap(mmap_dataP_rot); 
 ctrl_rotQ= open_mmap(mmap_dataQ_rot); 
 ctrl_rotR= open_mmap(mmap_dataR_rot); 
-
-%Storing all simulation data for all time
-store_posX = ones(max_time,n_obj); store_posY = ones(max_time,n_obj); 
-store_posZ = ones(max_time,n_obj);
-store_rotP = ones(max_time,n_obj); store_rotQ = ones(max_time,n_obj);
-store_rotR = ones(max_time,n_obj);
-
-%Simulate and Store All Data
-tic
-for i = 1:max_time-1
-    disp(i)
-    world.dynamics(i,solver_choice);
-
-    %Storing Data
-    store_posX(i,:) = world.x_log(:,i+1);
-    store_posY(i,:) = world.y_log(:,i+1);
-    store_posZ(i,:) = world.z_log(:,i+1);
-
-    store_rotP(i,:) = world.angle_phi_log(:,i+1);
-    store_rotQ(i,:) = world.angle_sig_log(:,i+1);
-    store_rotR(i,:) = world.angle_psi_log(:,i+1);
-    
-end
-toc
 
 %Start Renderer
 start_renderer();
