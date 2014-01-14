@@ -118,7 +118,7 @@ classdef world1 < handle
             for i = 1:n_sphere
                 % distribute the shperes so they won't overlap when created
                 x = xstart + (mod((i-1),xnumber)+1)*xinterval;  
-                y = yend - floor((i-1)/xnumber)*yinterval + abs(yend - ystart)*floor((i-1)/(xnumber*ynumber)); 
+                y = yend - floor((i-1)/xnumber)*yinterval + abs(yend - ystart-yinterval/2)*floor((i-1)/(xnumber*ynumber)); 
                 z = zend - floor((i-1)/(xnumber*ynumber))*zinterval;
                 phi = 2*pi*rand;  theta = 2*pi*rand;  psi = 2*pi*rand; 
                 Position = [x,y,z,phi,theta,psi];
@@ -159,7 +159,7 @@ classdef world1 < handle
             for i = 1:n_sphere
                 obj.radius(i) = r;
             end
-            obj.radius(2)=0.3; obj.radius(3)=0.3; obj.radius(5)=1;
+            obj.radius(2)=0.3; obj.radius(3)=0.3; obj.radius(6)=1;
             
         
         end

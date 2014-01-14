@@ -31,16 +31,16 @@ sphere_size = world.radius(:);
 addpath('iniconfig');
 
 %Define mmap file names
-cfg_ini = ['data',filesep,'cfg.ini'];
-mmap_dataX_pos = ['data',filesep,'dataX_pos'];
-mmap_dataY_pos = ['data',filesep,'dataY_pos'];
-mmap_dataZ_pos = ['data',filesep,'dataZ_pos'];
-
-mmap_data_siz = ['data',filesep,'data_siz'];
-
-mmap_dataP_rot = ['data',filesep,'dataP_rot'];
-mmap_dataQ_rot = ['data',filesep,'dataQ_rot'];
-mmap_dataR_rot = ['data',filesep,'dataR_rot'];
+% cfg_ini = ['data',filesep,'cfg.ini'];
+% mmap_dataX_pos = ['data',filesep,'dataX_pos'];
+% mmap_dataY_pos = ['data',filesep,'dataY_pos'];
+% mmap_dataZ_pos = ['data',filesep,'dataZ_pos'];
+% 
+% mmap_data_siz = ['data',filesep,'data_siz'];
+% 
+% mmap_dataP_rot = ['data',filesep,'dataP_rot'];
+% mmap_dataQ_rot = ['data',filesep,'dataQ_rot'];
+% mmap_dataR_rot = ['data',filesep,'dataR_rot'];
 
 %Config Data
 ini = IniConfig();
@@ -90,6 +90,19 @@ for i = 1:max_time-1
     
 end
 toc
+
+%---------RENDER
+%Define mmap file names
+cfg_ini = ['data',filesep,'cfg.ini'];
+mmap_dataX_pos = ['data',filesep,'dataX_pos'];
+mmap_dataY_pos = ['data',filesep,'dataY_pos'];
+mmap_dataZ_pos = ['data',filesep,'dataZ_pos'];
+
+mmap_data_siz = ['data',filesep,'data_siz'];
+
+mmap_dataP_rot = ['data',filesep,'dataP_rot'];
+mmap_dataQ_rot = ['data',filesep,'dataQ_rot'];
+mmap_dataR_rot = ['data',filesep,'dataR_rot'];
 
 %Construct new mmap file. Dimension of mmap file is fixed on construction.
 fileID = fopen(mmap_dataX_pos,'w');
