@@ -103,13 +103,13 @@ classdef world1 < handle
             xstart = -obj.lengthhh/2 + 1*r;
             xend = obj.lengthhh/2 - 1*r;
             zstart = -obj.height/2 + 1*r;
-            zend = obj.height/2 - 1*r;
+            zend = obj.height/3 - 1*r;
             ystart = -obj.width/2 + 1*r;
             yend = obj.width/2 - 1*r;
             
-            xinterval = 2.1*r;
-            yinterval = 2.1*r;
-            zinterval = 2.1*r;
+            xinterval = 2.5*r;
+            yinterval = 2.5*r;
+            zinterval = 2.5*r;
             xnumber = floor((xend - xstart)/xinterval);
             ynumber = floor((yend - ystart)/yinterval);
             znumber = floor((zend - zstart)/zinterval);
@@ -123,7 +123,7 @@ classdef world1 < handle
                 phi = 2*pi*rand;  theta = 2*pi*rand;  psi = 2*pi*rand; 
                 Position = [x,y,z,phi,theta,psi];
                 
-                vx = 100*rand; vy = 100*rand; vz = 100*rand;
+                vx = 1*rand; vy = 1*rand; vz = 1*rand;
                 %vx = 0; vy =0; vz=0;
                 omega_phi = 2; omega_theta = 3; omega_psi = 4;
                 Velocity = [vx,vy,vz,omega_phi,omega_theta,omega_psi];
@@ -183,9 +183,10 @@ classdef world1 < handle
             % repmat(obj.wall_c,1,nb) is nw by nb 
             distance = abs(obj.wall_normal * vertcat(x',y',z') + repmat(obj.wall_d,1,nb))./ ...
             repmat(sqrt(sum(abs(obj.wall_normal).^2,2)),1,nb);
-        
+            
+            oscillation = 0.1 * sin(10*t);
             % repmat(radius_vec',nw,1) is nw by nb 
-            distance_to_wall = distance - repmat(radius_vec',nw,1);
+            distance_to_wall = distance - repmat(radius_vec',nw,1) + oscillation;
             
             w_speed_bound = distance_to_wall(:)/dt; 
     
